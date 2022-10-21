@@ -8,9 +8,8 @@
     <meta name="description" content="
 简介 操作MySQL
 MySQL语法
-创建数据库 以bjpowernode为例1create database bjpowernode;
-使用bjpoernode的数据 以bjpowernode为例1use bjpoernode;
-查看当">
+创建数据库 以bjpowernode为例  1create database bjpowernode;
+使用bjpoernode的数据 以bjpowernode为例  1use bjpoernode;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -60,14 +59,38 @@ MySQL语法
 
     
 
-
-
+  
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-
+    <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
 
 <body>
+    
+    <div id="loading-box">
+      <div class="loading-left-bg"></div>
+      <div class="loading-right-bg"></div>
+      <div class="spinner-box">
+        <div class="configure-border-1">
+          <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+          <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+      </div>
+    </div>
+    <!-- 页面加载动画 -->
+    <script>
+      $(document).ready(function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+      })
+    </script>
+  
+  
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -363,7 +386,7 @@ MySQL语法
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-16
+                    2022-10-17
                 </div>
                 
 
@@ -385,13 +408,13 @@ MySQL语法
                 <hr>
 <h1 id="简介-操作MySQL"><a href="#简介-操作MySQL" class="headerlink" title="简介 操作MySQL"></a>简介 操作MySQL</h1><span id="more"></span>
 <h1 id="MySQL语法"><a href="#MySQL语法" class="headerlink" title="MySQL语法"></a>MySQL语法</h1><ul>
-<li>创建数据库 以bjpowernode为例<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database bjpowernode;</span><br></pre></td></tr></table></figure></li>
-<li>使用bjpoernode的数据 以bjpowernode为例<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use bjpoernode;</span><br></pre></td></tr></table></figure></li>
-<li>查看当前数据库的表格<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure></li>
-<li>初始化数据 复制在MySQL文件下resources文件下的bjpoernode.sql的路径 以bjpowernode为例<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source D:\MySQL\resources\bjpoernode.sql</span><br></pre></td></tr></table></figure></li>
-<li>删除数据库 以bjpowernode为例<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database bjpowernode;</span><br></pre></td></tr></table></figure></li>
-<li>查看表格结构 以dept为例<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">desc dept;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>查看表格数据 以dept为例<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from dept;</span><br></pre></td></tr></table></figure></li>
+<li>创建数据库 以bjpowernode为例  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database bjpowernode;</span><br></pre></td></tr></table></figure></li>
+<li>使用bjpoernode的数据 以bjpowernode为例  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use bjpoernode;</span><br></pre></td></tr></table></figure></li>
+<li>查看当前数据库的表格  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure></li>
+<li>初始化数据 复制在MySQL文件下resources文件下的bjpoernode.sql的路径 以bjpowernode为例  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source D:\MySQL\resources\bjpoernode.sql</span><br></pre></td></tr></table></figure></li>
+<li>删除数据库 以bjpowernode为例  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database bjpowernode;</span><br></pre></td></tr></table></figure></li>
+<li>查看表格结构 以dept为例  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">desc dept;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>查看表格数据 以dept为例  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from dept;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
                 
@@ -538,9 +561,9 @@ MySQL语法
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MySQL">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
                         
-                        <span class="card-title">MySQL</span>
+                        <span class="card-title">MySQL安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1013,29 +1036,33 @@ $(function () {
 </script>
 
     <!-- 白天和黑夜主题 -->
-<div class="stars-con">
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  <div class="stars-con">
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>  
-</div>
-
-<script>
+  </div>
+  <script>
     function switchNightMode() {
-        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
         setTimeout(function () {
-            $('body').hasClass('DarkMode') 
-            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
-            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
             
-            setTimeout(function () {
+          setTimeout(function () {
             $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-                $(this).remove()
+              $(this).remove()
             })
-            }, 2e3)
+          }, 2e3)
         })
     }
-</script>
-
+  </script>
+  
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -1043,6 +1070,30 @@ $(function () {
     </a>
 </div>
 
+    <!-- 弹出文字 -->
+    
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write(
+                '<script type="text/javascript" src="/libs/others/popupText.js"><\/script>'
+            );
+        }
+    </script>
+    
+
+
+    <!-- 冒泡 -->
+    
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/"><\/script>'
+        );
+    </script>
+     
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
@@ -1050,6 +1101,46 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  <div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+  </div>
+  <script>
+    function switchNightMode() {
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+        })
+    }
+  </script>
+  
+     /* 模式判断 */
+    <script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+</script>
+
 
     
 
@@ -1063,6 +1154,9 @@ $(function () {
             }
         </script>
     
+    <!--动态背景-->
+<div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<script src="/js/canvas_moving.js"></script>
 
     <!-- 雪花特效 -->
      
@@ -1122,8 +1216,8 @@ $(function () {
     <!--腾讯兔小巢-->
     
     
-    <script type="text/javascript" color="0,0,255"
-        pointColor="0,0,255" opacity='0.7'
+    <script type="text/javascript" color="200,50,25"
+        pointColor="200,50,25" opacity='1'
         zIndex="-1" count="99"
         src="/libs/background/canvas-nest.js"></script>
     
