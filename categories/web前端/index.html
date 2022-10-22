@@ -319,7 +319,14 @@
 
     <div class="bg-cover pd-header about-cover">
     <div class="container">
-    <div class="row">
+    
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + Math.floor(Math.random()*7)+1 + '.jpg';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
+    
+<div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -356,12 +363,6 @@
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + Math.floor(Math.random()*7) + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
     </div>
 </div>
 
@@ -379,17 +380,17 @@
                 
                 
                 
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
+                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
                             <div class="moleskine-notebook">
                                 <div class="chip notebook-cover center-align waves-effect waves-light
-                                 chip-default "
+                                 chip-active "
                                         style="background-color: #F9EBEA;">                                               
                                     <div class="notebook-skin
-                                         chip-default "
-                                        >数据库                                  
+                                         chip-active "
+                                        >web前端                                  
                                     </div>
                                 </div>
                                 <div class="notebook-page dotted"></div>
@@ -400,17 +401,17 @@
                 </a>
                 
                 
-                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 2">
+                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
                             <div class="moleskine-notebook">
                                 <div class="chip notebook-cover center-align waves-effect waves-light
-                                 chip-active "
+                                 chip-default "
                                         style="background-color: #F5EEF8;">                                               
                                     <div class="notebook-skin
-                                         chip-active "
-                                        >web前端                                  
+                                         chip-default "
+                                        >数据库                                  
                                     </div>
                                 </div>
                                 <div class="notebook-page dotted"></div>

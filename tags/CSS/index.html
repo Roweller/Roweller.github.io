@@ -319,7 +319,14 @@
 
     <div class="bg-cover pd-header about-cover">
     <div class="container">
-    <div class="row">
+    
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + Math.floor(Math.random()*7)+1 + '.jpg';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
+    
+<div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -356,12 +363,6 @@
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + Math.floor(Math.random()*7) + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
     </div>
 </div>
 
@@ -378,10 +379,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/html/" title="html: 1">
+                <a href="/tags/CSS/" title="CSS: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="html" style="background-color: #F9EBEA;">html
+                             chip-active "
+                            data-tagname="CSS" style="background-color: #F9EBEA;">CSS
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -396,10 +397,10 @@
                 </a>
                 
                 
-                <a href="/tags/CSS/" title="CSS: 1">
+                <a href="/tags/html/" title="html: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="CSS" style="background-color: #D5F5E3;">CSS
+                             chip-default "
+                            data-tagname="html" style="background-color: #D5F5E3;">html
                         <span class="tag-length">1</span>
                     </span>
                 </a>
