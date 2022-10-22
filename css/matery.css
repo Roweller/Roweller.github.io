@@ -2458,8 +2458,8 @@ body.DarkMode .skillbar .skill-bar-percent {
     text-align: center;
     border-radius: 50%;
     position: fixed;
-    right: 15px;
-    bottom: 195px;
+    left: 15px;
+    bottom: 135px;
     margin-bottom: 0;
     z-index: 900;
 }

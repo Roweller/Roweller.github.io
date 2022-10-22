@@ -358,7 +358,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "/medias/banner/" + new Math.random()*7 + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -400,7 +400,7 @@
                 </a>
                 
                 
-                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 1">
+                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
@@ -734,8 +734,6 @@ MySQL的配置配置环境变量
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -755,7 +753,7 @@ MySQL的配置配置环境变量
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/Roweller" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1062,8 +1060,6 @@ $(function () {
 </script>
 
     
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
