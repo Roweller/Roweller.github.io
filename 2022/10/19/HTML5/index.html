@@ -659,8 +659,21 @@ html标签的子标签
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><ul>
 <li><p>格式</p>
-</li>
-<li><p>form的主要的属性 </p>
+<pre class="line-numbers language-html"><code class="language-html">&lt;form action="url地址" nethod = "提交方式" name ="username">
+  <span class="token comment" spellcheck="true">&lt;!--maxlength规定输入最大长度--></span>
+  用户名：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+  密  码：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span> 
+  <span class="token comment" spellcheck="true">&lt;!--单选按钮 实现多选一--></span>
+  <span class="token comment" spellcheck="true">&lt;!--name是表单域名字 单选按钮必须要有相同的名字name 才能多选一--></span>
+  <span class="token comment" spellcheck="true">&lt;!--checked默认选项--></span>
+  性别： 男&lt;input type ="radio" name = "sex" value ="男" checked ="checked"> 女 &lt;input type ="radio" name = "sex" vuale ="女"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+  <span class="token comment" spellcheck="true">&lt;!--多选按钮 实现--></span>
+  爱好： 吃饭&lt;input type ="checkbox" name = "bobby" value="吃饭"> 睡觉 &lt;input type ="checkbox" name = "bobby" value="睡觉">打游戏&lt;input type ="checkbox" name = "bobby" value="打游戏"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+  &lt;input type ="file">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span> 
+！[](/images/input单元元素.png)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>form的主要的属性 </p>
 <table>
 <thead>
 <tr>
@@ -685,6 +698,68 @@ html标签的子标签
 <td>表单域的名称</td>
 </tr>
 </tbody></table>
+</li>
+<li><p>表单控件-input输入表单元素</p>
+</li>
+<li><ul>
+<li>type属性及其描述<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>button</td>
+<td>定义可点击的按钮</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>定义复选框</td>
+</tr>
+<tr>
+<td>file</td>
+<td>定义输入字段和“浏览”按钮，供文件上传</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>定义隐藏的输入字段</td>
+</tr>
+<tr>
+<td>image</td>
+<td>定义图像的形式的提交按钮</td>
+</tr>
+<tr>
+<td>password</td>
+<td>定义密码字段，字段被掩码</td>
+</tr>
+<tr>
+<td>radio</td>
+<td>定义单选按钮</td>
+</tr>
+<tr>
+<td>rest</td>
+<td>定义重置按钮，会清除表单的搜有数据</td>
+</tr>
+<tr>
+<td>submit</td>
+<td>定义提交按钮，把表单数据提交给服务器</td>
+</tr>
+<tr>
+<td>text</td>
+<td>定义单行输入字段</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>input中除type外的标签属性<br>|属性|属性值|描述|<br>|name|自定义|定义input元素的名称|<br>|value|自定义|规定input元素的值|<br>|checked|checked|决定input元素的默认值|<br>|maxlength|正整数|规定字段的字符最大长度|</li>
+</ul>
+</li>
+<li><p>表单控件-select下拉表单元素</p>
+</li>
+<li><p>表单控件-texttarea文本域元素</p>
 <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2></li>
 <li><p>介绍<br>超链接路径分为相对路径和绝对路径<br>打开同一目录下的网页，用相对路径<br>打开外部网页，用绝对路径</p>
 </li>
@@ -958,20 +1033,20 @@ frameborder="no" framespacing="0" allowfullscreen="true">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
+                <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
                         
-                        <span class="card-title">MySQL安装</span>
+                        <span class="card-title">MySQL操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-简介 下载MySQL
+简介 操作MySQL
                         
                     </div>
                     <div class="publish-info">
