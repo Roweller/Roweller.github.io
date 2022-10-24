@@ -60,7 +60,8 @@
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -698,14 +699,14 @@
             
             
             
-            <a href="/tags/MySQL/">
-                <span class="chip center-align waves-effect waves-light chip-default">MySQL</span>
+            <a href="/tags/html/">
+                <span class="chip center-align waves-effect waves-light chip-default">html</span>
             </a>
             
             
             
-            <a href="/tags/html/">
-                <span class="chip center-align waves-effect waves-light chip-default">html</span>
+            <a href="/tags/MySQL/">
+                <span class="chip center-align waves-effect waves-light chip-default">MySQL</span>
             </a>
             
             
@@ -1106,6 +1107,14 @@ $(function () {
 
 
     
+        <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
+        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script>
+          if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+          }
+        </script>
+    
 
     
         
@@ -1125,14 +1134,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      

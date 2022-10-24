@@ -60,7 +60,8 @@
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -325,20 +326,20 @@
                 </a>
                 
                 
-                <a href="/tags/MySQL/" title="MySQL: 2">
+                <a href="/tags/html/" title="html: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="MySQL" style="background-color: #F5EEF8;">MySQL
-                        <span class="tag-length">2</span>
+                            data-tagname="html" style="background-color: #F5EEF8;">html
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/html/" title="html: 1">
+                <a href="/tags/MySQL/" title="MySQL: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="html" style="background-color: #D5F5E3;">html
-                        <span class="tag-length">1</span>
+                            data-tagname="MySQL" style="background-color: #D5F5E3;">MySQL
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -366,7 +367,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"CSS","weight":1,"link":"/tags/CSS/"},{"text":"MySQL","weight":2,"link":"/tags/MySQL/"},{"text":"html","weight":1,"link":"/tags/html/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"CSS","weight":1,"link":"/tags/CSS/"},{"text":"html","weight":1,"link":"/tags/html/"},{"text":"MySQL","weight":2,"link":"/tags/MySQL/"}], {
         autoResize: true
     });
 </script>
@@ -713,6 +714,14 @@ $(function () {
 
 
     
+        <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
+        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script>
+          if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+          }
+        </script>
+    
 
     
         
@@ -732,14 +741,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      

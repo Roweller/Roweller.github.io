@@ -35,7 +35,7 @@ $(function () {
                                 opacity: 0,
                                 top: 0
                             }, 650)
-                        }, 400)
+                        }, 300)
                     })
                 return false
             }

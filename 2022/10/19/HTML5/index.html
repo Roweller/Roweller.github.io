@@ -8,9 +8,14 @@
     <meta name="description" content="
 简介  html学习
 标签的类型
-根标签1&amp;lt;html&amp;gt;网页内容&amp;lt;/html&amp;gt;
+根标签
+&amp;lt;html&amp;gt;网页内容&amp;lt;/html&amp;gt;
+
 制作网页时，内容要都在根标签里面
-html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;l">
+
+html标签的子标签
+&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -65,7 +70,8 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -274,6 +280,26 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
         </div>
     </div>
 </div>
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
 
 
 
@@ -324,7 +350,7 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-21
+                    2022-10-24
                 </div>
                 
 
@@ -340,23 +366,46 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
         
 
         
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <hr>
 <h1 id="简介-html学习"><a href="#简介-html学习" class="headerlink" title="简介  html学习"></a>简介  html学习</h1><span id="more"></span>
 <h2 id="标签的类型"><a href="#标签的类型" class="headerlink" title="标签的类型"></a>标签的类型</h2><ul>
-<li>根标签<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;网页内容&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-制作网页时，内容要都在根标签里面</li>
-<li>html标签的子标签<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-放在html标签中<br><br>head标签的内容不会出现在网页中，设置网页的属性，看不见<br><br>body标签的内容会出现在网页中,能看见</li>
-<li>head标签的子标签title<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>网页标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
-搜索引擎点击后，超链接的页面标题</li>
-<li>解析类型标签<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-告诉网页以html5解析网页，html5应用广泛，放在html标签之前</li>
-<li>meta标签<br>meta标签放在head标签中<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> =<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">&quot;keywords&quot;</span> <span class="attr">content</span> = <span class="string">&quot;html,前端&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span> = <span class="string">&quot;refresh&quot;</span> <span class="attr">content</span> =<span class="string">&quot;3;url = https://www.baidu.com/&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>   meta标签放在head标签中<br>   <br><br>   http-equiv 设置转到指定网页的时间，地址<br>   <br><br>   name设置属性，content告诉搜索引擎网页的关键字<br>   <br><br>   name不同属性的设置：</p>
+<li><p>根标签</p>
+<pre><code>&lt;html&gt;网页内容&lt;/html&gt;
+</code></pre>
+<p>制作网页时，内容要都在根标签里面</p>
+</li>
+<li><p>html标签的子标签</p>
+<pre><code>&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;&lt;/body&gt;
+</code></pre>
+<p>放在html标签中<br><br>head标签的内容不会出现在网页中，设置网页的属性，看不见<br><br>body标签的内容会出现在网页中,能看见</p>
+</li>
+<li><p>head标签的子标签title</p>
+<pre><code>&lt;title&gt;网页标题&lt;/title&gt;
+</code></pre>
+<p>搜索引擎点击后，超链接的页面标题</p>
+</li>
+<li><p>解析类型标签</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!doctype html></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>告诉网页以html5解析网页，html5应用广泛，放在html标签之前</p>
+</li>
+<li><p>meta标签<br>meta标签放在head标签中</p>
+<pre class="line-numbers language-html"><code class="language-html">&lt;meta charset ="utf-8">
+&lt;meta name = "keywords" content = "html,前端">
+&lt;meta http-equiv = "refresh" content ="3;url = https://www.baidu.com/">
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>meta标签放在head标签中<br>http-equiv 设置转到指定网页的时间，地址<br>name设置属性，content告诉搜索引擎网页的关键字</p>
+</li>
+<li><p>name不同属性的设置：</p>
 <table>
 <thead>
 <tr>
@@ -389,27 +438,77 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
 <td>网页的描述 显示在搜索引擎界面</td>
 </tr>
 </tbody></table>
-<ul>
+</li>
 <li><p>头部标签<br>放在body标签中</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>头部<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span>头部<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>某一部分的头部部分</p>
 </li>
 <li><p>主要部标签<br>放在body标签中</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">main</span>&gt;</span>主体<span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span>主体<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>网页的主体部分，一个网页只能有一个main标签</p>
 </li>
 <li><p>底部标签<br>放在body标签中</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>底部<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span>底部<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 <li><p>导航标签<br>放在body标签中</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span>导航<span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span>导航<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>便于查找网页内容</p>
 </li>
-<li><p>导航标签<br>放在body标签中</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>导航<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li><p>边框标签<br>放在body标签中</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>aside</span><span class="token punctuation">></span></span>导航<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>aside</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>放在网页的边栏部分</p>
 </li>
+<li><p>表格标签</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!--table表示表格，width和height限定表格的大小，border表示行距--></span>
+&lt;table align="center" width ="500" height ="250" border="1" >
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- tr表示每一行 --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>排名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- th表格头部 --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>名字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>123<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- td表格主体 --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>x西游记<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span> <span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>align</td>
+<td>left、certer、right</td>
+<td>规定表格对周围元素的对齐方式</td>
+</tr>
+<tr>
+<td>border</td>
+<td>1 or “”</td>
+<td>规定单元格是否有边框</td>
+</tr>
+<tr>
+<td>cellpadding</td>
+<td>像素值</td>
+<td>规定单元格与其内容之间的空白</td>
+</tr>
+<tr>
+<td>width</td>
+<td>像素值或百分比</td>
+<td>规定表格宽度</td>
+</tr>
+</tbody></table>
+</li>
 <li><p>文章标签<br>放在body标签中</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>导航<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span><span class="token punctuation">></span></span>导航<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>放在文章</p>
 </li>
 <li><p>语义化标签</p>
@@ -435,19 +534,25 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
 </tbody></table>
 </li>
 <li><p>分组标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hgroup</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hgroup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>hgroup</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>将有关的的标签放在hgroup中</p>
 </li>
 <li><p>标题标签 </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>****<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p> 内容****放在标签中间，第二个标签加/与第一个标签进行区分，<br> h1表示一级标签，h2则表示二级标签，h1-h6</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>****<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>内容****放在标签中间，第二个标签加/与第一个标签进行区分，<br>h1表示一级标签，h2则表示二级标签，h1-h6</p>
 </li>
 <li><p>段落标签</p>
- <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>$$$<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<p> 与标题标签用法相同,表示一个段落</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>$$$<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>与标题标签用法相同,表示一个段落</p>
 <h2 id="标签的属性"><a href="#标签的属性" class="headerlink" title="标签的属性"></a>标签的属性</h2></li>
-<li><p>标签属性的分类</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/u013519551/article/details/52525855</span><br></pre></td></tr></table></figure></li>
+<li><p>标签属性的分类<br><a href = "https://blog.csdn.net/u013519551/article/details/52525855" target = "_blank">标签属性分类</a></p>
+</li>
 <li><p>标签属性的使用</p>
 <table>
 <thead>
@@ -500,18 +605,14 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
 <td>status-bar</td>
 <td>定义被窗口状态栏使用的字体</td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
 </tbody></table>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span> = <span class="string">&quot;yellow&quot;</span> <span class="attr">size</span> =<span class="string">&#x27;3&#x27;</span>&gt;</span>内容<span class="tag">&lt;<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> color设置“内容”的颜色，属性值yellow放在””中,属性之间用空格隔开</p>
+<pre class="line-numbers language-html"><code class="language-html">&lt;font color = "yellow" size ='3'>内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>color设置“内容”的颜色，属性值yellow放在””中,属性之间用空格隔开</p>
 <h2 id="块元素和行内元素"><a href="#块元素和行内元素" class="headerlink" title="块元素和行内元素"></a>块元素和行内元素</h2></li>
 <li><p>介绍<br>块元素：宏观展示，大多数都能放，用了会换行<br>行内元素：对一行内的元素，进行添加修饰，不会换行<br>行内元素一般可放在块元素中，而块元素很少放在行内元素中，用错了浏览器会自动修正</p>
 </li>
-<li><p>分类<br>块元素</p>
+<li><p> 分类<br>块元素</p>
 <table>
 <thead>
 <tr>
@@ -530,33 +631,74 @@ html标签的子标签12&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&am
 </tbody></table>
 </li>
 </ul>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
-<li>介绍<br>ul表示列表标签<br><br>li表示列表的项<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>结构<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>表现<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
- <img src="/images/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8.png"></li>
-</ul>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ul>
-<li><p>介绍</p>
-<br>
-ol表示列表标签
-<br>li表示列表的项
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>结构<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>表现<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li><p>无序列表<br>ul表示列表标签<br>li表示列表的项</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>结构<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>表现<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/images/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8.png"></p>
+</li>
+<li><p>有序列表<br>ol表示列表标签<br>li表示列表的项</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>结构<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>表现<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="/images/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8.png"></p>
 </li>
+<li><p>定义列表<br>dl表示定义列表<br>dt表示要下定义的东西<br>dd表示下的定义</p>
+</li>
 </ul>
-<h2 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h2><ul>
-<li>介绍<br>
-dl表示定义列表
-<bt>dt表示要下定义的东西
-<br>dd表示下的定义
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">dt</span>&gt;</span>结构<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">dd</span>&gt;</span>结构是...<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">dd</span>&gt;</span>结构能..<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><ul>
-<li>介绍<br>超链接路径分为相对路径和绝对路径<br><br> 打开同一目录下的网页，用相对路径<br><br>打开外部网页，用绝对路径</li>
-<li>网页跳转<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">&quot;https://www12.baidu.com/&quot;</span> <span class="attr">target</span> = <span class="string">&quot;_blank&quot;</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-href填网址，既可是绝对路径，也可是相对路径  target填是否打开新的网页，_blank代表打开，默认不打开</li>
-<li>超链接相互跳转<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span> = <span class="string">&quot;top&quot;</span> <span class="attr">href</span> = <span class="string">&quot;#bottom&quot;</span> <span class="attr">target</span> = <span class="string">&quot;_blank&quot;</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span> = <span class="string">&quot;bottom&quot;</span> <span class="attr">href</span> = <span class="string">&quot;#top&quot;</span> <span class="attr">target</span> = <span class="string">&quot;_blank&quot;</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-为超链接赋给一个id，href填入#+id，即可到达该网页指定超链接的位置<br><br>href填入#，则默认返回该网页顶部，填入”javascrip:;”则不会跳转到任何界面</li>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>结构<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span> <span class="token comment" spellcheck="true">&lt;!--被定义的对象--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>结构是...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>结构能..<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><ul>
+<li><p>格式</p>
+</li>
+<li><p>form的主要的属性 </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>action</td>
+<td>url地址</td>
+<td>用于接收表单数据的服务器url地址</td>
+</tr>
+<tr>
+<td>method</td>
+<td>get/post</td>
+<td>用于设置表单提交的方式</td>
+</tr>
+<tr>
+<td>name</td>
+<td>名称</td>
+<td>表单域的名称</td>
+</tr>
+</tbody></table>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2></li>
+<li><p>介绍<br>超链接路径分为相对路径和绝对路径<br>打开同一目录下的网页，用相对路径<br>打开外部网页，用绝对路径</p>
+</li>
+<li><p>网页跳转</p>
+<pre class="line-numbers language-html"><code class="language-html">&lt;a href = "https://www12.baidu.com/" target = "_blank">超链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>href填网址，既可是绝对路径，也可是相对路径  target填是否打开新的网页，_blank代表打开，默认不打开</p>
+</li>
+<li><p>超链接相互跳转</p>
+<pre class="line-numbers language-html"><code class="language-html">&lt;a id = "top" href = "#bottom" target = "_blank">超链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+&lt;a id = "bottom" href = "#top" target = "_blank">超链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>为超链接赋给一个id，href填入#+id，即可到达该网页指定超链接的位置<br>href填入#，则默认返回该网页顶部，填入”javascrip:;”则不会跳转到任何界面</p>
+</li>
 </ul>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
 <li><p>图片分类</p>
@@ -591,28 +733,41 @@ href填网址，既可是绝对路径，也可是相对路径  target填是否�
 </tbody></table>
 </li>
 <li><p>用法</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">       <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span> = <span class="string">&quot;https://tse3-mm.cn.bing.net/th/id/OIP-C.Rq5h9rKa8uBoUxtGTCCVRQHaKd?w=130&amp;h=184&amp;c=7&amp;r=0&amp;o=5&amp;dpr=1.3&amp;pid=1.7&quot;</span> <span class="attr">width</span> = <span class="string">&quot;800&quot;</span> <span class="attr">alt</span> = <span class="string">&quot;风景&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span> = <span class="string">&quot;./img.gif&quot;</span> <span class="attr">alt</span> = <span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  ```  </span><br><span class="line">    src填本地图片的路径，图片要和网页在同一目录下，也可填图片网址</span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    width设置图片的大小</span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    alt对图片进行命名，一般不会在网页上显示，而会便于搜素引擎查找</span><br><span class="line"></span><br><span class="line">## 内联框架</span><br><span class="line">  - 介绍</span><br><span class="line">     引入别的网页在自己的网页中，放在一个指定大小的框架中</span><br><span class="line">  - 用法</span><br><span class="line">   ```html</span><br><span class="line">      <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span> =<span class="string">&quot;https://www.baidu.com&quot;</span> <span class="attr">width</span> = <span class="string">&quot;800&quot;</span> <span class="attr">height</span> = <span class="string">&quot;600&quot;</span> <span class="attr">framebordor</span> = <span class="string">&quot;0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<p>src放网址，width和height设置大小，framebordor边框设置</p>
+<pre class="line-numbers language-html"><code class="language-html">&lt;img src = "https://tse3-mm.cn.bing.net/th/id/OIP-C.Rq5h9rKa8uBoUxtGTCCVRQHaKd?w=130&amp;h=184&amp;c=7&amp;r=0&amp;o=5&amp;dpr=1.3&amp;pid=1.7" width = "800" alt = "风景">
+&lt;img src = "./img.gif" alt = "1">
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>src填本地图片的路径，图片要和网页在同一目录下，也可填图片网址<br>width设置图片的大小<br>alt对图片进行命名，一般不会在网页上显示，而会便于搜素引擎查找</p>
 </li>
 </ul>
+<h2 id="内联框架"><a href="#内联框架" class="headerlink" title="内联框架"></a>内联框架</h2><ul>
+<li>介绍<br>引入别的网页在自己的网页中，放在一个指定大小的框架中</li>
+<li>用法<pre class="line-numbers language-html"><code class="language-html">&lt;iframe src ="https://www.baidu.com" width = "800" height = "600" framebordor = "0"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+src放网址，width和height设置大小，framebordor边框设置</li>
+</ul>
 <h2 id="音频、视频"><a href="#音频、视频" class="headerlink" title="音频、视频"></a>音频、视频</h2><ul>
-<li>音频<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">contrals</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span> = <span class="string">&quot;./scorce/ji.mp3&quot;</span> &gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span> = <span class="string">&quot;./scorce/ji.mp3&quot;</span> <span class="attr">type</span> = <span class="string">&quot;audio/mp3 &quot;</span> <span class="attr">width</span> = <span class="string">&quot;400&quot;</span> <span class="attr">height</span> = <span class="string">&quot;300&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
-contrals是否允许用户控制播放<br><br>sourse用于windows9以上的浏览器<br><br>embed用于windows8以下的浏览器</li>
+<li>音频<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span> <span class="token attr-name">contrals</span><span class="token punctuation">></span></span>
+  &lt;source src = "./scorce/ji.mp3" >
+  &lt;embed src = "./scorce/ji.mp3" type = "audio/mp3 " width = "400" height = "300">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+contrals是否允许用户控制播放<br>sourse用于windows9以上的浏览器<br>embed用于windows8以下的浏览器</li>
 </ul>
 <ul>
 <li><p>视频</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">contrals</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span> = <span class="string">&quot;./scorce/ji.mp4&quot;</span> &gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span> = <span class="string">&quot;./scorce/ji.mp4&quot;</span> <span class="attr">type</span> = <span class="string">&quot;audio/mp4 &quot;</span> <span class="attr">width</span> = <span class="string">&quot;400&quot;</span> <span class="attr">height</span> = <span class="string">&quot;300&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>contrals是否允许用户控制播放<br><br>sourse用于windows9以上的浏览器<br><br>embed用于windows8以下的浏览器</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">contrals</span><span class="token punctuation">></span></span>
+  &lt;source src = "./scorce/ji.mp4" >
+  &lt;embed src = "./scorce/ji.mp4" type = "audio/mp4 " width = "400" height = "300">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>contrals是否允许用户控制播放<br>sourse用于windows9以上的浏览器<br>embed用于windows8以下的浏览器</p>
 </li>
 <li><p>第三方</p>
-<pre><code class="html">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=77217003&amp;bvid=BV1XJ411X7Ud&amp;cid=
- 132017557&amp;page=26&quot; scrolling=&quot;no&quot; border=&quot;0&quot;         
- frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; 
-&lt;/iframe&gt; 
-</code></pre>
-<p>视频和音频一般较大，会占用外存和内存，可将自己的视频音频借用第三方网页进行打开，不会占用自己的网页空间<br><br>找到视频下的分享链接，复制代码即可  </p>
-</li>
+<iframe src="//player.bilibili.com/player.html?aid=77217003&bvid=BV1XJ411X7Ud&cid=132017557&page=26" scrolling="no" border="0"         
+frameborder="no" framespacing="0" allowfullscreen="true"> 
+</iframe> </li>
 </ul>
+<p>视频和音频一般较大，会占用外存和内存，可将自己的视频音频借用第三方网页进行打开，不会占用自己的网页空间<br>找到视频下的分享链接，复制代码即可  </p>
 
                 
             </div>
@@ -803,20 +958,20 @@ contrals是否允许用户控制播放<br><br>sourse用于windows9以上的浏�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
+                <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
                         
-                        <span class="card-title">MySQL安装</span>
+                        <span class="card-title">MySQL操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-简介 下载MySQL
+简介 操作MySQL
                         
                     </div>
                     <div class="publish-info">
@@ -1337,6 +1492,14 @@ $(function () {
 
 
     
+        <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
+        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script>
+          if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+          }
+        </script>
+    
 
     
         
@@ -1356,14 +1519,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      

@@ -60,7 +60,8 @@
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -492,23 +493,29 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
+                    <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
                             
-                            <span class="card-title">MySQL操作</span>
+                            <span class="card-title">MySQL安装</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-简介 操作MySQL
-MySQL语法
-创建数据库 以bjpowernode为例  1create database bjpowernode;
-使用bjpoernode的数据 以bjpowernode为例  1use bjpoernode;
+简介 下载MySQL
+MySQL的下载下载网址：https://downloads.mysql.com/archives/community/
+
+MySQL的配置配置环境变量
+ 打开电脑高级系统配置
+复制MySQL的路径
+
+
+
+新建MyS
                             
                         </div>
                         <div class="publish-info">
@@ -542,27 +549,28 @@ MySQL语法
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
+                    <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
                             
-                            <span class="card-title">MySQL安装</span>
+                            <span class="card-title">MySQL操作</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
                                 
-简介 下载MySQL
-MySQL的下载  下载网址：https://downloads.mysql.com/archives/community/
-  
-MySQL的配置配置环境变量
-打开电脑高级系统配置  
+简介 操作MySQL
+MySQL语法
+ 创建数据库 以bjpowernode为例
+create database bjpowernode;
 
-复制MySQL的路径
-  
+
+使用bjpoernode的数据 以bjpowernode为例
+use bjpoernode;
+
                             
                         </div>
                         <div class="publish-info">
@@ -938,6 +946,14 @@ $(function () {
 
 
     
+        <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
+        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script>
+          if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+          }
+        </script>
+    
 
     
         
@@ -957,14 +973,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      
