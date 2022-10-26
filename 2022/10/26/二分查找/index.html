@@ -4,10 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS学习, Roweller">
-    <meta name="description" content="简介 CSS学习
+    <meta name="keywords" content="二分查找, Roweller">
+    <meta name="description" content="简介 二分法查找数据
 
-">
+
+思路
+
+二分查找适用于有序列表，当数组中含有重复元素时，可能会返回的下标不是唯一的。可看教程二分法
+
+写法定义target在一个的区间内，用区间的的范围查找target，边界值的取值是二分法的核心
+
+
+
+ 写法一：">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +28,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS学习 | Roweller</title>
+    <title>二分查找 | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -261,12 +270,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS学习</h1>
+                    <h1 class="description center-align post-title">二分查找</h1>
                 </div>
             </div>
         </div>
@@ -310,8 +319,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/tags/%E6%9F%A5%E6%89%BE/">
+                                <span class="chip bg-color">查找</span>
                             </a>
                         
                     </div>
@@ -322,8 +331,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -335,14 +344,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-22
+                    2022-10-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-22
+                    2022-10-26
                 </div>
                 
 
@@ -366,9 +375,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介-CSS学习"><a href="#简介-CSS学习" class="headerlink" title="简介 CSS学习"></a>简介 CSS学习</h1><span id="more"></span>
+                <h1><span id="简介-二分法查找数据">简介 二分法查找数据</span></h1><span id="more"></span>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<ul>
+<li>思路</li>
+</ul>
+<p>二分查找适用于有序列表，当数组中含有重复元素时，可能会返回的下标不是唯一的。可看教程<a href="https://www.bilibili.com/video/BV1fA4y1o715/?vd_source=580cd891d54084c6f0158e0c631311d8" target="_blank">二分法</a></p>
+<ul>
+<li>写法<br>定义target在一个的区间内，用区间的的范围查找target，边界值的取值是二分法的核心</li>
+</ul>
+<ul>
+<li><ul>
+<li> 写法一：while(start&lt; end) [start,end)区间 if(nums[(start+end)/2]&gt;=target),令end=(start+end)/2 , if(nums[(start+end)/2]&lt;=target),令start=(start+end)/2+1 注意等号的取值</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token operator">></span>nums<span class="token punctuation">[</span>end<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">||</span>target<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> index<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             <span class="token keyword">int</span> mid<span class="token operator">=</span> <span class="token punctuation">(</span>start<span class="token operator">+</span>end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
+                end<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span> 
+                start<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    
+            <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//nums[mid]==target</span>
+                <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><ul>
+<li>写法二：while(start&lt;=end)，要用&lt;=，因为start==end也是会产生target [start,end]区间 if(nums[(start+end)/2]&gt;target),令end=(start+end)/2-1 , if(nums[(start+end)/2]&lt; target) , 令start=(start+end)/2+1 注意等号的取值</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token operator">></span>nums<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token operator">||</span>target<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> index<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;=</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>start<span class="token operator">+</span>end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    index <span class="token operator">=</span>mid<span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
+                end<span class="token operator">=</span>mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span> 
+                start<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> index<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>文章转自<a href="https://www.programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#_704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" target="_blank">二分查找</a></p>
+
                 
             </div>
             <hr/>
@@ -394,7 +462,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/">https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/</a>
+                    <a href="https://roweller.github.io/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">https://roweller.github.io/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -432,8 +500,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/tags/%E6%9F%A5%E6%89%BE/">
+                                    <span class="chip bg-color">查找</span>
                                 </a>
                             
                         </div>
@@ -473,9 +541,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/';
-        this.page.identifier = '/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/';
-        this.page.title = 'CSS学习';
+        this.page.url = 'https://roweller.github.io/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/';
+        this.page.identifier = '/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/';
+        this.page.title = '二分查找';
     };
     let disqus_shortname = '';
 
@@ -509,19 +577,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                <a href="/2022/10/26/%E5%8F%8C%E6%8C%87%E9%92%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="二分查找">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="双指针">
                         
-                        <span class="card-title">二分查找</span>
+                        <span class="card-title">双指针</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 二分法查找数据
+                            简介 双指针操作数组
                         
                     </div>
                     <div class="publish-info">
@@ -547,6 +615,14 @@
                         <span class="chip bg-color">查找</span>
                     </a>
                     
+                    <a href="/tags/%E7%A7%BB%E9%99%A4/">
+                        <span class="chip bg-color">移除</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -558,24 +634,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/19/HTML5/">
+                <a href="/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML5">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSS学习">
                         
-                        <span class="card-title">HTML5</span>
+                        <span class="card-title">CSS学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介  html的相关知识
+                            简介 CSS学习
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-22
                             </span>
                         <span class="publish-author">
                             
@@ -592,8 +668,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>
