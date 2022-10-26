@@ -108,11 +108,11 @@
     
     
     <entry>
-      <title>MySQL安装</title>
-      <link href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/"/>
-      <url>/2022/10/11/MySQL%E5%AE%89%E8%A3%85/</url>
+      <title>MySQL操作</title>
+      <link href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/"/>
+      <url>/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<hr><h2><span id>{}</span></h2>]]></content>
+        <content type="html"><![CDATA[<h1><span id="简介-操作mysql">简介 操作MySQL</span></h1><span id="more"></span><h1><span id="mysql语法">MySQL语法</span></h1><ul><li><p> 创建数据库 以bjpowernode为例</p><pre><code>create database bjpowernode;</code></pre></li><li><p>使用bjpoernode的数据 以bjpowernode为例</p><pre><code>use bjpoernode;</code></pre></li><li><p>查看当前数据库的表格</p><pre><code> show tables;</code></pre></li><li><p>初始化数据 复制在MySQL文件下resources文件下的bjpoernode.sql的路径 以bjpowernode为例</p><pre><code>  source D:\MySQL\resources\bjpoernode.sql</code></pre></li><li><p>删除数据库 以bjpowernode为例</p><pre><code> drop database bjpowernode;</code></pre></li><li><p>查看表格结构 以dept为例</p><pre><code> desc dept;</code></pre></li></ul><ul><li><p>查看表格数据 以dept为例</p><pre><code> select *from dept;</code></pre></li></ul>]]></content>
       
       
       <categories>
@@ -133,11 +133,11 @@
     
     
     <entry>
-      <title>MySQL操作</title>
-      <link href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/"/>
-      <url>/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/</url>
+      <title>MySQL安装</title>
+      <link href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/"/>
+      <url>/2022/10/11/MySQL%E5%AE%89%E8%A3%85/</url>
       
-        <content type="html"><![CDATA[<hr><h2><span id>{}</span></h2>]]></content>
+        <content type="html"><![CDATA[<h1><span id="简介-下载mysql">简介 下载MySQL</span></h1><span id="more"></span><h1><span id="mysql的下载">MySQL的下载</span></h1><p>下载网址：<a href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></p><p><img src="/images/MySQLdownload.png"></p><h1><span id="mysql的配置">MySQL的配置</span></h1><h2><span id="配置环境变量">配置环境变量</span></h2><ul><li> 打开电脑高级系统配置<br><img src="/images/%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png"></li><li>复制MySQL的路径</li></ul><p><img src="/images/MySQL%E7%9A%84%E8%B7%AF%E5%BE%84.png" alt="复制路径"></p><ul><li>新建MySQL_HOME环境变量</li></ul><p><img src="/images/%E6%96%B0%E5%BB%BAMySQL%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png" alt="新建环境变量"></p><ul><li>编辑path，点击“新建”</li></ul><p><img src="/images/%E6%B7%BB%E5%8A%A0path.png" alt="新建环境变量"></p><ul><li>点击“确定”，保存设置，这样环境变量就配置完成了</li></ul><h2><span id="新建mysql的配置文件">新建MySQL的配置文件</span></h2><ul><li> 在MySQL的文件目录下，新建一个文件“my.ini”，把以下的内容粘贴复制到文件里<pre class="line-numbers language-sql"><code class="language-sql"><span class="token punctuation">[</span>mysql<span class="token punctuation">]</span><span class="token keyword">default</span><span class="token operator">-</span>character<span class="token operator">-</span><span class="token keyword">set</span><span class="token operator">=</span>utf8<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>character<span class="token operator">-</span><span class="token keyword">set</span><span class="token operator">-</span>server<span class="token operator">=</span>utf8<span class="token keyword">default</span><span class="token operator">-</span>storage<span class="token operator">-</span><span class="token keyword">engine</span><span class="token operator">=</span><span class="token keyword">INNODB</span>sql_mode<span class="token operator">=</span>STRICT_TRANS_TABLES<span class="token punctuation">,</span>NO_ZERO_IN_DATE<span class="token punctuation">,</span>NO_ZERO_DATE<span class="token punctuation">,</span>ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE_USER<span class="token punctuation">,</span>NO_ENGINE_SUBSTITUTION<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2><span id="初始化mysql">初始化MySQL</span></h2><ul><li>用管理员命令打开命令框，进入到mysqlt下的bin，并输入.\mysqld       –initialize-insecure </li></ul><p><img src="/images/%E7%94%9F%E6%88%90data.png" alt=".\mysqld  --initialize-insecure"></p><h2><span id="注册mysql服务">注册MySQL服务</span></h2><ul><li>在命令行中输入mysqld -Install  </li></ul><p><img src="/images/%E6%B3%A8%E5%86%8CMySQL.png" alt="mysqld -Install"></p><h2><span id="启动mysql服务">启动MySQL服务</span></h2><ul><li>输入 net start mysql<pre><code>net start mysql</code></pre></li></ul>]]></content>
       
       
       <categories>
