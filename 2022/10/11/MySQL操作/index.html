@@ -373,9 +373,9 @@ use bjpoernode;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="简介-操作mysql">简介 操作MySQL</span></h1><span id="more"></span>
+                <h1 id="简介-操作MySQL"><a href="#简介-操作MySQL" class="headerlink" title="简介 操作MySQL"></a>简介 操作MySQL</h1><span id="more"></span>
 
-<h1><span id="mysql语法">MySQL语法</span></h1><ul>
+<h1 id="MySQL语法"><a href="#MySQL语法" class="headerlink" title="MySQL语法"></a>MySQL语法</h1><ul>
 <li><p> 创建数据库 以bjpowernode为例</p>
 <pre><code>create database bjpowernode;
 </code></pre>
@@ -490,7 +490,6 @@ use bjpoernode;
     
 
 </div>
-
                 </div>
             </div>
             
@@ -548,55 +547,6 @@ use bjpoernode;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/19/HTML5/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML5">
-                        
-                        <span class="card-title">HTML5</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            简介  html的相关知识
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-19
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
                     <div class="card-image">
                         
@@ -610,6 +560,55 @@ use bjpoernode;
                     <div class="summary block-with-text">
                         
                             简介 下载MySQL
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
+                        
+                        <span class="card-title">MySQL操作</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介 操作MySQL
                         
                     </div>
                     <div class="publish-info">
@@ -628,6 +627,7 @@ use bjpoernode;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -733,20 +733,18 @@ use bjpoernode;
             collapseDepth: Number('2'),
             headingSelector: 'h2, h3, h4'
         });
-
         // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height()* 0.4 - 64);
+        let tocHeight = parseInt($(window).height()*0.4 -45);
         let $tocWidget = $('.toc-widget');
         $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
+            let scroll11 = $(window).scrollTop();
             /* add post toc fixed. */
-            if (scroll > tocHeight) {
+            if (scroll11 >tocHeight) {
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
             }
         });
-
         
         /* 修复文章卡片 div 的宽度. */
         let fixPostCardWidth = function (srcId, targetId) {
@@ -754,7 +752,6 @@ use bjpoernode;
             if (srcDiv.length === 0) {
                 return;
             }
-
             let w = srcDiv.width();
             if (w >= 450) {
                 w = w + 21;
@@ -767,7 +764,6 @@ use bjpoernode;
             }
             $('#' + targetId).width(w);
         };
-
         // 切换TOC目录展开收缩的相关操作.
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
@@ -785,7 +781,6 @@ use bjpoernode;
         
     });
 </script>
-
     
 
 </main>

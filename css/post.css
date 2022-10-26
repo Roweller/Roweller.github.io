@@ -22,7 +22,7 @@
 
 .toc-widget {
     width: 345px;
-    padding-left: 20px;
+    padding-left: 100px;
 }
 
 .toc-widget .toc-title {
@@ -59,7 +59,6 @@
 #toc-content .toc-link::before {
     background-color: transparent;
     max-height: 25px;
-
     position: absolute;
     right: 23.5vw;
     display: block;
