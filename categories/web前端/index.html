@@ -528,7 +528,12 @@
                             
                                 简介 CSS学习
 
-
+语法CSS主要有两部分组成：选择器以及一条或几条声明，放在head标签中,可以参考CSS选择器
+CSS基础选择器
+标签选择器&lt;head>
+&lt;style>
+/*标签选择器不能差异化设置*/
+p {  /*p和{
                             
                         </div>
                         <div class="publish-info">
@@ -574,17 +579,13 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                简介  html的相关知识
+                                简介  HTML5的相关知识
 
-标签的类型
-根标签
-&lt;html&gt;网页内容&lt;/html&gt;
+标签的类型根标签&lt;html&gt;网页内容&lt;/html&gt;
 
 制作网页时，内容要都在根标签里面
-
-html标签的子标签
-&lt;head&gt;&lt;/head&gt;
-&lt;body&
+html标签的子标签&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
                             
                         </div>
                         <div class="publish-info">
@@ -607,8 +608,8 @@ html标签的子标签
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/html/">
-                            <span class="chip bg-color">html</span>
+                        <a href="/tags/HTML5/">
+                            <span class="chip bg-color">HTML5</span>
                         </a>
                         
                     </div>
@@ -919,45 +920,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-     <!-- 白天和黑夜主题 -->
-<div class="sum-moon-box">
-    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
-      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
-    </a>
-  </div>
-  <div class="stars-con">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>  
-  </div>
-  <script>
-    function switchNightMode() {
-      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
-        setTimeout(function () {
-          $('body').hasClass('DarkMode') 
-          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
-          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
-            
-          setTimeout(function () {
-            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-              $(this).remove()
-            })
-          }, 2e3)
-        })
-    }
-  </script>
-  
-    <script>
-    /* 模式判断 */
-    if (localStorage.getItem('isDark') === '1') {
-        document.body.classList.add('DarkMode');
-        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
-    } else {
-        document.body.classList.remove('DarkMode');
-        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-    }
-    </script>
-
 
     
         <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
@@ -1044,5 +1006,45 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  <div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+  </div>
+  <script>
+    function switchNightMode() {
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+        })
+    }
+  </script>
+  
+       
+    <script>
+        /* 模式判断 */
+        if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+        }
+        </script>
+    
+    
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

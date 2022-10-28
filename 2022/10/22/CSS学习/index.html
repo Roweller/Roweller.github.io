@@ -7,7 +7,12 @@
     <meta name="keywords" content="CSS学习, Roweller">
     <meta name="description" content="简介 CSS学习
 
-">
+语法CSS主要有两部分组成：选择器以及一条或几条声明，放在head标签中,可以参考CSS选择器
+CSS基础选择器
+标签选择器&amp;lt;head&gt;
+&amp;lt;style&gt;
+/*标签选择器不能差异化设置*/
+p {  /*p和{">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -342,7 +347,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-22
+                    2022-10-28
                 </div>
                 
 
@@ -368,7 +373,73 @@
             <div id="articleContent">
                 <h1 id="简介-CSS学习"><a href="#简介-CSS学习" class="headerlink" title="简介 CSS学习"></a>简介 CSS学习</h1><span id="more"></span>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>CSS主要有两部分组成：选择器以及一条或几条声明，放在head标签中,可以参考<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/css_selectors.asp" target = "_blank">CSS选择器</a></p>
+<h3 id="CSS基础选择器"><a href="#CSS基础选择器" class="headerlink" title="CSS基础选择器"></a>CSS基础选择器</h3><ul>
+<li>标签选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
+&lt;style>
+<span class="token comment" spellcheck="true">/*标签选择器不能差异化设置*/</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">/*p和{之间要有一个空格*/</span>
+  <span class="token comment" spellcheck="true">/*将p标签的属性改为设的值*/</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*：和属性值之间要有一个空格*/</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+&lt;/head>
+&lt;/style>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>类选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
+&lt;style>
+  <span class="token comment" spellcheck="true">/*目标标签添加class="red"*/</span>
+  <span class="token selector"><span class="token class">.red</span> </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*类前面加一个.*/</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+&lt;/style>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>id选择器<br>```css<head>
+<style>
+  #pink { /*前面加一个# 只能被调用一次*/
+    color: pink;
+    font-size: 12px;
+  }
+</style>
+<head></li>
+</ul>
+<body>
+ <table>
+    <p id = "pink">123</p>/*添加类*/
+ </table>
+</body>
+- 通配符选择器
+
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
+  &lt;style>
+    * </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*将所有的标签都改属性值*/</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  &lt;/style>
+&lt;head>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h3><p>CSS font用于更改字体</p>
+<ul>
+<li>字体系列<pre class="line-numbers language-css"><code class="language-css"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'宋体'</span>,serif<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*font-family改字体系列 可写多个字体*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>字体大小<pre class="line-numbers language-css"><code class="language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*font-size改字体大小 别忘了px*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>字体粗细<pre class="line-numbers language-css"><code class="language-css"><span class="token property">font-wight</span><span class="token punctuation">:</span> <span class="token number">700</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*font-weight改字体粗细  700加粗 400变细*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>字体样式<pre class="line-numbers language-css"><code class="language-css"><span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*倾斜*/</span>
+<span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*直立*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>font的复合属性</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -569,7 +640,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介  html的相关知识
+                            简介  HTML5的相关知识
                         
                     </div>
                     <div class="publish-info">
@@ -591,8 +662,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
+                    <a href="/tags/HTML5/">
+                        <span class="chip bg-color">HTML5</span>
                     </a>
                     
                 </div>
@@ -691,7 +762,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('2'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2 , h3 , h4'
         });
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height()*0.4 -45);
@@ -699,7 +770,7 @@
         $(window).scroll(function () {
             let scroll11 = $(window).scrollTop();
             /* add post toc fixed. */
-            if (scroll11 >tocHeight) {
+            if (scroll11 > 0) {
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
@@ -1044,45 +1115,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-     <!-- 白天和黑夜主题 -->
-<div class="sum-moon-box">
-    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
-      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
-    </a>
-  </div>
-  <div class="stars-con">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>  
-  </div>
-  <script>
-    function switchNightMode() {
-      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
-        setTimeout(function () {
-          $('body').hasClass('DarkMode') 
-          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
-          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
-            
-          setTimeout(function () {
-            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-              $(this).remove()
-            })
-          }, 2e3)
-        })
-    }
-  </script>
-  
-    <script>
-    /* 模式判断 */
-    if (localStorage.getItem('isDark') === '1') {
-        document.body.classList.add('DarkMode');
-        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
-    } else {
-        document.body.classList.remove('DarkMode');
-        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-    }
-    </script>
-
 
     
         <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
@@ -1169,5 +1201,45 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  <div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+  </div>
+  <script>
+    function switchNightMode() {
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+        })
+    }
+  </script>
+  
+       
+    <script>
+        /* 模式判断 */
+        if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+        }
+        </script>
+    
+    
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
