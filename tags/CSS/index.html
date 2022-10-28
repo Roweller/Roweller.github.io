@@ -326,20 +326,20 @@
                 </a>
                 
                 
-                <a href="/tags/MySQL/" title="MySQL: 2">
+                <a href="/tags/CSS/" title="CSS: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MySQL" style="background-color: #F5EEF8;">MySQL
-                        <span class="tag-length">2</span>
+                             chip-active "
+                            data-tagname="CSS" style="background-color: #F5EEF8;">CSS
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/CSS/" title="CSS: 1">
+                <a href="/tags/MySQL/" title="MySQL: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="CSS" style="background-color: #D5F5E3;">CSS
-                        <span class="tag-length">1</span>
+                             chip-default "
+                            data-tagname="MySQL" style="background-color: #D5F5E3;">MySQL
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -669,7 +669,7 @@ $(function () {
   </script>
   
     <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
+<div id="backTop" class="top-scroll" style="position:fixed;bottom:50px;left:15px;cursor: pointer;">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
     </a>
@@ -824,11 +824,11 @@ $(function () {
     <script>
         /* 模式判断 */
         if (localStorage.getItem('isDark') === '1') {
-            document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
-        } else {
-            document.body.classList.remove('DarkMode');
+             document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+        } else { 
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')   
         }
         </script>
     
