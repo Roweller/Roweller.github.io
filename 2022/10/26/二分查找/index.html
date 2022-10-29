@@ -618,6 +618,14 @@
                         <span class="chip bg-color">移除</span>
                     </a>
                     
+                    <a href="/tags/%E7%BF%BB%E8%BD%AC/">
+                        <span class="chip bg-color">翻转</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9B%BF%E6%8D%A2/">
+                        <span class="chip bg-color">替换</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1232,13 +1240,12 @@ $(function () {
   
     <script>
         /* 模式判断 */
-        if (localStorage.getItem('isDark') === '1') {
+        if (localStorage.getItem('isDark') !== '1') {
                document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
         } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-           
         }
         </script>
     

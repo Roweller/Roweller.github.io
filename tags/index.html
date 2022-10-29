@@ -317,11 +317,11 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/CSS/" title="CSS: 1">
+                <a href="/tags/CSS/" title="CSS: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="CSS" style="background-color: #F9EBEA;">CSS
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -361,6 +361,24 @@
                     </span>
                 </a>
                 
+                
+                <a href="/tags/%E7%BF%BB%E8%BD%AC/" title="翻转: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="翻转" style="background-color: #F8F9F9;">翻转
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%9B%BF%E6%8D%A2/" title="替换: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="替换" style="background-color: #82E0AA;">替换
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -385,7 +403,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"CSS","weight":1,"link":"/tags/CSS/"},{"text":"MySQL","weight":2,"link":"/tags/MySQL/"},{"text":"HTML5","weight":1,"link":"/tags/HTML5/"},{"text":"查找","weight":2,"link":"/tags/查找/"},{"text":"移除","weight":1,"link":"/tags/移除/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"CSS","weight":2,"link":"/tags/CSS/"},{"text":"MySQL","weight":2,"link":"/tags/MySQL/"},{"text":"HTML5","weight":1,"link":"/tags/HTML5/"},{"text":"查找","weight":2,"link":"/tags/查找/"},{"text":"移除","weight":1,"link":"/tags/移除/"},{"text":"翻转","weight":1,"link":"/tags/翻转/"},{"text":"替换","weight":1,"link":"/tags/替换/"}], {
         autoResize: true
     });
 </script>
@@ -807,13 +825,12 @@ $(function () {
   
     <script>
         /* 模式判断 */
-        if (localStorage.getItem('isDark') === '1') {
+        if (localStorage.getItem('isDark') !== '1') {
                document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
         } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-           
         }
         </script>
     

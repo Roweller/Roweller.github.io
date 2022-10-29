@@ -350,7 +350,7 @@ MySQL的配置配置环境变量
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-10-29
                 </div>
                 
 
@@ -416,7 +416,7 @@ ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE
 <h2 id="启动MySQL服务"><a href="#启动MySQL服务" class="headerlink" title="启动MySQL服务"></a>启动MySQL服务</h2><ul>
 <li>输入 net start mysql<pre><code>net start mysql
 </code></pre>
-</li>
+转自<a href ="https://blog.csdn.net/weixin_42869365/article/details/83472466">MySQL下载与安装</a></li>
 </ul>
 
                 
@@ -1210,13 +1210,12 @@ $(function () {
   
     <script>
         /* 模式判断 */
-        if (localStorage.getItem('isDark') === '1') {
+        if (localStorage.getItem('isDark') !== '1') {
                document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
         } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-           
         }
         </script>
     

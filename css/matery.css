@@ -2352,18 +2352,19 @@ body.DarkMode.read .bg-cover .description {
 /* 背景颜色变灰色 */
 body.DarkMode .card,
 body.DarkMode .block-with-text:after {
-    background-color: #282c34;
+  background-color: #282c34;
 }
 
 /* 背景颜色变黑色 */
 body.DarkMode,
-body.DarkMode .v[data-class='v'] .vcount,
+body.DarkMode .v[data-class="v"] .vcount,
 body.DarkMode #rewardModal .modal-content,
 body.DarkMode .modal,
 body.DarkMode header .side-nav,
 body.DarkMode header .side-nav .menu-list .m-nav-show {
-    background-color: #12121c;
+  background-color: #12121c;
 }
+
 
 /* 改变透明度 */
 body.DarkMode .aplayer {
@@ -2379,7 +2380,9 @@ body.DarkMode strong {
 body.DarkMode .toc-widget {
     filter: invert(0.8);
 }
-
+body.DarkMode .toc-widget .toc-list-item {
+    color: #000;
+  }
 /* Skill bar text color */
 body.DarkMode .skillbar .skill-bar-percent {
     color: #000;

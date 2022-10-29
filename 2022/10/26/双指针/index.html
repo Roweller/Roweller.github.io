@@ -318,6 +318,14 @@
                                 <span class="chip bg-color">移除</span>
                             </a>
                         
+                            <a href="/tags/%E7%BF%BB%E8%BD%AC/">
+                                <span class="chip bg-color">翻转</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%9B%BF%E6%8D%A2/">
+                                <span class="chip bg-color">替换</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -346,7 +354,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-10-29
                 </div>
                 
 
@@ -405,6 +413,49 @@
     <span class="token keyword">return</span> slowIndex<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="翻转字符串"><a href="#翻转字符串" class="headerlink" title="翻转字符串"></a>翻转字符串</h2><p>将字符串的前后顺序进行颠倒</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">removeElement</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//返回数组的删除后的长度，数组发生了改变</span>
+    <span class="token keyword">int</span> length <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> length<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">char</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+         arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>length<span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+         arr<span class="token punctuation">[</span>length<span class="token operator">-</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> slowIndex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="替换字符串"><a href="#替换字符串" class="headerlink" title="替换字符串"></a>替换字符串</h2><p>将字符替换成指定的字符，首先要扩容填充之后的大小，要从后面进行填充<br>下面将“ ”转为123</p>
+<iframe src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" width="502" height = "350" framebordor = "0"></iframe>
+```c
+char* replace(char* s){
+   //统计空格数量
+   int num = 0;
+   int length = strlen(s);
+   for(int i=0;i<length;i++){
+     if(s[i] == ' ')
+       num++;
+   } 
+   //新的数组大小
+   int newLength = length+2*num; //新数组的长度
+   char* newArr = malloc(sizeof(char)*newLength+1);
+   for (int i = length - 1, j = newLength - 1; i >= 0; i--, j--) {//i是左侧的指针 j是右侧的指针
+      if(s[i] != ' ')
+        newArr[j] = s[i];//将不是空格的字符添加给新数组
+      else {
+       newArr[j--] = '3';
+       newArr[j--] = '2';
+       newArr[j] = '1'; 
+        }
+   }
+   newArr[newLength] = '\0';
+   return newArr;
+}
+
+<pre><code>
+转自&lt;a href =&quot;https://programmercarl.com/&quot;&gt;代码随想录&lt;/a&gt;
+
+
+</code></pre>
 
                 
             </div>
@@ -477,6 +528,14 @@
                                     <span class="chip bg-color">移除</span>
                                 </a>
                             
+                                <a href="/tags/%E7%BF%BB%E8%BD%AC/">
+                                    <span class="chip bg-color">翻转</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%9B%BF%E6%8D%A2/">
+                                    <span class="chip bg-color">替换</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -545,30 +604,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/26/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                <a href="/2022/10/29/%E5%93%88%E5%B8%8C%E8%A1%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="双指针">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="哈希表">
                         
-                        <span class="card-title">双指针</span>
+                        <span class="card-title">哈希表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 双指针操作数组
+                            简介 哈希表
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -580,19 +638,6 @@
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">查找</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%A7%BB%E9%99%A4/">
-                        <span class="chip bg-color">移除</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1207,13 +1252,12 @@ $(function () {
   
     <script>
         /* 模式判断 */
-        if (localStorage.getItem('isDark') === '1') {
+        if (localStorage.getItem('isDark') !== '1') {
                document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
         } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-           
         }
         </script>
     
