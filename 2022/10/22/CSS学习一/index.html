@@ -4,15 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS学习, Roweller">
+    <meta name="keywords" content="CSS学习一, Roweller">
     <meta name="description" content="简介 CSS学习
 
-语法CSS主要有两部分组成：选择器以及一条或几条声明，放在head标签中,可以参考CSS选择器
+语法CSS主要有两部分组成：选择器以及一条或几条声明，放在style标签中,style标签放在head标枪中,可以参考CSS选择器
 CSS基础选择器
 标签选择器&amp;lt;head&gt;
 &amp;lt;style&gt;
-/*标签选择器不能差异化设置*/
-p {  /*p和{">
+/*标签选择器不能">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +23,7 @@ p {  /*p和{">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS学习 | Roweller</title>
+    <title>CSS学习一 | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -266,12 +265,12 @@ p {  /*p和{">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS学习</h1>
+                    <h1 class="description center-align post-title">CSS学习一</h1>
                 </div>
             </div>
         </div>
@@ -347,7 +346,7 @@ p {  /*p和{">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-28
+                    2022-10-29
                 </div>
                 
 
@@ -373,7 +372,7 @@ p {  /*p和{">
             <div id="articleContent">
                 <h1 id="简介-CSS学习"><a href="#简介-CSS学习" class="headerlink" title="简介 CSS学习"></a>简介 CSS学习</h1><span id="more"></span>
 
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>CSS主要有两部分组成：选择器以及一条或几条声明，放在head标签中,可以参考<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/css_selectors.asp" target = "_blank">CSS选择器</a></p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>CSS主要有两部分组成：选择器以及一条或几条声明，放在style标签中,style标签放在head标枪中,可以参考<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/css_selectors.asp" target = "_blank">CSS选择器</a></p>
 <h3 id="CSS基础选择器"><a href="#CSS基础选择器" class="headerlink" title="CSS基础选择器"></a>CSS基础选择器</h3><ul>
 <li>标签选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
 &lt;style>
@@ -397,31 +396,32 @@ p {  /*p和{">
 &lt;/style>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li>id选择器<br>```css<head>
-<style>
-  #pink { /*前面加一个# 只能被调用一次*/
-    color: pink;
-    font-size: 12px;
-  }
-</style>
-<head></li>
-</ul>
-<body>
- <table>
-    <p id = "pink">123</p>/*添加类*/
- </table>
-</body>
-- 通配符选择器
-
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
-  &lt;style>
-    * </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*将所有的标签都改属性值*/</span>
-      <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
-      <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  &lt;/style>
+<li>id选择器<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
+&lt;style>
+  <span class="token id">#pink</span> </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*前面加一个# 只能被调用一次*/</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+&lt;/style>
+&lt;head>
+&lt;body>
+&lt;table>
+  &lt;p id = <span class="token string">"pink"</span>><span class="token number">123</span>&lt;/p><span class="token comment" spellcheck="true">/*添加类*/</span>
+&lt;/table>
+&lt;/body>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>通配符选择器<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
+&lt;style>
+  * </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*将所有的标签都改属性值*/</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+&lt;/style>
 &lt;head>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
 <h3 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h3><p>CSS font用于更改字体</p>
 <ul>
 <li>字体系列<pre class="line-numbers language-css"><code class="language-css"><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'宋体'</span>,serif<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*font-family改字体系列 可写多个字体*/</span>
@@ -437,8 +437,63 @@ p {  /*p和{">
 <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*直立*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li>font的复合属性</li>
+<li>font的复合属性<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*font: font-style font-weught font-size/lin-height fpnt-family; 语法规范不能颠倒顺序*/</span> 
+<span class="token comment" spellcheck="true">/*不需要的行可以省略，但是font-size font-*family不能省略*/</span>
+<span class="token property">font</span><span class="token punctuation">:</span> italic <span class="token number">700</span> <span class="token number">16</span>px/<span class="token number">28</span>px <span class="token string">'Microsoft yahei'</span> <span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*将font属性写在一行，减少代码*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h4></li>
+<li>文本颜色<pre class="line-numbers language-css"><code class="language-css"><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#ff6600</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*十六进制改颜色,#开头，不需要记鼠标放在"#ff6600"*/</span>
+<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">250</span>,<span class="token number">0</span>,<span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*三基色表示颜色*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>对齐文本<pre class="line-numbers language-css"><code class="language-css"><span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*相对于文本的盒子居中对齐*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>左对齐（默认）</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右对齐</td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中对齐</td>
+</tr>
+</tbody></table>
+</li>
+<li>装饰文本<pre class="line-numbers language-css"><code class="language-css"><span class="token property">text-decoration</span><span class="token punctuation">:</span> line-through<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*x修饰文本的样式 家删除线*/</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+|属性值|作用|<br>|none|默认，没有下划线，最常用|<br>|underline|下划线，链接a自带下划线|<br>|overline|上划线|<br>|line-through|删除线|</li>
+<li>首行缩进<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*text-indent只会首行缩进，输入负值会向左缩进*/</span>
+<span class="token property">text-indent</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*输入一个数值，px像素*/</span>
+<span class="token property">text-indent</span><span class="token punctuation">:</span> <span class="token number">2</span>em<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/**em表示当前文字的单位距离*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>行间距<pre class="line-numbers language-css"><code class="language-css"><span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">26</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*行间距改变上下行的距离*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="样式表"><a href="#样式表" class="headerlink" title="样式表"></a>样式表</h3></li>
+<li>内部样式表<br>内部样式表是写在html页面内部，将css代码抽出，单独放在<style>标签中，控制整个html页面<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;style>
+p </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#160545</span><span class="token punctuation">;</span>
+&lt;/style>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>行内样式表<br>行内样式表写在标签里，仅仅对该标签进行修改，用于属性较少的情况，使用较少<pre class="line-numbers language-css"><code class="language-css">&lt;p style=<span class="token string">"color: #165452;font: 54px sans-serif;"</span>>有点意思&lt;/p><span class="token comment" spellcheck="true">/*stylel里放要修改的的属性*/</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>外部样式表<br>外部样式表，将css单独写在一个css文件里，再把css文件引入到html界面中，用于样式较多的情况，完全实现样式和结构分离，可控制多个页面，实际开发常用</li>
 </ul>
+<p>1.新建一个css文件，将css代码写在文件里<br>2.在html页面中，使用<link>标签引入到其中</p>
+<pre class="line-numbers language-css"><code class="language-css">&lt;link rel=<span class="token string">"stylesheet"</span> href=<span class="token string">"style.css"</span>><span class="token comment" spellcheck="true">/*放在head标签下，css文件要和html在同一目录之下*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -465,7 +520,7 @@ p {  /*p和{">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/">https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/</a>
+                    <a href="https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/">https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,9 +598,9 @@ p {  /*p和{">
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/';
-        this.page.identifier = '/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/';
-        this.page.title = 'CSS学习';
+        this.page.url = 'https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/';
+        this.page.identifier = '/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/';
+        this.page.title = 'CSS学习一';
     };
     let disqus_shortname = '';
 
@@ -1229,15 +1284,15 @@ $(function () {
     }
   </script>
   
-       
     <script>
         /* 模式判断 */
         if (localStorage.getItem('isDark') === '1') {
+               document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
+        } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-        } else { 
-            document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')   
+           
         }
         </script>
     

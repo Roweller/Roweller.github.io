@@ -1051,13 +1051,13 @@ frameborder="no" framespacing="0" allowfullscreen="true">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/">
+                <a href="/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSS学习">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS学习一">
                         
-                        <span class="card-title">CSS学习</span>
+                        <span class="card-title">CSS学习一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1701,15 +1701,15 @@ $(function () {
     }
   </script>
   
-       
     <script>
         /* 模式判断 */
         if (localStorage.getItem('isDark') === '1') {
+               document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
+        } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-        } else { 
-            document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')   
+           
         }
         </script>
     

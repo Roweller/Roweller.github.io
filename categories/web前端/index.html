@@ -318,17 +318,17 @@
                 
                 
                 
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
+                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
                             <div class="moleskine-notebook">
                                 <div class="chip notebook-cover center-align waves-effect waves-light
-                                 chip-default "
+                                 chip-active "
                                         style="background-color: #F9EBEA;">                                               
                                     <div class="notebook-skin
-                                         chip-default "
-                                        >数据库                                  
+                                         chip-active "
+                                        >web前端                                  
                                     </div>
                                 </div>
                                 <div class="notebook-page dotted"></div>
@@ -339,17 +339,17 @@
                 </a>
                 
                 
-                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 2">
+                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
                             <div class="moleskine-notebook">
                                 <div class="chip notebook-cover center-align waves-effect waves-light
-                                 chip-active "
+                                 chip-default "
                                         style="background-color: #F5EEF8;">                                               
                                     <div class="notebook-skin
-                                         chip-active "
-                                        >web前端                                  
+                                         chip-default "
+                                        >数据库                                  
                                     </div>
                                 </div>
                                 <div class="notebook-page dotted"></div>
@@ -514,13 +514,13 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/10/22/CSS%E5%AD%A6%E4%B9%A0/">
+                    <a href="/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSS学习">
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS学习一">
                             
-                            <span class="card-title">CSS学习</span>
+                            <span class="card-title">CSS学习一</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
@@ -528,12 +528,11 @@
                             
                                 简介 CSS学习
 
-语法CSS主要有两部分组成：选择器以及一条或几条声明，放在head标签中,可以参考CSS选择器
+语法CSS主要有两部分组成：选择器以及一条或几条声明，放在style标签中,style标签放在head标枪中,可以参考CSS选择器
 CSS基础选择器
 标签选择器&lt;head>
 &lt;style>
-/*标签选择器不能差异化设置*/
-p {  /*p和{
+/*标签选择器不能
                             
                         </div>
                         <div class="publish-info">
@@ -1034,15 +1033,15 @@ $(function () {
     }
   </script>
   
-       
     <script>
         /* 模式判断 */
         if (localStorage.getItem('isDark') === '1') {
+               document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
+        } else { 
              document.body.classList.remove('DarkMode');
             $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
-        } else { 
-            document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')   
+           
         }
         </script>
     
