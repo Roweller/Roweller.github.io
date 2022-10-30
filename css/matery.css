@@ -33,7 +33,9 @@
         max-width: 1250px;
     }
 }
-
+pre[class*="language-"].line-numbers > code {
+display: inline-block;
+}
 body {
       background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) ) 0% 0% /     cover, url("https://x.png"), url("https://x.jpg") 0px 0px;
     background-attachment: fixed;
@@ -401,7 +403,10 @@ header .side-nav .social-link {
     0 4px 23px 0 rgba(0, 0, 0, 0.12),
     0 8px 10px -5px rgba(233, 30, 99, 0.2);
 }
-
+a {
+    display: inline-block;
+    line-height: 30px;
+}
 .cover-btns a i {
     font-size: 1.1rem;
     padding-right: 5px;
