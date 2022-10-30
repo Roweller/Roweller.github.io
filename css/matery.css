@@ -1962,7 +1962,7 @@ p.search-result-summary{
 }
 
 .container {
-    width: 68%;
+    width: 68% !important;
 }
 .clearfix {
     clear: left;

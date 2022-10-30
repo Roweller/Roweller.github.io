@@ -539,7 +539,7 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 <li><ul>
 <li>背景颜色半透明<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.6</span><span class="token punctuation">)</span> <span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*0.6设置透明度，0-1*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="CSS三大特性"><a href="#CSS三大特性" class="headerlink" title="CSS三大特性"></a>CSS三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3></li>
+</li>
 </ul>
 </li>
 </ul>
@@ -679,18 +679,17 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/29/CSS%E5%AD%A6%E4%B9%A0%E4%BA%8C/">
+                <a href="/2022/10/30/CSS%E5%AD%A6%E4%B9%A0%E4%B8%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CSS学习（二）">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS学习（三）">
                         
-                        <span class="card-title">CSS学习（二）</span>
+                        <span class="card-title">CSS学习（三）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -700,9 +699,9 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -715,7 +714,6 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1337,7 +1335,7 @@ $(function () {
   
     <script>
        /* 模式判断 */
-       if (localStorage.getItem('isDark') === '0') {
+       if (localStorage.getItem('isDark') !== '1') {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         } else {
@@ -1345,7 +1343,7 @@ $(function () {
             $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
         }
 
-        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+        if ((new Date().getHours() >= 22 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }

@@ -318,7 +318,7 @@
                 
                 
                 
-                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 3">
+                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 4">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
@@ -514,6 +514,59 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2022/10/30/CSS%E5%AD%A6%E4%B9%A0%E4%B8%89/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS学习（三）">
+                            
+                            <span class="card-title">CSS学习（三）</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                简介 CSS学习
+CSS三大特性
+层叠性层叠性主要解决样式冲突的问题层叠性原则：
+
+1.样式冲突，就近原则，哪个样式离结构近，选择那个样式2.样式不冲突，不重叠
+div {
+    color: red;/*会被覆盖*/
+    font-
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CSS/">
+                            <span class="chip bg-color">CSS</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2022/10/29/CSS%E5%AD%A6%E4%B9%A0%E4%BA%8C/">
                         <div class="card-image tag-image">
                             
@@ -579,10 +632,10 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
                                 简介 CSS学习
 
 
-介绍CSS主要有两部分组成：选择器以及一条或几条声明，放在style标签中,style标签放在head标枪中,可以参考CSS选择器CSS基础选择器
+介绍CSS主要有两部分组成：选择器以及一条或几条声明，放在style标签中,style标签放在head标枪中,可以参考CSS选择器基础选择器
 标签选择器&lt;head>
 &lt;style>
-  /*标签选择器
+  /*标签选择器不能差
                             
                         </div>
                         <div class="publish-info">
@@ -1085,7 +1138,7 @@ $(function () {
   
     <script>
        /* 模式判断 */
-       if (localStorage.getItem('isDark') === '0') {
+       if (localStorage.getItem('isDark') !== '1') {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         } else {
@@ -1093,7 +1146,7 @@ $(function () {
             $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
         }
 
-        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+        if ((new Date().getHours() >= 22 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }

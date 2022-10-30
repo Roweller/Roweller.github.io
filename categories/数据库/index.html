@@ -318,7 +318,7 @@
                 
                 
                 
-                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 3">
+                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 4">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
@@ -1042,7 +1042,7 @@ $(function () {
   
     <script>
        /* 模式判断 */
-       if (localStorage.getItem('isDark') === '0') {
+       if (localStorage.getItem('isDark') !== '1') {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         } else {
@@ -1050,7 +1050,7 @@ $(function () {
             $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
         }
 
-        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+        if ((new Date().getHours() >= 22 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }
