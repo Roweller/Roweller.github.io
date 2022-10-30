@@ -542,7 +542,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"数据库","value":2},{"name":"web前端","value":3},{"name":"算法","value":3}],
+                data: [{"name":"web前端","value":3},{"name":"数据库","value":2},{"name":"算法","value":3}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -566,7 +566,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["查找","MySQL","CSS","HTML5","移除","翻转","替换"]
+                data: ["查找","CSS","MySQL","HTML5","移除","翻转","替换"]
             }
         ],
         yAxis: [
@@ -697,13 +697,13 @@
         <div class="tag-chips center-align">
             
             
+            
+            
+            
+            
             <a href="/tags/MySQL/">
                 <span class="chip center-align waves-effect waves-light chip-default">MySQL</span>
             </a>
-            
-            
-            
-            
             
             
             
@@ -748,20 +748,20 @@
         
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="/medias/featureimages/0.jpg" class="responsive-img">
+            <div class="img-item" data-src="/medias/banner/0.jpg">
+                <img src="/medias/banner/0.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="/medias/featureimages/1.jpg" class="responsive-img">
+            <div class="img-item" data-src="/medias/banner/1.jpg">
+                <img src="/medias/banner/1.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="/medias/featureimages/2.jpg" class="responsive-img">
+            <div class="img-item" data-src="/medias/banner/3.jpg">
+                <img src="/medias/banner/3.jpg" class="responsive-img">
             </div>
         </div>
         
@@ -1202,7 +1202,7 @@ $(function () {
   
     <script>
        /* 模式判断 */
-       if (localStorage.getItem('isDark') === '1') {
+       if (localStorage.getItem('isDark') === '0') {
             document.body.classList.add('DarkMode');
             $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         } else {
