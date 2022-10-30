@@ -7,12 +7,9 @@
     <meta name="keywords" content="CSS学习（三）, Roweller">
     <meta name="description" content="简介 CSS学习
 CSS三大特性
-层叠性层叠性主要解决样式冲突的问题层叠性原则：
-
-1.样式冲突，就近原则，哪个样式离结构近，选择那个样式2.样式不冲突，不重叠
-div {
-    color: red;/*会被覆盖*/
-    font-">
+层叠性层叠性主要解决样式冲突的问题层叠性原则：  1.样式冲突，就近原则，哪个样式离结构近，选择那个样式  2.样式不冲突，不重叠div {
+  color: red;/*会被覆盖*/
+  font-siz">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -373,27 +370,67 @@ div {
             <div id="articleContent">
                 <h1 id="简介-CSS学习"><a href="#简介-CSS学习" class="headerlink" title="简介 CSS学习"></a>简介 CSS学习</h1><span id="more"></span>
 <h2 id="CSS三大特性"><a href="#CSS三大特性" class="headerlink" title="CSS三大特性"></a>CSS三大特性</h2><ul>
-<li>层叠性<br>层叠性主要解决样式冲突的问题<br>层叠性原则：</li>
-</ul>
-<p>1.样式冲突，<font color = "red">就近原则</font>，哪个样式离结构近，选择那个样式<br>2.样式不冲突，不重叠</p>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*会被覆盖*/</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*不会覆盖*/</span>
+<li>层叠性<br>层叠性主要解决样式冲突的问题<br>层叠性原则：<br>  1.样式冲突，<font color = "red">就近原则</font>，哪个样式离结构近，选择那个样式<br>  2.样式不冲突，不重叠<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*会被覆盖*/</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*不会覆盖*/</span>
 <span class="token punctuation">}</span>
 <span class="token selector">div </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
+</li>
 <li>继承性<br>子元素会继承父元素的样式（text-，font-，line-，color）<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/**包含在div标签中的标签颜色都会变为红色*/</span>
   <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
   <span class="token property">font</span><span class="token punctuation">:</span> <span class="token number">15</span>px/<span class="token number">1.5</span> <span class="token string">'Microsoft YaHei'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*1.5表示当前文字的1.5倍行高*/</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li>优先级<br>当一个元素指定多个选择器，就会有优先级的产生</li>
+<li>优先级<br>当一个元素指定多个选择器，就会有优先级的产生<br>  1.选择器相同，则执行层叠性<br>  2.选择器不同，则根据<font color = "red" >选择器权重</font>执行</li>
+<li><ul>
+<li>  选择器的权重<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>权重</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承 或者 *（通用符选择器）</td>
+<td>0，0，0，0</td>
+</tr>
+<tr>
+<td>元素选择器</td>
+<td>0，0，0，1</td>
+</tr>
+<tr>
+<td>类选择器，伪类选择器</td>
+<td>0，0，1，0</td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>0，1，0，0</td>
+</tr>
+<tr>
+<td>行内格式</td>
+<td>1，0，0，0</td>
+</tr>
+<tr>
+<td>!important（重要）</td>
+<td>无穷大</td>
+</tr>
+<tr>
+<td>从上到下，优先性逐渐增加，权重比较从左到右</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
 </ul>
-<p>1.选择器相同，则执行层叠性<br>2.选择器不同，则根据<font color = "red" >选择器权重</font>执行<br>选择器的权重<br>|选择器|权重|<br>|继承 或者 *（通用符选择器）|0，0，0，0|<br>|元素选择器|0，0，0，1|<br>|类选择器，伪类选择器|0，0，1，0|<br>|id选择器|0，1，0，0|<br>|行内格式|1，0，0，0|<br>|!important（重要）|无穷大|<br>从上到下，优先性逐渐增加</p>
+</li>
+<li><ul>
+<li>权重叠加<br>复合选择器会有权重叠加，<font color = "red" >权重叠加不会进位</font></li>
+</ul>
+</li>
+</ul>
 
                 
             </div>

@@ -22,7 +22,7 @@
 }
 
 .toc-widget {
-    width: 345px;
+    width: 345px !important;
     padding-left: 100px;
 }
 

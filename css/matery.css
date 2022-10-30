@@ -3,21 +3,21 @@
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
     .container {
-        width: 95%;
+        width: 78%;
     }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
-        width: 90%;
+        width: 78%;
     }
 }
 
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 90%;
+        width: 78%;
         max-width: 1125px;
     }
 
@@ -224,7 +224,9 @@ dfn {
 small {
     font-size: 85%;
 }
-
+a {
+    width: max-content;
+}
 cite {
     font-style: normal;
 }
@@ -237,12 +239,16 @@ mark {
 .card {
     border-radius: 10px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    width: 100% ;
 }
-
+article .card> a {
+    width: 100%;
+}
 .card .card-image img {
     border-radius: 8px 8px 0 0;
     /* 修改文章列表图片填充样式为 cover 以覆盖整个区域而不会被缩放 */
     object-fit: cover;
+
 }
 
 .container .row {
@@ -1962,7 +1968,7 @@ p.search-result-summary{
 }
 
 .container {
-    width: 68% !important;
+    width: 68% ;
 }
 .clearfix {
     clear: left;
