@@ -1961,6 +1961,9 @@ p.search-result-summary{
     margin-bottom: 8px;
 }
 
+.container {
+    width: 68%;
+}
 .clearfix {
     clear: left;
 }

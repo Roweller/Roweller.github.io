@@ -304,7 +304,7 @@
     
     <script>
         // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + Math.floor(Math.random()*7) + '.jpg';
+        var bannerUrl = "/medias/banner/" + Math.floor(Math.random()*8) + '.jpg';
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
     
@@ -542,7 +542,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"web前端","value":3},{"name":"数据库","value":2},{"name":"算法","value":3}],
+                data: [{"name":"数据库","value":2},{"name":"web前端","value":3},{"name":"算法","value":3}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -566,7 +566,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["查找","CSS","MySQL","HTML5","移除","翻转","替换"]
+                data: ["查找","MySQL","CSS","HTML5","移除","翻转","替换"]
             }
         ],
         yAxis: [
@@ -697,11 +697,11 @@
         <div class="tag-chips center-align">
             
             
-            
-            
             <a href="/tags/MySQL/">
                 <span class="chip center-align waves-effect waves-light chip-default">MySQL</span>
             </a>
+            
+            
             
             
             

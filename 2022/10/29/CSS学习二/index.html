@@ -474,12 +474,15 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">153</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*转换之后就可以设置高度*/</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#456415</span>,pink,transparent<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*颜色可以直接写相应的单词，十六进制，transparent为透明*/</span>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2></li>
+<li>背景颜色<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#456415</span>,pink,transparent<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*颜色可以直接写相应的单词，十六进制，transparent为透明*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(images/R-C.png)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*images文件要和html文件在同一目录之下，文件目录要放在url()中，none默认没有背景图片*/</span>
+</li>
+<li>背景图片<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(images/R-C.png)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*images文件要和html文件在同一目录之下，文件目录要放在url()中，none默认没有背景图片*/</span>
 <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*图片默认情况下视平铺的，no-repeat是平铺*/</span><span class="token comment" spellcheck="true">/*盒子的大小不会改变*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
+<li><ul>
 <li> 平铺属性值<table>
 <thead>
 <tr>
@@ -505,7 +508,10 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 </tr>
 </tbody></table>
 </li>
-<li> 背景图片位置<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*background-position: 方位名词;*/</span> 
+</ul>
+</li>
+<li><ul>
+<li>背景图片位置<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*background-position: 方位名词;*/</span> 
 <span class="token comment" spellcheck="true">/*仅仅写一个方位名词，则另一个默认居中*/</span>
 <span class="token property">background-position</span><span class="token punctuation">:</span> center center<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*center和top的顺序可以颠倒，位置没有影响*/</span>
 <span class="token comment" spellcheck="true">/*background-position: x y  仅写一个表示x*/</span>
@@ -514,9 +520,27 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 <span class="token property">background-position</span><span class="token punctuation">:</span> <span class="token number">20</span>px center<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*20px设置x center设置y*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
+</ul>
+</li>
+<li><ul>
 <li>背景图片固定<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-attachment</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*背景图像随内容滚动*/</span>
 <span class="token property">background-attachment</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*背景图像固定*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>背景复合写法<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*background书写没有固定格式，一般background:color image repeat attachment position;*/</span>
+<span class="token property">background</span><span class="token punctuation">:</span> black <span class="token url">url(images/R-C.png)</span> no-repeat scroll center top <span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>背景颜色半透明<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.6</span><span class="token punctuation">)</span> <span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*0.6设置透明度，0-1*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="CSS三大特性"><a href="#CSS三大特性" class="headerlink" title="CSS三大特性"></a>CSS三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3></li>
+</ul>
 </li>
 </ul>
 
