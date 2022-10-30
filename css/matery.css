@@ -130,6 +130,8 @@ code {
     top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
+    height: 25px;
+    line-height: 25px;
     color: #e96900;
     background-color: #f8f8f8;
     border-radius: 2px;
@@ -1473,8 +1475,7 @@ color: #64c45b;
         left: 50%;
         margin-left: -20px;
         /* Force Hardware Acceleration in WebKit */
-        -webkit-transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
+
     }
 
     .cssanimations .cd-timeline-img.is-hidden {
@@ -2034,8 +2035,7 @@ p.search-result-summary{
 
 /*二级菜单*/
 
-.nav-menu {
-}
+
 
 .nav-menu li .sub-nav {
     position: absolute;
@@ -2351,6 +2351,7 @@ body.DarkMode.read .bg-cover .description {
 
 /* 背景颜色变灰色 */
 body.DarkMode .card,
+body.DarkMode .post-charts,
 body.DarkMode .block-with-text:after {
   background-color: #282c34;
 }
@@ -2364,7 +2365,12 @@ body.DarkMode header .side-nav,
 body.DarkMode header .side-nav .menu-list .m-nav-show {
   background-color: #12121c;
 }
-
+body.DarkMode #articleContent table th,
+body.DarkMode td,
+th
+    {
+    background-color: #2d2d2d;
+}
 
 /* 改变透明度 */
 body.DarkMode .aplayer {

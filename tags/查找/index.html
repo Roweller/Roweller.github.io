@@ -326,28 +326,28 @@
                 </a>
                 
                 
-                <a href="/tags/MySQL/" title="MySQL: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MySQL" style="background-color: #F5EEF8;">MySQL
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/HTML5/" title="HTML5: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="HTML5" style="background-color: #D5F5E3;">HTML5
+                            data-tagname="HTML5" style="background-color: #F5EEF8;">HTML5
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E6%9F%A5%E6%89%BE/" title="查找: 2">
+                <a href="/tags/%E6%9F%A5%E6%89%BE/" title="查找: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="查找" style="background-color: #E8F8F5;">查找
+                            data-tagname="查找" style="background-color: #D5F5E3;">查找
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/MySQL/" title="MySQL: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="MySQL" style="background-color: #E8F8F5;">MySQL
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -388,6 +388,38 @@
 
     <article id="articles" class="container articles">
         <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="查找" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2022/10/29/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="哈希表">
+                            
+                            <span class="card-title">哈希表</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             
             <div class="article tag-post col s12 m6 l4" data-tags="查找, 移除, 翻转, 替换" data-aos="fade-up">
@@ -871,13 +903,18 @@ $(function () {
   </script>
   
     <script>
-        /* 模式判断 */
-        if (localStorage.getItem('isDark') !== '1') {
-               document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
-        } else { 
-             document.body.classList.remove('DarkMode');
-            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+       /* 模式判断 */
+       if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+        }
+
+        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }
         </script>
     

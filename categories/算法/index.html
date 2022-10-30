@@ -339,17 +339,17 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
+                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 3">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
                             <div class="moleskine-notebook">
                                 <div class="chip notebook-cover center-align waves-effect waves-light
-                                 chip-default "
+                                 chip-active "
                                         style="background-color: #F5EEF8;">                                               
                                     <div class="notebook-skin
-                                         chip-default "
-                                        >数据库                                  
+                                         chip-active "
+                                        >算法                                  
                                     </div>
                                 </div>
                                 <div class="notebook-page dotted"></div>
@@ -360,17 +360,17 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 3">
+                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-wrapper">
                             <div class="moleskine-notebook">
                                 <div class="chip notebook-cover center-align waves-effect waves-light
-                                 chip-active "
+                                 chip-default "
                                         style="background-color: #D5F5E3;">                                               
                                     <div class="notebook-skin
-                                         chip-active "
-                                        >算法                                  
+                                         chip-default "
+                                        >数据库                                  
                                     </div>
                                 </div>
                                 <div class="notebook-page dotted"></div>
@@ -546,6 +546,14 @@
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%9F%A5%E6%89%BE/">
+                            <span class="chip bg-color">查找</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -1085,13 +1093,18 @@ $(function () {
   </script>
   
     <script>
-        /* 模式判断 */
-        if (localStorage.getItem('isDark') !== '1') {
-               document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
-        } else { 
-             document.body.classList.remove('DarkMode');
-            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+       /* 模式判断 */
+       if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+        }
+
+        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }
         </script>
     

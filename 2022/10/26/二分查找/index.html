@@ -641,9 +641,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS学习一">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="CSS学习（一）">
                         
-                        <span class="card-title">CSS学习一</span>
+                        <span class="card-title">CSS学习（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1239,13 +1239,18 @@ $(function () {
   </script>
   
     <script>
-        /* 模式判断 */
-        if (localStorage.getItem('isDark') !== '1') {
-               document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
-        } else { 
-             document.body.classList.remove('DarkMode');
-            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+       /* 模式判断 */
+       if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+        }
+
+        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }
         </script>
     

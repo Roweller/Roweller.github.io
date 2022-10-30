@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS学习一, Roweller">
+    <meta name="keywords" content="CSS学习（一）, Roweller">
     <meta name="description" content="简介 CSS学习
 
 
@@ -23,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS学习一 | Roweller</title>
+    <title>CSS学习（一） | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -265,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS学习一</h1>
+                    <h1 class="description center-align post-title">CSS学习（一）</h1>
                 </div>
             </div>
         </div>
@@ -650,7 +650,7 @@ p </span><span class="token punctuation">{</span>
     disqus_config = function () {
         this.page.url = 'https://roweller.github.io/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/';
         this.page.identifier = '/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%E4%B8%80/';
-        this.page.title = 'CSS学习一';
+        this.page.title = 'CSS学习（一）';
     };
     let disqus_shortname = '';
 
@@ -1335,13 +1335,18 @@ $(function () {
   </script>
   
     <script>
-        /* 模式判断 */
-        if (localStorage.getItem('isDark') !== '1') {
-               document.body.classList.add('DarkMode');
-            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon') 
-        } else { 
-             document.body.classList.remove('DarkMode');
-            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+       /* 模式判断 */
+       if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+        }
+
+        if ((new Date().getHours() >= 20 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
         }
         </script>
     
