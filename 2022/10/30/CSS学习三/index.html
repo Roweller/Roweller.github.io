@@ -450,7 +450,7 @@ div {
 </tbody></table>
 </li>
 </ul>
-<p> <img src="images/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" alt="盒子模型"></p>
+<p> <img src="/images/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" alt="盒子模型"></p>
 <ul>
 <li>边框</li>
 <li><ul>
@@ -488,6 +488,7 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 </ul>
 </li>
 <li>内边距</li>
+<li><ul>
 <li>内边距属性<br>内边距就是内容和边框的距离，padding设置内边距<table>
 <thead>
 <tr>
@@ -513,6 +514,8 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 </tr>
 </tbody></table>
 </li>
+</ul>
+</li>
 <li><ul>
 <li>内边距的复合写法<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*padding会影响盒子的实际大小，盒子width和height改变大小即可*/</span>
 <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*上下左右都是10px*/</span>
@@ -521,6 +524,45 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">15</span>px <span class="token number">20</span>px <span class="token number">25</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*上是10px，右是15px 下是20px 左是25px*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
+</ul>
+</li>
+<li>外边距</li>
+<li><ul>
+<li>外边距属性<br>内边距就是相邻盒子的距离，margin设置外边距<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>margin-left</td>
+<td>左外边距</td>
+</tr>
+<tr>
+<td>margin-top</td>
+<td>上外边距</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>右外边距</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>下外边距</td>
+</tr>
+<tr>
+<td>margin用法和padding相似</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>外边距应用<pre class="line-numbers language-css"><code class="language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span>  auto<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*0设置上下外边距，auto水平居中对齐*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<font color="red" ><b>注意：</b></font>以上方法是块元素居中，行内元素或者是行内块元素居中是给其父元素添加<font color="red" >text-align:center</font>即可</li>
 </ul>
 </li>
 </ul>
