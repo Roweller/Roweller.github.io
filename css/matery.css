@@ -5,6 +5,10 @@
     .container {
         width: 100%;
     }
+  .live2d-widget-container {
+    width: 30% !important;;
+    height: 30% !important;;
+}
 }
 
 /*中等屏幕下(平板类)的样式*/
