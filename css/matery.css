@@ -5,12 +5,12 @@
     .container {
         width: 100%;
     }
-    #live2d-widget {
-        width: 120px !important;
-        height: 240px !important;
+    div#live2d-widget {
+        width: 150px !important;
+        height: 300px !important;
         bottom: 0px!important;
     }
-    #live2dcanvas {
+    canvas#live2dcanvas {
         width: 100%!important;
         height: 100%!important;
     }
