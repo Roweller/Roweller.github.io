@@ -6,8 +6,8 @@
         width: 100%;
     }
     #live2d-widget {
-        width: 80px !important;
-        height: 160px !important;
+        width: 120px !important;
+        height: 240px !important;
         bottom: 0px!important;
     }
     #live2dcanvas {
@@ -20,6 +20,15 @@
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 100%;
+    }
+    #live2d-widget {
+        width: 80px !important;
+        height: 160px !important;
+        bottom: 0px!important;
+    }
+    #live2dcanvas {
+        width: 100%!important;
+        height: 100%!important;
     }
 }
 
