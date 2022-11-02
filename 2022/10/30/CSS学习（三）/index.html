@@ -344,7 +344,7 @@ div {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-01
+                    2022-11-02
                 </div>
                 
 
@@ -452,7 +452,8 @@ div {
 </ul>
 <p> <img src="/images/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" alt="盒子模型"></p>
 <ul>
-<li>边框</li>
+<li><p>边框</p>
+</li>
 <li><ul>
 <li>边框的属性<pre class="line-numbers language-css"><code class="language-css">|属性|作用|
 |--|--|
@@ -487,7 +488,8 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 </li>
 </ul>
 </li>
-<li>内边距</li>
+<li><p>内边距</p>
+</li>
 <li><ul>
 <li>内边距属性<br>内边距就是内容和边框的距离，padding设置内边距<table>
 <thead>
@@ -526,7 +528,8 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 </li>
 </ul>
 </li>
-<li>外边距</li>
+<li><p>外边距</p>
+</li>
 <li><ul>
 <li>外边距属性<br>内边距就是相邻盒子的距离，margin设置外边距<table>
 <thead>
@@ -562,11 +565,22 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 <li><ul>
 <li>外边距应用<pre class="line-numbers language-css"><code class="language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span>  auto<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*0设置上下外边距，auto水平居中对齐*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<font color="red" ><b>注意：</b></font>以上方法是块元素居中，行内元素或者是行内块元素居中是给其父元素添加<font color="red" ><b>text-align:center</b></font>即可</li>
+<font color="red" ><b>注意：</b></font>以上方法是块元素居中，行内元素或者是行内块元素居中是给其父元素添加<font color="red" ><b>text-align:center</b></font>即可<br>```</li>
+</ul>
+</li>
+<li><ul>
+<li>外边距合并<br>对于两个嵌套关系的块元素，父元素有上边距同时子元素也有上边距，此时父元素会塌陷较大的外边距<br>解决方案：</li>
 </ul>
 </li>
 </ul>
-
+<p>1.为父元素定义一个上边框<br>2.可以为父元素定义一个内边距<br>3.为父元素添加一个overflow:hidden</p>
+<ul>
+<li>清除内外边距</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*将内外边距变为0*/</span>
+<span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="ps基本操作"><a href="#ps基本操作" class="headerlink" title="ps基本操作"></a>ps基本操作</h2>
                 
             </div>
             <hr/>
