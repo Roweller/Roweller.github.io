@@ -344,7 +344,7 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-30
+                    2022-11-02
                 </div>
                 
 
@@ -372,8 +372,11 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 
 <h2 id="Emmet语法"><a href="#Emmet语法" class="headerlink" title="Emmet语法"></a>Emmet语法</h2><p>  Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写</p>
 <ul>
-<li>快速生成html<br>  1.标签*n，即可快速生成n个标签<br>  2.父子级关系的，div&gt;span,按tab<br>  3.兄弟级关系的，div+p,按tab<br>  4.带有类名，.nav,按tab，即可生成一个默认nav属性的div标签<br>  5.带有id，#nav,按tab，即可生成一个默认id为nav的div标签<br>  6.span.gray，按tab，即可生成一个gary属性的span标签<br>  7.span#gray，按tab，即可生成一个id为gary的span标签<br>  8..nav$*5,按tab，即可生成五个个默认nav属性的div标签，类的属性值从nav1-nav5</li>
-<li>快速生成CSS<br>  简写属性的首字母，按tab，即可快速补全代码   <h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2>  复合选择器是由两个或者两个以上的基础选择器，通过不同方式组合而成<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><pre class="line-numbers language-css"><code class="language-css">&lt;head>
+<li><p>快速生成html<br>  1.标签*n，即可快速生成n个标签<br>  2.父子级关系的，div&gt;span,按tab<br>  3.兄弟级关系的，div+p,按tab<br>  4.带有类名，.nav,按tab，即可生成一个默认nav属性的div标签<br>  5.带有id，#nav,按tab，即可生成一个默认id为nav的div标签<br>  6.span.gray，按tab，即可生成一个gary属性的span标签<br>  7.span#gray，按tab，即可生成一个id为gary的span标签<br>  8..nav$*5,按tab，即可生成五个个默认nav属性的div标签，类的属性值从nav1-nav5</p>
+</li>
+<li><p>快速生成CSS<br>  简写属性的首字母，按tab，即可快速补全代码   </p>
+<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><p>  复合选择器是由两个或者两个以上的基础选择器，通过不同方式组合而成</p>
+<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><pre class="line-numbers language-css"><code class="language-css">&lt;head>
 &lt;style>
   <span class="token comment" spellcheck="true">/*父标签和子标签用空格隔开*/</span>
   <span class="token selector">ol li </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*选择ol中的li，而不是所有的li*/</span>
@@ -396,7 +399,9 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 &lt;/ul>
 &lt;/body>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-元素1 元素2 {样式}，元素1和元素2可以是任意基础选择器<br>元素2必须是元素1的后代，可以是多重后代<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3>子选择器只能选择作为某一元素的最近的一级元素<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
+<p>元素1 元素2 {样式}，元素1和元素2可以是任意基础选择器<br>元素2必须是元素1的后代，可以是多重后代</p>
+<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3><p>子选择器只能选择作为某一元素的最近的一级元素</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
 &lt;style>
   div > a </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*div和a之间用一个">"隔开*/</span>
     <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#000</span><span class="token punctuation">;</span>
@@ -413,14 +418,17 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 &lt;/div>
 &lt;/body>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-元素1 &gt;元素2 {样式}，元素1和元素2可以是任意基础选择器<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3>并集选择器可以为多组标签定义相同的格式，用于集体声明<pre class="line-numbers language-css"><code class="language-css">  div ,<span class="token comment" spellcheck="true">/*并集选择器常常竖着写*/</span>
+<p>元素1 &gt;元素2 {样式}，元素1和元素2可以是任意基础选择器</p>
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>并集选择器可以为多组标签定义相同的格式，用于集体声明</p>
+<pre class="line-numbers language-css"><code class="language-css">  div ,<span class="token comment" spellcheck="true">/*并集选择器常常竖着写*/</span>
   <span class="token selector">p ,
   <span class="token class">.nav</span> </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*div,p和nav属性都改变了颜色,选择器可以是任意选择器*/</span>
   <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3></li>
-<li>链接的伪类选择器<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:link</span> </span><span class="token punctuation">{</span>
+<li><p>链接的伪类选择器</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:link</span> </span><span class="token punctuation">{</span>
   <span class="token property">color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -448,19 +456,22 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 <td>选择鼠标在其位置上摁下而未松开的链接</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <p>按照:link - :visited -:hover -:active的顺序声明<br>经常使用:visited选择器</p>
-<ul>
-<li>focus伪类选择器<br>focus伪类选择器用于获得光标的<font color = "red">表单元素</font>，一般input类表单元素才能获取<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">input<span class="token pseudo-class">:focus</span></span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*选择input表单中光标点击的元素*/</span>
+</li>
+<li><p>focus伪类选择器<br>focus伪类选择器用于获得光标的<font color = "red">表单元素</font>，一般input类表单元素才能获取</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">input<span class="token pseudo-class">:focus</span></span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*选择input表单中光标点击的元素*/</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> aquamarine<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="元素显示模式"><a href="#元素显示模式" class="headerlink" title="元素显示模式"></a>元素显示模式</h2></li>
-<li>块元素<br>1.独占一行<br>2.可以设置宽度，高度，外边距和内边距都可以设置<br>3.宽度默认是父类的的宽度<br>4.可以放行内元素和块元素<br>常见的块元素有h1-h6,p,div,ul,ol,li等.</li>
-<li>行内元素<br>1.一行可以放多个元素<br>2.宽和高直接设置是无效的<br>3.默认宽度就是它本身内容的宽度<br>4.不可以放块元素，只能放行内元素<br>常见的行内元素有a,strong,b,em,i,del,s,ins,u,span</li>
-<li>行内块元素<br>1.可以一行放多个元素，元素之间有缝隙<br>2.默认宽度就是它本身内容的宽度<br>3.高度，行高，外边距以及内边距都是可以设置的<br>常见的有img,input, td</li>
-<li>元素显示模式转化<br>简单来说将一个模式的元素转化为另一个模式的元素<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">a </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*a标签是行内元素*/</span>
+<li><p>块元素<br>1.独占一行<br>2.可以设置宽度，高度，外边距和内边距都可以设置<br>3.宽度默认是父类的的宽度<br>4.可以放行内元素和块元素<br>常见的块元素有h1-h6,p,div,ul,ol,li等.</p>
+</li>
+<li><p>行内元素<br>1.一行可以放多个元素<br>2.宽和高直接设置是无效的<br>3.默认宽度就是它本身内容的宽度<br>4.不可以放块元素，只能放行内元素<br>常见的行内元素有a,strong,b,em,i,del,s,ins,u,span</p>
+</li>
+<li><p>行内块元素<br>1.可以一行放多个元素，元素之间有缝隙<br>2.默认宽度就是它本身内容的宽度<br>3.高度，行高，外边距以及内边距都是可以设置的<br>常见的有img,input, td</p>
+</li>
+<li><p>元素显示模式转化<br>简单来说将一个模式的元素转化为另一个模式的元素</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">a </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*a标签是行内元素*/</span>
  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*dispaly表示转换模式*/</span>
  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">153</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*转换之后就可以设置宽度和高度*/</span>
  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">155</span>px<span class="token punctuation">;</span>
@@ -475,10 +486,12 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2></li>
-<li>背景颜色<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#456415</span>,pink,transparent<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*颜色可以直接写相应的单词，十六进制，transparent为透明*/</span>
+<li><p>背景颜色</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#456415</span>,pink,transparent<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*颜色可以直接写相应的单词，十六进制，transparent为透明*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li>背景图片<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(images/R-C.png)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*images文件要和html文件在同一目录之下，文件目录要放在url()中，none默认没有背景图片*/</span>
+<li><p>背景图片</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(images/R-C.png)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*images文件要和html文件在同一目录之下，文件目录要放在url()中，none默认没有背景图片*/</span>
 <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*图片默认情况下视平铺的，no-repeat是平铺*/</span><span class="token comment" spellcheck="true">/*盒子的大小不会改变*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
