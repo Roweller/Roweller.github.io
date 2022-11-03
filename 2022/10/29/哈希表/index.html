@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="哈希表, Roweller">
-    <meta name="description" content="简介 哈希表">
+    <meta name="description" content="简介 哈希表
+
+介绍哈希表一般是解决快速判断一个元素是否在数组中。我们判断一个学生是不是在一个学校里，我们首先要将学生存储在学校里，查询时通过索引查询在不在学校里。将学生映射在哈希表上需要用到hash funtion（哈希函数）
+
+哈希函数">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -340,7 +344,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-29
+                    2022-11-03
                 </div>
                 
 
@@ -365,6 +369,45 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="简介-哈希表"><a href="#简介-哈希表" class="headerlink" title="简介 哈希表"></a>简介 哈希表</h1><span id="more"></span>
+<ul>
+<li><p>介绍<br>哈希表一般是解决<b>快速</b>判断一个元素是否在数组中。<br>我们判断一个学生是不是在一个学校里，我们首先要将学生存储在学校里，查询时通过索引查询在不在学校里。<br>将学生映射在哈希表上需要用到<b>hash funtion（哈希函数）</b></p>
+</li>
+<li><p>哈希函数<br>哈希函数，可以把把学生的姓名直接映射为哈希表上的索引，然后就可以查询。<br>通过hashCode把名字转化为数值，一般hashcode是通过特定编码方式，可以将其他数据格式转化为不同的数值，这样把学生名字映射为哈希表上的索引数字</p>
+<iframe src="https://img-blog.csdnimg.cn/2021010423484818.png" width="502" height = "350" framebordor = "0"></iframe>
+如果hashCode得到的数值大于哈希表的大小了，也就是大于tableSize
+此时为了保证映射出来的索引数值都落在哈希表上，我们会在再次对数值做一个取模的操作，就要我们就保证了学生姓名一定可以映射到哈希表上了。
+如果学生的数量大于哈希表的大小，必定会有几个学生映射在同一个索引表下，此时需要用到<b>哈希碰撞</b></li>
+<li><p>哈希算法<br>哈希表的组成取决于哈希算法，也就是哈希函数的构成，下面列举几种常见的哈希算法。</p>
+</li>
+</ul>
+<p>1） 直接定址法<br>取关键字或关键字的某个线性函数值为散列地址。<br>即 f(key) = key 或 f(key) = a*key + b，其中a和b为常数。</p>
+<p>2） 除留余数法<br>取关键字被某个不大于散列表长度 m 的数 p 求余，得到的作为散列地址。<br>即 f(key) = key % p, p &lt; m。这是最为常见的一种哈希算法。</p>
+<p>3） 数字分析法<br>当关键字的位数大于地址的位数，对关键字的各位分布进行分析，选出分布均匀的任意几位作为散列地址。<br>仅适用于所有关键字都已知的情况下，根据实际应用确定要选取的部分，尽量避免发生冲突。</p>
+<p>4） 平方取中法<br>先计算出关键字值的平方，然后取平方值中间几位作为散列地址。<br>随机分布的关键字，得到的散列地址也是随机分布的。</p>
+<p>5） 随机数法<br>选择一个随机函数，把关键字的随机函数值作为它的哈希值。<br>通常当关键字的长度不等时用这种方法。</p>
+<ul>
+<li>哈希碰撞<br>如果两个输入串的hash函数的值一样，则称这两个串是一个碰撞(Collision)。既然是把任意长度的字符串变成固定长度的字符串，所以必有一个输出串对应无穷多个输入串，碰撞是必然存在的。<br>一个优良的hash函数 f 应当满足以下三个条件：<br>（1）对于任意y，寻找x，使得f(x)=y，在计算上是不可行的。<br>（2）给定x1∈A,找x2∈B，，使得f(x1)=f(x2)，在计算上是不可能的，这也就是弱无碰撞性。<br>（3）寻找x1，x2，使得f(x1)=f(x2)，在计算上也是不可行的，这也就是强无碰撞性。<br>这样就称为安全保密的Hash函数，除了枚举外不可能有别的更快的方法。如第3条，根据生日定理，要想找到这样的x1，x2，理论上需要大约2^(n/2)的枚举次数。<br>因为前两条都能被破坏的hash函数太弱而被抛弃，几乎所有的hash函数的破解，都是指的破坏上面的第3条性质，即找到一个碰撞。在密码学上还有一个概念是理论破解，指的是提出一个算法，使得可以用低于理论值得枚举次数找到碰撞</li>
+</ul>
+<iframe src="https://img-blog.csdnimg.cn/2021010423494884.png" width="502" height = "350" framebordor = "0"></iframe>
+将两个学生映射在同一下标下，这叫做哈希碰撞
+一般哈希碰撞有两个解决方法，拉链法和线性探测法
+
+<ul>
+<li><ul>
+<li>拉伸法<iframe src="https://img-blog.csdnimg.cn/20210104235015226.png" width="502" height = "350" framebordor = "0"></iframe>
+（数据规模是dataSize， 哈希表的大小为tableSize）
+将发生冲突的元素都存在列表中，这样就可以找到小王和小李
+拉伸法就是合理控制哈希表的大小，既不会造成资源的浪费，又不会增加查询时间</li>
+</ul>
+</li>
+<li><ul>
+<li>线性探测法<iframe src="https://img-blog.csdnimg.cn/20210104235109950.png" width="502" height = "350" framebordor = "0"></iframe>
+线性探测法要满足tableSize大于dateSize，利用空格解决哈希碰撞的问题，如果冲突位置放置了小李，就要在下一位置放置小王。</li>
+</ul>
+</li>
+</ul>
+<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/YOUYOU0710/article/details/108761052">什么是hash？什么是hash碰撞？怎么处理hash碰撞？</a><br>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lgg20/p/15910890.html">什么是hash？什么是hash碰撞？怎么处理hash碰撞？</a></p>
+
                 
             </div>
             <hr/>

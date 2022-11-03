@@ -344,7 +344,7 @@ div {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-02
+                    2022-11-03
                 </div>
                 
 
@@ -593,6 +593,83 @@ border：<span class="token number">5</span>px solid red<span class="token punct
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
+</li>
+<li><p>圆角矩形</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*border-adius设置和边角的圆形的半径，圆的弧度表示圆框弧度的大小*/</span>
+border-radius：<span class="token number">10</span>px <span class="token number">20</span>px <span class="token number">30</span>px <span class="token number">40</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*按顺序设置左上，右上，右下，左下*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>盒子阴影</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*box-shadow: h-shadow v-shadow blur spread color inset;*/</span>
+<span class="token comment" spellcheck="true">/*h-shadow v-shadow控制阴影的位置*/</span>
+<span class="token comment" spellcheck="true">/*blur越大表示越模糊*/</span>
+<span class="token comment" spellcheck="true">/*spread表示阴影的大小*/</span>
+<span class="token comment" spellcheck="true">/*inset表示内阴影，outset表示外阴影，默认是外阴影，outset一般不写*/</span>
+<span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">10</span>px <span class="token number">10</span>px <span class="token number">10</span>px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span> , <span class="token number">.3</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h-shadow</td>
+<td>必选，水平阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td>v-shadow</td>
+<td>必选，竖直阴影位置，允许负值</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>可选，模糊距离</td>
+</tr>
+<tr>
+<td>spread</td>
+<td>可选，模糊尺寸</td>
+</tr>
+<tr>
+<td>color</td>
+<td>可选，阴影颜色</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>可选，将外部阴影改为内部阴影</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>文字阴影</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*box-shadow: h-shadow v-shadow blur spread color inset;*/</span>
+<span class="token comment" spellcheck="true">/*h-shadow v-shadow控制阴影的位置*/</span>
+<span class="token comment" spellcheck="true">/*blur越大表示越模糊*/</span>
+<span class="token property">text-shadow</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">10</span>px <span class="token number">6</span>px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>,<span class="token number">.3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h-shadow</td>
+<td>必选，水平阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td>v-shadow</td>
+<td>必选，竖直阴影位置，允许负值</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>可选，模糊距离</td>
+</tr>
+<tr>
+<td>color</td>
+<td>可选，阴影颜色</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 
