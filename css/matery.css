@@ -12,6 +12,7 @@
     }
     canvas#live2dcanvas {
         width: 100%!important;
+        
     }
 }
 
@@ -21,13 +22,12 @@
         width: 90%;
     }
     #live2d-widget {
-        width: 80px !important;
-        height: 160px !important;
+        width: 130px !important;
+        height: 260px !important;
         bottom: 0px!important;
     }
     #live2dcanvas {
         width: 100%!important;
-        height: 100%!important;
     }
 }
 
@@ -764,10 +764,12 @@ header .go-back i {
     padding-top: 30px;
 }
 
-.index-card .card .card-content {
+.index-card .card  {
     padding: 20px 40px;
 }
-
+.card-content {
+   padding: 0px !important;
+}
 @media only screen and (min-width: 1418px) {
     .recommend {
         margin-top: 20px;
@@ -1979,6 +1981,36 @@ p.search-result-summary{
         padding: 0 2px !important;
     }
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-image: linear-gradient(
+      rgba(173, 15, 15, 0),
+      rgb(119, 153, 250),
+      rgba(173, 15, 15, 0)
+    );
+    border-radius: 6px;
+    filter: alpha(opacity = 10);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgb(72, 120, 253),
+      rgba(255, 255, 255, 0)
+    );
+  }
+  
 
 .info-break-policy {
     margin-bottom: 8px;
