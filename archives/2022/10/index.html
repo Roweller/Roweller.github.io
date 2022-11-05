@@ -60,6 +60,16 @@
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script> 
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script> 
+    <script>
+    L2Dwidget.init({ 
+    "model": {jsonPath:"https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json","scale": 1 }, 
+    "display": { "position": "left", "width": 150, "height": 300,"hOffset": 0, "vOffset": -20 }, 
+    "mobile": { "show": true, "scale": 0.5 }, 
+    "react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } });
+</script> 
+
 <meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -435,9 +445,8 @@
                                 
                                     简介 CSS学习
 CSS三大特性层叠性层叠性主要解决样式冲突的问题层叠性原则：    1.样式冲突，就近原则，哪个样式离结构近，选择那个样式    2.样式不冲突，不重叠
-div {
-    color: red;/*会被覆盖*/
-    
+div &amp;#123;
+    color: red;/*会被
                                 
                             </div>
                             <div class="publish-info">
@@ -877,29 +886,28 @@ html标签的子标签&lt;head&gt;&lt;/head&gt;
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
+                        <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
+                                <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
                                 
-                                <span class="card-title">MySQL安装</span>
+                                <span class="card-title">MySQL操作</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    简介 下载MySQL
+                                    简介 操作MySQL
 
-MySQL的下载下载网址：https://downloads.mysql.com/archives/community/
-
-MySQL的配置配置环境变量
- 打开电脑高级系统配置
-复制MySQL的路径
+MySQL语法
+ 创建数据库 以bjpowernode为例
+create database bjpowernode;
 
 
+使用bjpoernode的数据 以bjpowernode为例
+use bjpoernode;
 
-新建MyS
                                 
                             </div>
                             <div class="publish-info">
@@ -946,28 +954,29 @@ MySQL的配置配置环境变量
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
+                        <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
+                                <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL安装">
                                 
-                                <span class="card-title">MySQL操作</span>
+                                <span class="card-title">MySQL安装</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    简介 操作MySQL
+                                    简介 下载MySQL
 
-MySQL语法
- 创建数据库 以bjpowernode为例
-create database bjpowernode;
+MySQL的下载下载网址：https://downloads.mysql.com/archives/community/
+
+MySQL的配置配置环境变量
+ 打开电脑高级系统配置
+复制MySQL的路径
 
 
-使用bjpoernode的数据 以bjpowernode为例
-use bjpoernode;
 
+新建MyS
                                 
                             </div>
                             <div class="publish-info">

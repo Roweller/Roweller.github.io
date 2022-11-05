@@ -60,6 +60,16 @@
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script> 
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script> 
+    <script>
+    L2Dwidget.init({ 
+    "model": {jsonPath:"https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json","scale": 1 }, 
+    "display": { "position": "left", "width": 150, "height": 300,"hOffset": 0, "vOffset": -20 }, 
+    "mobile": { "show": true, "scale": 0.5 }, 
+    "react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } });
+</script> 
+
 <meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -528,9 +538,8 @@
                             
                                 简介 CSS学习
 CSS三大特性层叠性层叠性主要解决样式冲突的问题层叠性原则：    1.样式冲突，就近原则，哪个样式离结构近，选择那个样式    2.样式不冲突，不重叠
-div {
-    color: red;/*会被覆盖*/
-    
+div &amp;#123;
+    color: red;/*会被
                             
                         </div>
                         <div class="publish-info">

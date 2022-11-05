@@ -66,6 +66,16 @@
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script> 
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script> 
+    <script>
+    L2Dwidget.init({ 
+    "model": {jsonPath:"https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json","scale": 1 }, 
+    "display": { "position": "left", "width": 150, "height": 300,"hOffset": 0, "vOffset": -20 }, 
+    "mobile": { "show": true, "scale": 0.5 }, 
+    "react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } });
+</script> 
+
 <meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -377,11 +387,11 @@
 <li>标签选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
 &lt;style>
   <span class="token comment" spellcheck="true">/*标签选择器不能差异化设置*/</span>
-  <span class="token selector">p </span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">/*p和{之间要有一个空格*/</span>
+  p &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*p和&amp;#123;之间要有一个空格*/</span>
       <span class="token comment" spellcheck="true">/*将p标签的属性改为设的值*/</span>
       <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*：和属性值之间要有一个空格*/</span>
       <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 &lt;/head>
 &lt;/style>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -389,19 +399,19 @@
 <li>类选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
 &lt;style>
   <span class="token comment" spellcheck="true">/*目标标签添加class="red"*/</span>
-  <span class="token selector"><span class="token class">.red</span> </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*类前面加一个.*/</span>
+  <span class="token number">.</span>red &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*类前面加一个.*/</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
     <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 &lt;/style>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li>id选择器<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
+<li>id选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
   &lt;style>
-      <span class="token id">#pink</span> </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*前面加一个# id是唯一的 只能被调用一次*/</span>
+      #pink &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*前面加一个# id是唯一的 只能被调用一次*/</span>
         <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
         <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
   &lt;/style>
 &lt;head>
 &lt;body>
@@ -411,12 +421,12 @@
 &lt;/body>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li>通配符选择器<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;head>
+<li>通配符选择器<pre class="line-numbers language-css"><code class="language-css">&lt;head>
 &lt;style>
-  * </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/*将所有的标签都改属性值*/</span>
+  * &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*将所有的标签都改属性值*/</span>
     <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
     <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 &lt;/style>
 &lt;head>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -515,10 +525,10 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="样式表"><a href="#样式表" class="headerlink" title="样式表"></a>样式表</h2></li>
 <li><p>内部样式表<br>内部样式表是写在html页面内部，将css代码抽出，单独放在style标签中，控制整个html页面</p>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">&lt;style>
-p </span><span class="token punctuation">{</span>
+<pre class="line-numbers language-css"><code class="language-css">&lt;style>
+p &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#160545</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span>
+   &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 &lt;/style>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>

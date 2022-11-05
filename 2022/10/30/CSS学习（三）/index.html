@@ -7,9 +7,8 @@
     <meta name="keywords" content="CSS学习（三）, Roweller">
     <meta name="description" content="简介 CSS学习
 CSS三大特性层叠性层叠性主要解决样式冲突的问题层叠性原则：    1.样式冲突，就近原则，哪个样式离结构近，选择那个样式    2.样式不冲突，不重叠
-div {
-    color: red;/*会被覆盖*/
-    ">
+div &amp;amp;#123;
+    color: red;/*会被">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -64,6 +63,16 @@ div {
      <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="webjars/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script> 
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script> 
+    <script>
+    L2Dwidget.init({ 
+    "model": {jsonPath:"https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json","scale": 1 }, 
+    "display": { "position": "left", "width": 150, "height": 300,"hOffset": 0, "vOffset": -20 }, 
+    "mobile": { "show": true, "scale": 0.5 }, 
+    "react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } });
+</script> 
+
 <meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -344,7 +353,7 @@ div {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-04
+                    2022-11-05
                 </div>
                 
 
@@ -370,19 +379,19 @@ div {
             <div id="articleContent">
                 <h1 id="简介-CSS学习"><a href="#简介-CSS学习" class="headerlink" title="简介 CSS学习"></a>简介 CSS学习</h1><span id="more"></span>
 <h2 id="CSS三大特性"><a href="#CSS三大特性" class="headerlink" title="CSS三大特性"></a>CSS三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><p>层叠性主要解决样式冲突的问题<br>层叠性原则：<br>    1.样式冲突，<font color = "red">就近原则</font>，哪个样式离结构近，选择那个样式<br>    2.样式不冲突，不重叠</p>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+<pre class="line-numbers language-css"><code class="language-css">div &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*会被覆盖*/</span>
     <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*不会覆盖*/</span>
-<span class="token punctuation">}</span>
-<span class="token selector">div </span><span class="token punctuation">{</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+div &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
     <span class="token property">color</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><p>子元素会继承父元素的样式（text-，font-，line-，color）</p>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">/**包含在div标签中的标签颜色都会变为红色*/</span>
+<pre class="line-numbers language-css"><code class="language-css">div &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/**包含在div标签中的标签颜色都会变为红色*/</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
     <span class="token property">font</span><span class="token punctuation">:</span> <span class="token number">15</span>px/<span class="token number">1.5</span> <span class="token string">'Microsoft YaHei'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*1.5表示当前文字的1.5倍行高*/</span>
-<span class="token punctuation">}</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>当一个元素指定多个选择器，就会有优先级的产生<br>    1.选择器相同，则执行层叠性<br>    2.选择器不同，则根据<font color = "red" >选择器权重</font>执行</p>
 <ul>
@@ -481,7 +490,7 @@ div {
 <ul>
 <li><ul>
 <li> 边框的复合写法<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*边框会影响盒子的大小,不给盒子指定宽高度就不会改变大小*/</span>
-<span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">5</span>px solid red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*顺序没有要求*/</span>
+<span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">5</span>px solid red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*顺序没有要求*/</span><span class="token comment" spellcheck="true">/*solid表示盒子边框的样式 实线*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
@@ -495,10 +504,10 @@ div {
 <li><ul>
 <li>表格的边框<pre class="line-numbers language-css"><code class="language-css">table ,<span class="token comment" spellcheck="true">/*表格*/</span>
 td ,<span class="token comment" spellcheck="true">/*表格的表头*/</span>
-<span class="token selector">th </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*表格的单元格*/</span>
+th &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*表格的单元格*/</span>
 border：<span class="token number">5</span>px solid red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*顺序没有要求*/</span>
 <span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*合并相邻单元格的边框*/</span>
-<span class="token punctuation">}</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
@@ -670,10 +679,8 @@ border-radius：<span class="token number">10</span>px <span class="token number
 <td>可选，阴影颜色</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><p>float属性用于创建浮动框，将其移动在一边，直到左边缘或右边缘以及包括另一个浮动框的边缘</p>
-<ul>
+</li>
 <li><p>float的属性值</p>
 <table>
 <thead>
@@ -696,10 +703,241 @@ border-radius：<span class="token number">10</span>px <span class="token number
 </tr>
 </tbody></table>
 </li>
-<li><p>浮动特性</p>
+<li><p>浮动特性<br>  1.脱离标准普通流的控制移动到指定位置（简称脱标）<br>  3.如果所有浮动的盒子会一行显示，并且上沿对齐<br>  4.添加浮动的元素具有行内块元素的相似特性<br>  5.浮动元素经常和标准流父元素搭配使用<br>  6.浮动的盒子只会影响浮动盒子后面的标准流不会影响前面的标准流</p>
+<pre class="line-numbers language-css"><code class="language-css">&lt;head>
+&lt;title>Document&lt;/title>
+&lt;style>
+  * &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*清除内外边距*/</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+  li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*去掉列表的标志*/</span>
+          <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+  <span class="token number">.</span>box &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1226</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">285</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> antiquewhite<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*居中*/</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+  <span class="token number">.</span>box li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">296</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">285</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">14</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*设置每个浮动元素的距离*/</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+  <span class="token number">.</span>box <span class="token number">.</span>li&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*最后一个右侧没有内边距*/</span>
+  &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;ul class=<span class="token string">"box"</span>>
+  &lt;li><span class="token number">1</span>&lt;/li>
+  &lt;li><span class="token number">2</span>&lt;/li>
+  &lt;li><span class="token number">3</span>&lt;/li>
+  &lt;li class=<span class="token string">"li"</span>><span class="token number">4</span>&lt;/li>
+&lt;/ul>
+&lt;/body>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>清除浮动<br>有时候父元素中的浮动元素个数不确定，所以父元素的高度不是定值，然而不给父元素设高度又会造成父元素高度为零。<br>清除浮动就是清除浮动元素的影响，清除浮动之后父元素会根据浮动盒子自动检测高度</p>
+</li>
+<li><ul>
+<li>清除浮动的属性值<pre class="line-numbers language-css"><code class="language-css"><span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>清除左侧浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>清除右侧浮动</td>
+</tr>
+<tr>
+<td>both</td>
+<td>清除左右侧浮动,经常使用</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
-<p>1.脱离标准普通流的控制移动到指定位置（简称脱标）<br>2.浮动盒子不在保留原先的位置<br>3.如果所有浮动的盒子会一行显示，并且上沿对齐</p>
+</li>
+<li><ul>
+<li>清除浮动的方法</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li>额外标签法<pre class="line-numbers language-css"><code class="language-css"><span class="token number">.</span>clear &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*清除浮动*/</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+&lt;div class=<span class="token string">"clear"</span>>&lt;/div><span class="token comment" spellcheck="true">/*在父元素的最后一个浮动元素之后加一个标签，这个标签必须是块元素，添加clear类*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li>给父元素添加overflow属性<pre class="line-numbers language-css"><code class="language-css"><span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*添加给父元素*/</span><span class="token comment" spellcheck="true">/*超出的元素会隐藏，不会占位*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li>after伪元素<pre class="line-numbers language-css"><code class="language-css"><span class="token number">.</span><span class="token property">clearfix</span><span class="token punctuation">:</span>after &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*:after是额外标签法的升级版，相当于添加了一个额外标签*/</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*新标签的内容*/</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*默认元素元素是行内元素，所以要转为块元素*/</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+  <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token number">.</span>clearfix &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*给父元素添加clearfix类*/</span>
+<span class="token comment" spellcheck="true">/*IE6,7专有*/</span>
+  *<span class="token property">zoom</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*为了兼容*/</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li>双伪元素法<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*双伪元素法用的比较多*/</span>
+<span class="token number">.</span><span class="token property">clearfix</span><span class="token punctuation">:</span><span class="token punctuation">:</span>before,<span class="token comment" spellcheck="true">/*相当于在伪元素的前后都加上一个标签*/</span>
+<span class="token number">.</span><span class="token property">clearfix</span><span class="token punctuation">:</span>after &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*新标签的内容*/</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*转化为表格*/</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token number">.</span><span class="token property">clearfix</span><span class="token punctuation">:</span>after &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*给父元素添加clearfix类*/</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token number">.</span>clearfix &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*IE6,7专有*/</span>
+*<span class="token property">zoom</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="PS切图"><a href="#PS切图" class="headerlink" title="PS切图"></a>PS切图</h2><h3 id="常见的图片格式"><a href="#常见的图片格式" class="headerlink" title="常见的图片格式"></a>常见的图片格式</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>格式</th>
+<th>特点和常用的用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>jpg</td>
+<td>JPEG（.JPG）对色彩的信息保留较好，高清，颜色较多，我们<strong>产品类的图片</strong> 经常用jpg格式的</td>
+</tr>
+<tr>
+<td>2</td>
+<td>gif</td>
+<td>GIF格式最多只能储存256色，所以通常用来显示简单图形及字体，但是可以保存透明背景和动画效果, 实际 <strong>经常用于一些图片小动画效果</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>png</td>
+<td>png图像格式，是一种新兴的网络图形格式，结合了GIF和JPEG的优点，具有存储形式丰富的特点，能够保持透明背景. 如果想要切成 <strong>背景透明的图片</strong> ,请选择png格式.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>psd</td>
+<td>PSD图像格式，Photoshop的专用格式，里面可以存放图层、通道、遮罩等多种设计稿. <strong>对我们前端人员来说,最大的优点,我们可以直接从上面复制文字,获得图片,还可以测量大小和距离</strong>.</td>
+</tr>
+</tbody></table>
+<p>PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等。 </p>
+<h3 id="图层切图"><a href="#图层切图" class="headerlink" title="图层切图"></a>图层切图</h3><p>简单版步骤：</p>
+<p>​    ① 使用<strong>移动工具</strong>，点击需要的图片</p>
+<p><img src="/images/1571299959992.png"></p>
+<p>​    ② 查看右侧，找到图片对应的图层，右击图层 → 快速导出为 PNG</p>
+<p><img src="/images/1571300150618.png"></p>
+<p>但是很多情况下,我们需要合并图层再导出:</p>
+<p>步骤：</p>
+<p>​    ① 选中需要的若干个图层：选择一个图层，再按住shift键，继续选第二个图层:  </p>
+<p>​    ② 图层菜单 → 合并图层(ctrl+e)   </p>
+<p>​    <img src="/images/1571300529539.png"></p>
+<p>​    ③ 查看右侧生成的新图层，在合并后的图层上，右击 →  快速导出为 PNG</p>
+<h3 id="切片切图"><a href="#切片切图" class="headerlink" title="切片切图"></a>切片切图</h3><p>步骤：</p>
+<p>​    ① 利用切片选中图片 ：利用切片工具手动划出</p>
+<p><img src="/images/1571301270696.png"> </p>
+<p>​    ② 导出选中的图片：文件菜单  →  导出  → 存储为 web 设备所用格式  →  选择我们要的图片格式 →  存储 。</p>
+<p>​    注意：保存的时候，要选“选中的切片”：</p>
+<p><img src="/images/1571301357818.png"> </p>
+<h3 id="插件切图"><a href="#插件切图" class="headerlink" title="插件切图"></a>插件切图</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>Cutterman是一款运行在photoshop中的插件，能够自动将你需要的图层进行输出， 以替代传统的手工 “导出web所用格式” 以及使用切片工具进行挨个切图的繁琐流程。 </p>
+<p>它支持各种各样的图片尺寸、格式、形态输出，方便你在pc、ios、Android等端上使用。 它不需要你记住一堆的语法、规则，纯点击操作，方便、快捷，易于上手。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>注意： <strong>cutterman插件要求你的ps 必须是完整版</strong>，不能是绿色版，所以大家需要从新安装完整版本。</p>
+<p>查看 “窗口菜单”里面的“扩展功能”：</p>
+<p>​    ① 如果是扩展功能的是灰色的，表示就是绿色版的，需要重新安装PS</p>
+<p>​    ② 如果是扩展功能右侧是可以使用的，表示就是完整版的，可以安装cutterman插件快速切图</p>
+<p><img src="/images/1571302032310.png"></p>
+<p>官网: <a href ="http://www.cutterman.cn/zh/cutterman">http://www.cutterman.cn/zh/cutterman</a></p>
+<p>当cutterman 安装完成后，重启PS，会发现扩展功能里面多了一个cutterman工具：</p>
+<p><img src="/images/1571302286467.png"></p>
+<p>使用步骤</p>
+<p>​    ① 选择需要的图层</p>
+<p>​    ② 选择web端，点击web下面的下拉三角</p>
+<p>​    ③ 选择需要的图片格式</p>
+<p>​    ④ 设置好存储路径</p>
+<p>​    ⑤ 点击 “导出选中图层” 按钮</p>
+<p><img src="/images/1571303715362.png"> </p>
+<p>示意图：</p>
+<img src="/images/sample1.gif" /> 
+
+<h2 id="CSS布局"><a href="#CSS布局" class="headerlink" title="CSS布局"></a>CSS布局</h2><h3 id="CSS书写规范"><a href="#CSS书写规范" class="headerlink" title="CSS书写规范"></a>CSS书写规范</h3><p>建议遵循以下顺序：</p>
+<ol>
+<li><strong>布局定位属性</strong>：display / position / float / clear / visibility / overflow（建议 display 第一个写，毕竟关系到模式）</li>
+<li><strong>自身属性</strong>：width / height / margin / padding / border / background</li>
+<li><strong>文本属性</strong>：color / font / text-decoration / text-align / vertical-align / white- space / break-word</li>
+<li><strong>其他属性（CSS3）</strong>：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …</li>
+</ol>
+<p><strong>举例：</strong></p>
+<pre class="line-numbers language-css"><code class="language-css"> <span class="token number">.</span>jdc &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">20</span>px <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> Arial, <span class="token string">'Helvetica Neue'</span>, Helvetica, sans-serif<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+ &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="页面布局整体思路"><a href="#页面布局整体思路" class="headerlink" title="页面布局整体思路"></a>页面布局整体思路</h3><p>为了提高网页制作的效率，布局时通常有以下的整体思路，具体如下：</p>
+<p>​    1.必须确定页面的<strong>版心</strong>（可视区），我们<strong>测量</strong>可得知。</p>
+<p>​    2.分析页面中的行模块，以及每个行模块中的列模块。其实页面布局第一准则.</p>
+<p>​    3.一行中的列模块经常浮动布局, 先确定每个列的大小,之后确定列的位置.  页面布局第二准则</p>
+<p>​    4.制作 HTML 结构。我们还是遵循，先有结构，后有样式的原则。结构永远最重要.</p>
+<p>​    5.所以, 先理清楚<strong>布局结构</strong>,再写代码尤为重要. 这需要我们多写多积累.</p>
+<h3 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h3><p><font color ="red">实际开发中，<strong>重要的导航栏</strong>，我们不会直接用链接a ，而是<strong>用 li  包含链接(li+a)的做法</strong></font></p>
+<p>​    1.li+a 语义更清晰，一看这就是有条理的列表型内容。</p>
+<p>​    2.如果直接用a，搜索引擎容易辨别为有堆砌关键字嫌疑（故意堆砌关键字容易被搜索引擎有降权的风险），从而影响网站排名</p>
+<p><strong>注意:</strong> </p>
+<p>​    1.让导航栏一行显示, 给 li 加浮动, 因为 li 是块级元素, 需要一行显示.</p>
+<p>​    2.这个nav导航栏可以不给宽度,将来可以继续添加其余文字</p>
+<p>​    3.因为导航栏里面文字不一样多,所以最好给链接 a 左右padding 撑开盒子,而不是指定宽度 </p>
 
                 
             </div>
