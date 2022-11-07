@@ -352,7 +352,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-06
+                    2022-11-07
                 </div>
                 
 
@@ -440,7 +440,10 @@
 </li>
 </ul>
 <p>定位的盒子有了边偏移才有价值。 一般情况下，凡是有定位地方必定有边偏移。</p>
-<h3 id="定位模式介绍"><a href="#定位模式介绍" class="headerlink" title="定位模式介绍"></a>定位模式介绍</h3><h4 id="静态定位-static-了解"><a href="#静态定位-static-了解" class="headerlink" title="静态定位(static) - 了解"></a>静态定位(static) - 了解</h4><p><strong>静态定位</strong>是元素的<strong>默认</strong>定位方式，<strong>无定位的意思</strong>。它相当于 border 里面的none，静态定位static，不要定位的时候用。</p>
+<h3 id="定位模式介绍"><a href="#定位模式介绍" class="headerlink" title="定位模式介绍"></a>定位模式介绍</h3><blockquote>
+<p>常见的几种定位模式特性<br>| <strong>定位模式</strong>     | <strong>是否脱标</strong>  | <strong>移动位置</strong>     | <strong>是否常用</strong>          |<br>| ———— | ————— | ———————- | ———————- |<br>| static   静态定位     | 否        | 不能使用边偏移      | 很少         |<br>| <strong>relative 相对定位</strong> | <strong>否 (占有位置)</strong>    | <strong>相对于自身位置移动</strong> | <strong>基本单独使用</strong>    |<br>| <strong>absolute绝对定位</strong>  | <strong>是（不占有位置）</strong> | <strong>带有定位的父级</strong>     | <strong>要和定位父级元素搭配使用</strong> |<br>| <strong>fixed 固定定位</strong>    | <strong>是（不占有位置）</strong> | <strong>浏览器可视区</strong>       | <strong>单独使用，不需要父级</strong>     |<br>| sticky 粘性定位    | 否   (占有位置)    | 浏览器可视区     | 当前阶段少      |</p>
+</blockquote>
+<h4 id="静态定位-static-了解"><a href="#静态定位-static-了解" class="headerlink" title="静态定位(static) - 了解"></a>静态定位(static) - 了解</h4><p><strong>静态定位</strong>是元素的<strong>默认</strong>定位方式，<strong>无定位的意思</strong>。它相当于 border 里面的none，静态定位static，不要定位的时候用。</p>
 <ul>
 <li>语法：</li>
 </ul>
@@ -508,6 +511,85 @@
 </li>
 </ol>
 <p> <strong>结论</strong>：<strong>父级要占有位置，子级要任意摆放</strong>，这就是<strong>子绝父相</strong>的由来。</p>
+<h4 id="固定定位-fixed-重要"><a href="#固定定位-fixed-重要" class="headerlink" title="固定定位(fixed) - 重要"></a>固定定位(fixed) - 重要</h4><ul>
+<li><p><strong>固定定位</strong>是元素<strong>固定于浏览器可视区的位置</strong>。 主要使用场景： 可以在浏览器页面滚动时元素的位置不会改变。</p>
+</li>
+<li><p>语法：</p>
+<pre><code> 选择器 &#123; 
+     position: fixed; 
+ &#125;
+</code></pre>
+</li>
+<li><p>固定定位的特点：（务必记住）：</p>
+<p>1.以浏览器的可视窗口为参照点移动元素。</p>
+<ul>
+<li>跟父元素没有任何关系</li>
+<li>不随滚动条滚动。</li>
+</ul>
+<p>2.固定定位<strong>不在占有原先的位置</strong>。</p>
+</li>
+<li><p>固定定位也是<strong>脱标</strong>的，其实<strong>固定定位也可以看做是一种特殊的绝对定位</strong>。（认死理型） </p>
+<ul>
+<li><strong>完全脱标</strong>—— 完全不占位置；</li>
+<li>只认<strong>浏览器的可视窗口</strong> —— <code>浏览器可视窗口 + 边偏移属性</code> 来设置元素的位置；<ul>
+<li>跟父元素没有任何关系；单独使用的</li>
+<li>不随滚动条滚动。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src = "/images/08_固定定位案例.png" width="600" />
+
+<p><strong>提示</strong>：IE 6 等低版本浏览器不支持固定定位。</p>
+<h4 id="粘性定位-sticky-了解"><a href="#粘性定位-sticky-了解" class="headerlink" title="粘性定位(sticky) - 了解"></a>粘性定位(sticky) - 了解</h4><ul>
+<li><p><strong>粘性定位</strong>可以被认为是相对定位和固定定位的混合。 Sticky  粘性的 </p>
+</li>
+<li><p>语法：</p>
+<pre><code> 选择器 &#123; 
+     position: sticky; 
+     top: 10px; 
+ &#125;
+</code></pre>
+</li>
+<li><p>粘性定位的特点：</p>
+<p>1.以浏览器的可视窗口为参照点移动元素（固定定位特点）</p>
+<p>2.粘性定位占有原先的位置（相对定位特点）</p>
+<p>3.必须添加 top 、left、right、bottom <strong>其中一个</strong>才有效</p>
+<p>跟页面滚动搭配使用。 兼容性较差，IE 不支持。</p>
+</li>
+</ul>
+<h4 id="定位的补充"><a href="#定位的补充" class="headerlink" title="定位的补充"></a>定位的补充</h4><ul>
+<li>定位的重叠顺序<blockquote>
+<p>当同时使用定位时，会出现盒子重叠的现象，需要用z-index来控制盒子的先后次序</p>
+</blockquote>
+<pre class="line-numbers language-css"><code class="language-css">选择器&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<span class="token property">z-index</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p>*<strong>注意：</strong><br>1.数值可以是正整数，负整数，默认为auto，数值越大，盒子越靠上<br>2.如果属性值相同，则按书写顺序，后来居上<br>3.数字后面不能加单位<br>4.只有定位的盒子才有z-index属性</p>
+<ul>
+<li>绝对定位的居中显示<blockquote>
+<p>加了绝对定位的盒子不能使用margin:auto水平居中，但是可以采取以下的方式实现水平和垂直居中</p>
+</blockquote>
+</li>
+</ul>
+<p>1.left:50%; 让盒子的左侧移动到父级元素的水平居中位置<br>2.margin-left:-100px;让盒子移动自身宽度的一半</p>
+<ul>
+<li>定位的特殊性<blockquote>
+<p>绝对定位和固定定位也有和浮动相似的特性</p>
+</blockquote>
+</li>
+</ul>
+<p>1.行内元素添加绝对或者固定定位，可以直接设置高度和宽度<br>2.块元素添加绝对定位和固定定位，如果不给高度或者宽度，默认大小是内容的大小</p>
+<h2 id="显示与隐藏"><a href="#显示与隐藏" class="headerlink" title="显示与隐藏"></a>显示与隐藏</h2><blockquote>
+<p>让一个元素在页面中隐藏或显示出来</p>
+</blockquote>
+<h3 id="dispaly显示隐藏"><a href="#dispaly显示隐藏" class="headerlink" title="dispaly显示隐藏"></a>dispaly显示隐藏</h3><p>display属性用于设置一个对象该如何显示<br>|属性值|作用|<br>|–|–|<br>|none|隐藏对象|<br>|block|除转为块元素之外，还能显示对象|<br><font color = "red"><strong>display隐藏对象后，不在占用原来的位置</strong></font></p>
+<h3 id="visibility显示隐藏"><a href="#visibility显示隐藏" class="headerlink" title="visibility显示隐藏"></a>visibility显示隐藏</h3><p>visibility属性指定一个元素应该可见还是隐藏<br>|属性值|作用|<br>|–|–|<br>|visible|可视|<br>|hidden|隐藏|<br><font color = "red"><strong>visibility隐藏对象后，保留原来的位置</strong></font></p>
+<h3 id="overflow显示隐藏"><a href="#overflow显示隐藏" class="headerlink" title="overflow显示隐藏"></a>overflow显示隐藏</h3><p>overflow属性指定内容溢出的部分，显示还是隐藏，默认显示<br>|属性值|作用|<br>|–|–|<br>|visible|默认值，显示|<br>|hidden|不显示|<br>|scroll|溢出部分显示滚动条，没有超出也会显示滚动条|<br>|auto|溢出部分显示滚动条，没有超出不会显示滚动条|<br>如果有定位的盒子，<strong>慎用overflow：hidden</strong>，他会隐藏多余的部分</p>
 
                 
             </div>

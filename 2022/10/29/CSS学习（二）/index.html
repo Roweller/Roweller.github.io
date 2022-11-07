@@ -7,7 +7,9 @@
     <meta name="keywords" content="CSS学习（二）, Roweller">
     <meta name="description" content="简介 CSS学习
 
-Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
+Emmet语法
+Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
+
 
 快速生成html  1.标签*n，即可快速生成n个标签  2.父子级关系的，div&amp;gt;span,按tab  3.兄弟级关系的，d">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -354,7 +356,7 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-02
+                    2022-11-07
                 </div>
                 
 
@@ -380,7 +382,9 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
             <div id="articleContent">
                 <h1 id="简介-CSS学习"><a href="#简介-CSS学习" class="headerlink" title="简介 CSS学习"></a>简介 CSS学习</h1><span id="more"></span>
 
-<h2 id="Emmet语法"><a href="#Emmet语法" class="headerlink" title="Emmet语法"></a>Emmet语法</h2><p>  Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写</p>
+<h2 id="Emmet语法"><a href="#Emmet语法" class="headerlink" title="Emmet语法"></a>Emmet语法</h2><blockquote>
+<p>Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写</p>
+</blockquote>
 <ul>
 <li><p>快速生成html<br>  1.标签*n，即可快速生成n个标签<br>  2.父子级关系的，div&gt;span,按tab<br>  3.兄弟级关系的，div+p,按tab<br>  4.带有类名，.nav,按tab，即可生成一个默认nav属性的div标签<br>  5.带有id，#nav,按tab，即可生成一个默认id为nav的div标签<br>  6.span.gray，按tab，即可生成一个gary属性的span标签<br>  7.span#gray，按tab，即可生成一个id为gary的span标签<br>  8..nav$*5,按tab，即可生成五个个默认nav属性的div标签，类的属性值从nav1-nav5</p>
 </li>
@@ -410,7 +414,9 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 &lt;/body>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>元素1 元素2 {样式}，元素1和元素2可以是任意基础选择器<br>元素2必须是元素1的后代，可以是多重后代</p>
-<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3><p>子选择器只能选择作为某一元素的最近的一级元素</p>
+<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3><blockquote>
+<p>子选择器只能选择作为某一元素的最近的一级元素</p>
+</blockquote>
 <pre class="line-numbers language-css"><code class="language-css">&lt;head>
 &lt;style>
   div > a &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*div和a之间用一个">"隔开*/</span>
@@ -429,7 +435,9 @@ Emmet语法  Emmet语法可以快速生成CSS语法和HTML语法，提高了代�
 &lt;/body>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>元素1 &gt;元素2 {样式}，元素1和元素2可以是任意基础选择器</p>
-<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>并集选择器可以为多组标签定义相同的格式，用于集体声明</p>
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><blockquote>
+<p>并集选择器可以为多组标签定义相同的格式，用于集体声明</p>
+</blockquote>
 <pre class="line-numbers language-css"><code class="language-css">  div ,<span class="token comment" spellcheck="true">/*并集选择器常常竖着写*/</span>
   p ,
   <span class="token number">.</span>nav &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*div,p和nav属性都改变了颜色,选择器可以是任意选择器*/</span>
