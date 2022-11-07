@@ -5,7 +5,15 @@
     .container {
         width: 80%;
     }
-
+    div#live2d-widget {
+        /* position: absolute; */
+        width: 120px!important;
+        height: 240px!important;
+    }
+    canvas#live2dcanvas {
+        width: 100%!important;
+        height: 100%!important;
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
