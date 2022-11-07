@@ -7,12 +7,18 @@
     }
     div#live2d-widget {
         /* position: absolute; */
-        width: 120px!important;
-        height: 240px!important;
+        width: 150px!important;
+        height: 300px!important;
     }
     canvas#live2dcanvas {
         width: 100%!important;
         height: 100%!important;
+    }
+    .content .index-card .container>.card {
+        padding: 0;
+    }
+    .content .index-card .container .card>.card-content {
+        padding: 16px !important;
     }
 }
 
