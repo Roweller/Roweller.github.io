@@ -4,18 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL安装, Roweller">
-    <meta name="description" content="简介 下载MySQL
+    <meta name="keywords" content="CSS（六）, Roweller">
+    <meta name="description" content="简介 HTML5X新特性、CSS3新特性
 
-MySQL的下载下载网址：https://downloads.mysql.com/archives/community/
-
-MySQL的配置配置环境变量
- 打开电脑高级系统配置
-复制MySQL的路径
-
-
-
-新建MyS">
+HTML5的新特性
+HTML5 的新增特性主要是针对于以前的不足，增加了一些新的标签、新的表单和新的表单属性等。这些新特性都有兼容性问题，基本是 IE9+ 以上版本的浏览器才支持，如果不考虑兼容性">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -27,7 +20,7 @@ MySQL的配置配置环境变量
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL安装 | Roweller</title>
+    <title>CSS（六） | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -281,12 +274,12 @@ MySQL的配置配置环境变量
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL安装</h1>
+                    <h1 class="description center-align post-title">CSS（六）</h1>
                 </div>
             </div>
         </div>
@@ -330,8 +323,8 @@ MySQL的配置配置环境变量
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MySQL/">
-                                <span class="chip bg-color">MySQL</span>
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                     </div>
@@ -342,8 +335,8 @@ MySQL的配置配置环境变量
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -355,14 +348,14 @@ MySQL的配置配置环境变量
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-11
+                    2022-11-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-07
+                    2022-11-08
                 </div>
                 
 
@@ -386,54 +379,308 @@ MySQL的配置配置环境变量
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介-下载MySQL"><a href="#简介-下载MySQL" class="headerlink" title="简介 下载MySQL"></a>简介 下载MySQL</h1><span id="more"></span>
+                <h1 id="简介-HTML5X新特性、CSS3新特性"><a href="#简介-HTML5X新特性、CSS3新特性" class="headerlink" title="简介 HTML5X新特性、CSS3新特性"></a>简介 HTML5X新特性、CSS3新特性</h1><span id="more"></span>
 
-<h1 id="MySQL的下载"><a href="#MySQL的下载" class="headerlink" title="MySQL的下载"></a>MySQL的下载</h1><p>下载网址：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></p>
-<p><img src="/images/MySQLdownload.png"></p>
-<h1 id="MySQL的配置"><a href="#MySQL的配置" class="headerlink" title="MySQL的配置"></a>MySQL的配置</h1><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ul>
-<li> 打开电脑高级系统配置<br><img src="/images/%E9%85%8D%E7%BD%AEMySQL%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png"></li>
-<li>复制MySQL的路径</li>
-</ul>
-<p><img src="/images/MySQL%E7%9A%84%E8%B7%AF%E5%BE%84.png" alt="复制路径"></p>
-<ul>
-<li>新建MySQL_HOME环境变量</li>
-</ul>
-<p><img src="/images/%E6%96%B0%E5%BB%BAMySQL%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png" alt="新建环境变量"></p>
-<ul>
-<li>编辑path，点击“新建”</li>
-</ul>
-<p><img src="/images/%E6%B7%BB%E5%8A%A0path.png" alt="新建环境变量"></p>
-<ul>
-<li>点击“确定”，保存设置，这样环境变量就配置完成了</li>
-</ul>
-<h2 id="新建MySQL的配置文件"><a href="#新建MySQL的配置文件" class="headerlink" title="新建MySQL的配置文件"></a>新建MySQL的配置文件</h2><ul>
-<li> 在MySQL的文件目录下，新建一个文件“my.ini”，把以下的内容粘贴复制到文件里<pre class="line-numbers language-sql"><code class="language-sql"><span class="token punctuation">[</span>mysql<span class="token punctuation">]</span>
-<span class="token keyword">default</span><span class="token operator">-</span>character<span class="token operator">-</span><span class="token keyword">set</span><span class="token operator">=</span>utf8
-<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
-character<span class="token operator">-</span><span class="token keyword">set</span><span class="token operator">-</span>server<span class="token operator">=</span>utf8
-<span class="token keyword">default</span><span class="token operator">-</span>storage<span class="token operator">-</span><span class="token keyword">engine</span><span class="token operator">=</span><span class="token keyword">INNODB</span>
-sql_mode<span class="token operator">=</span>STRICT_TRANS_TABLES<span class="token punctuation">,</span>NO_ZERO_IN_DATE<span class="token punctuation">,</span>NO_ZERO_DATE<span class="token punctuation">,</span>
-ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE_USER<span class="token punctuation">,</span>NO_ENGINE_SUBSTITUTION
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h2 id="初始化MySQL"><a href="#初始化MySQL" class="headerlink" title="初始化MySQL"></a>初始化MySQL</h2><ul>
-<li>用管理员命令打开命令框，进入到mysqlt下的bin，并输入.\mysqld       –initialize-insecure </li>
-</ul>
-<p><img src="/images/%E7%94%9F%E6%88%90data.png" alt=".\mysqld  --initialize-insecure"></p>
-<h2 id="注册MySQL服务"><a href="#注册MySQL服务" class="headerlink" title="注册MySQL服务"></a>注册MySQL服务</h2><ul>
-<li>在命令行中输入mysqld -Install  </li>
-</ul>
-<p><img src="/images/%E6%B3%A8%E5%86%8CMySQL.png" alt="mysqld -Install"></p>
-<h2 id="启动MySQL服务"><a href="#启动MySQL服务" class="headerlink" title="启动MySQL服务"></a>启动MySQL服务</h2><ul>
-<li>输入 net start mysql<pre><code>net start mysql
-</code></pre>
-<blockquote>
-<p>参考<a href ="https://blog.csdn.net/weixin_42869365/article/details/83472466">MySQL下载与安装</a></p>
+<h2 id="HTML5的新特性"><a href="#HTML5的新特性" class="headerlink" title="HTML5的新特性"></a>HTML5的新特性</h2><blockquote>
+<p>HTML5 的新增特性主要是针对于以前的不足，增加了一些新的标签、新的表单和新的表单属性等。<br>这些新特性都有兼容性问题，基本是 <strong>IE9+ 以上版本的浏览器</strong>才支持，如果不考虑兼容性问题，可以大量使用这些新特性。</p>
 </blockquote>
+<h3 id="语义化标签"><a href="#语义化标签" class="headerlink" title="语义化标签"></a>语义化标签</h3><p>发展到了HTML5后，新增了一些语义化标签，这样的话更加有利于浏览器的搜索引擎搜索，也方便了网站的seo（Search Engine Optimization，搜索引擎优化），下面就是新增的一些语义化标签</p>
+<ul>
+<li><code>&lt;header&gt;</code> 头部标签</li>
+<li><code>&lt;nav&gt;</code> 导航标签</li>
+<li><code>&lt;article&gt;</code> 内容标签</li>
+<li><code>&lt;section&gt;</code> 定义文档某个区域</li>
+<li><code>&lt;aside&gt;</code> 侧边栏标签</li>
+<li><code>&lt;footer&gt;</code> 尾部标签</li>
+</ul>
+<img src = "/images/语义化标签.png" width =  "600"/>
+
+<p><strong>注意：</strong></p>
+<ol>
+<li>这种语义化标准主要是针对搜索引擎的</li>
+<li>这些新标签页面中可以使用多次</li>
+<li>在 IE9 中，需要把这些元素转换为块级元素</li>
+<li>移动端更喜欢使用这些标签</li>
+</ol>
+<h3 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h3><blockquote>
+<p>多媒体标签分为 音频 <strong>audio</strong> 和视频 <strong>video</strong> 两个标签 使用它们，我们可以很方便的在页面中嵌入音频和视频，而不再去使用落后的flash和其他浏览器插件了。<br>因为多媒体标签的 属性、方法、事件比较多，因此我们需要什么功能的时候，就需要去查找相关的文档进行学习使用。</p>
+</blockquote>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><pre class="line-numbers language-html"><code class="language-html"> &lt;video src="media/mi.mp4" controls="controls" muted = "muted" loop="loop"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>video的支持情况<br>当前 <strong>video</strong> 元素支持三种视频格式： 尽量使用 <strong>mp4格式</strong><br>不同浏览器支持 <strong>video</strong> 视频格式的情况：<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>MP4</th>
+<th>WebM</th>
+<th>Ogg</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Intemet Explorer</td>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>YES(从Firefox31开始，Linux从Firefox30开始)</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>YES(从Opera25开始)</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
-
+<p><strong>上面这种写法，浏览器会匹配video标签中的source，如果支持就播放，如果不支持往下匹配，直到没有匹配的格式，就提示文本</strong></p>
+<ul>
+<li>兼容性<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span>  <span class="token attr-name">controls</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>controls<span class="token punctuation">"</span></span>  <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>move.ogg<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video/ogg<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>move.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video/mp4<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+  您的浏览器暂不支持 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span><span class="token punctuation">></span></span> 标签播放视频
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>video的属性<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>url</td>
+<td>要播放的视频的 URL</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则视频在就绪后马上播放,chrome禁用该属性，添加muted，才可使用</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则当媒介文件完成播放后再次开始播放</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>规定视频的音频输出应该被静音</td>
+</tr>
+<tr>
+<td>poster</td>
+<td>URL</td>
+<td>规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>preload</td>
+<td>如果出现该属性，则视频在页面加载时进行加载，并预备播放,如果使用 “autoplay”，则忽略该属性</td>
+</tr>
+<tr>
+<td>width</td>
+<td>pixels</td>
+<td>设置视频播放器的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>pixels</td>
+<td>设置视频播放器的高度</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h4><p><strong>使用语法：</strong></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>media/music.mp3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><p>audio的支持情况<br>当前 <strong>audio</strong> 元素支持三种视频格式： 尽量使用 <strong>mp3格式</strong><br>不同浏览器支持 <strong>audio</strong> 视频格式的情况：</p>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>MP3</th>
+<th>Wav</th>
+<th>Ogg</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Intemet Explorer</td>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>YES</td>
+<td>YES</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>兼容性</p>
+<pre class="line-numbers language-html"><code class="language-html">&lt; audio controls="controls"  >
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>happy.mp3<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio/mpeg<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>happy.ogg<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio/ogg<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+  您的浏览器暂不支持 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span><span class="token punctuation">></span></span> 标签。
+&lt;/ audio>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p><strong>上面这种写法，浏览器会匹配audio标签中的source，如果支持就播放，如果不支持往下匹配，直到没有匹配的格式，就提示文本</strong></p>
+<ul>
+<li>audio属性<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>url</td>
+<td>要播放的音频的 URL</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则音频在就绪后马上播放,chrome禁用了该属性</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则每当音频结束时重新开始播放</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>规定视频输出应该被静音</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>preload</td>
+<td>如果出现该属性，则音频在页面加载时进行加载，并预备播放,如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="新增的表单元素-（★★）"><a href="#新增的表单元素-（★★）" class="headerlink" title="新增的表单元素 （★★）"></a>新增的表单元素 （★★）</h3><p>在H5中，帮我们新增加了很多类型的表单</p>
+<ul>
+<li>案例<pre class="line-numbers language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- 我们验证的时候必须添加form表单域 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--type设置了输入的格式--></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>邮箱: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>网址: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>日期: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>date<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>时间: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>time<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>数量: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>手机号码: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tel<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>搜索: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>颜色: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>color<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token comment" spellcheck="true">&lt;!-- 当我们点击提交按钮就可以验证表单了 --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>提交<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>新增加的输入类型<img src = "/images/新增input表单.png" width= "700" /></li>
+</ul>
+<h3 id="新增加的表单属性"><a href="#新增加的表单属性" class="headerlink" title="新增加的表单属性"></a>新增加的表单属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>required</td>
+<td>required</td>
+<td>表明该元素是必填项，不能不填</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>提示文本</td>
+<td>在用户输入时进行提示</td>
+</tr>
+<tr>
+<td>autofocus</td>
+<td>autofocus</td>
+<td>在打开页面时使元素自动获取焦点</td>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>off/on</td>
+<td>使form元素或者input元素拥有自动完成功能，即记录户之前输入的值，关闭为off，默认为on</td>
+</tr>
+<tr>
+<td>mutiple</td>
+<td>mutiple</td>
+<td>可以多选文件提交</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-css"><code class="language-css">   <span class="token selector">input<span class="token pseudo-element">::placeholder</span> </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*改变表单提示的属性*/</span>
+       <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="CSS3的新特性"><a href="#CSS3的新特性" class="headerlink" title="CSS3的新特性"></a>CSS3的新特性</h2><blockquote>
+<p>新增的CSS3特性有兼容性问题，ie9+才支持,移动端支持优于 PC 端 </p>
+</blockquote>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3>
                 
             </div>
             <hr/>
@@ -459,7 +706,7 @@ ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://roweller.github.io/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">https://roweller.github.io/2022/10/11/MySQL%E5%AE%89%E8%A3%85/</a>
+                    <a href="https://roweller.github.io/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/">https://roweller.github.io/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -497,8 +744,8 @@ ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MySQL/">
-                                    <span class="chip bg-color">MySQL</span>
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                         </div>
@@ -570,9 +817,9 @@ ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://roweller.github.io/2022/10/11/MySQL%E5%AE%89%E8%A3%85/';
-        this.page.identifier = '/2022/10/11/MySQL%E5%AE%89%E8%A3%85/';
-        this.page.title = 'MySQL安装';
+        this.page.url = 'https://roweller.github.io/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/';
+        this.page.identifier = '/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/';
+        this.page.title = 'CSS（六）';
     };
     let disqus_shortname = '';
 
@@ -602,84 +849,36 @@ ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
+                <a href="/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="MySQL操作">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="CSS（六）">
                         
-                        <span class="card-title">MySQL操作</span>
+                        <span class="card-title">CSS（六）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 操作MySQL
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-11
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/10/11/MySQL%E5%AE%89%E8%A3%85/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="MySQL安装">
-                        
-                        <span class="card-title">MySQL安装</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            简介 下载MySQL
+                            简介 HTML5X新特性、CSS3新特性
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -690,8 +889,57 @@ ERROR_FOR_DIVISION_BY_ZERO<span class="token punctuation">,</span>NO_AUTO_CREATE
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/07/CSS%EF%BC%88%E4%BA%94%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CSS（五）">
+                        
+                        <span class="card-title">CSS（五）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介 界面样式、对齐属性、省略、布局技巧
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>

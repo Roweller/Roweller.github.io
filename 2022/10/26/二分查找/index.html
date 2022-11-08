@@ -280,7 +280,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -394,48 +394,48 @@
 </ul>
 <ul>
 <li><ul>
-<li>写法一：while(start&lt; end) [start,end)区间 if(nums[(start+end)/2]&gt;=target),令end=(start+end)/2 , if(nums[(start+end)/2]&lt;=target),令start=(start+end)/2+1 注意等号的取值<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<li>写法一：while(start&lt; end) [start,end)区间 if(nums[(start+end)/2]&gt;=target),令end=(start+end)/2 , if(nums[(start+end)/2]&lt;=target),令start=(start+end)/2+1 注意等号的取值<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token operator">></span>nums<span class="token punctuation">[</span>end<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">||</span>target<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;</span>end<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
          <span class="token keyword">int</span> mid<span class="token operator">=</span> <span class="token punctuation">(</span>start<span class="token operator">+</span>end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
             end<span class="token operator">=</span>mid<span class="token punctuation">;</span>
         <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span> 
             start<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    
-        <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//nums[mid]==target</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//nums[mid]==target</span>
             <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
 <li><ul>
-<li>写法二：while(start&lt;=end)，要用&lt;=，因为start==end也是会产生target [start,end]区间 if(nums[(start+end)/2]&gt;target),令end=(start+end)/2-1 , if(nums[(start+end)/2]&lt; target) , 令start=(start+end)/2+1 注意等号的取值<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<li>写法二：while(start&lt;=end)，要用&lt;=，因为start==end也是会产生target [start,end]区间 if(nums[(start+end)/2]&gt;target),令end=(start+end)/2-1 , if(nums[(start+end)/2]&lt; target) , 令start=(start+end)/2+1 注意等号的取值<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token operator">></span>nums<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token operator">||</span>target<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;=</span>end<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;=</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>start<span class="token operator">+</span>end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 index <span class="token operator">=</span>mid<span class="token punctuation">;</span>
                 <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
         
         <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
             end<span class="token operator">=</span>mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
         <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span> 
             start<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
@@ -621,7 +621,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="双指针">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="双指针">
                         
                         <span class="card-title">双指针</span>
                     </div>
@@ -678,19 +678,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/22/CSS%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/">
+                <a href="/2022/10/22/CSS%EF%BC%88%E4%B8%80%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="CSS学习（一）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CSS（一）">
                         
-                        <span class="card-title">CSS学习（一）</span>
+                        <span class="card-title">CSS（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 CSS学习
+                            简介 基础选择器、字体、文本
                         
                     </div>
                     <div class="publish-info">
@@ -1160,7 +1160,7 @@ $(function () {
     
     <script type="text/javascript" color="200,50,25"
         pointColor="200,50,25" opacity='1'
-        zIndex="-1" count="99"
+        zIndex="-1" count="149"
         src="/libs/background/canvas-nest.js"></script>
     
 

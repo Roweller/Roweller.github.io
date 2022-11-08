@@ -57,8 +57,14 @@ body {
     background-attachment: fixed;
     margin: 0;
     color: #7F95D1;
+  
 }
-
+* {
+    cursor: url(../medias/mouse.cur),default;
+}
+ a:hover {
+    cursor: url(../medias/select.cur),pointer!important;
+ }
 
 h1 {
     margin: 48px 0 22px -5px;
