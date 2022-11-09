@@ -355,10 +355,15 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-08
+                    2022-11-09
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.9k
+                </div>
                 
 
                 
@@ -680,7 +685,164 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
 <h2 id="CSS3的新特性"><a href="#CSS3的新特性" class="headerlink" title="CSS3的新特性"></a>CSS3的新特性</h2><blockquote>
 <p>新增的CSS3特性有兼容性问题，ie9+才支持,移动端支持优于 PC 端 </p>
 </blockquote>
-<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p>属性选择器，按照字面意思，都是根据标签中的属性来选择元素</p>
+<p><img src="/images/%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8.png"></p>
+<p><strong>示例代码：</strong></p>
+<pre class="line-numbers language-css"><code class="language-css"> <span class="token comment" spellcheck="true">/* 只选择 type =text 文本框的input 选取出来 */</span>
+<span class="token selector">input<span class="token attribute">[type=text]</span> </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*input和[之间没有空格*/</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 选择首先是div 然后 具有class属性 并且属性值 必须是 icon开头的这些元素 */</span>
+<span class="token selector">div<span class="token attribute">[class^=icon]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 选择首先是section 然后 具有class属性 并且属性值 必须是 data结尾的这些元素 */</span>
+<span class="token selector">section<span class="token attribute">[class$=data]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 选择首先是section 然后 具有class属性 并且属性值 含有 data 的这些元素 */</span>
+<span class="token selector">section<span class="token attribute">[class*=da]</span></span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>属性选择器，按照字面意思，都是根据标签中的属性来选择元素</li>
+<li>属性选择器可以根据元素特定属性的来选择元素。 这样就可以不用借助于类或者id选择器</li>
+<li>属性选择器也可以选择出来自定义的属性</li>
+<li><strong>注意：</strong>类选择器、属性选择器、伪类选择器，权重为 10。</li>
+</ul>
+<h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><p>结构伪类选择器主要根据文档结构来选择器元素， 常用于根据父级选择器里面的子元素<br><img src="images/%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8-01.png"></p>
+<pre class="line-numbers language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token comment" spellcheck="true">/*选择第一个li*/</span>
+    <span class="token selector">ul li<span class="token pseudo-class">:first-child</span></span><span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/*选择最后一个li*/</span>
+     <span class="token selector">ul li<span class="token pseudo-class">:last-child</span></span><span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/*选择第二个li*/</span>
+    <span class="token selector">ul li<span class="token pseudo-class">:nth-child(2)</span> </span><span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>    
+   <span class="token selector">ul li<span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/* 字体变成红色 */</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">ul li<span class="token pseudo-class">:nth-of-type(2)</span></span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/* 背景变成绿色 */</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项一<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项二<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项三<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项四<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p><strong>E:nth-child(n)（★★★）</strong></p>
+<p>  匹配到父元素的第n个元素</p>
+<ul>
+<li>匹配到父元素的第2个子元素  </li>
+</ul>
+<p>  <code>ul li:nth-child(2)&#123;&#125;</code></p>
+<ul>
+<li>匹配到父元素的序号为奇数的子元素</li>
+</ul>
+<p>  <code>ul li:nth-child(odd)&#123;&#125;</code>    <strong>odd</strong> 是关键字  奇数的意思（3个字母 ）</p>
+<ul>
+<li>匹配到父元素的序号为偶数的子元素</li>
+</ul>
+<p>  <code>ul li:nth-child(even)&#123;&#125;</code>   <strong>even</strong>（4个字母 ）</p>
+<ul>
+<li><strong>匹配到父元素的前3个子元素</strong><br><code>ul li:nth-child(-n+3)&#123;&#125;</code>    这里面必须是<strong>n</strong><br>nth-child(n) 从0开始 每次加1 往后面计算  这里面必须是n 不能是其他的字母 选择了所有的孩子</li>
+</ul>
+</li>
+<li><p><strong>nth-of-type（n）和nth-child（n）用法大致相同，但子元素不是相同的标签会有不同点</strong><br><img src="/images/nth-child%E4%B8%8Enth-of-type%E5%8C%BA%E5%88%AB.png"></p>
+<p> 也就是说：</p>
+<ul>
+<li><code>E:nth-child(n)</code>     匹配父元素的第n个子元素E，也就是说，nth-child 对父元素里面所有孩子排序选择（序号是固定的）  先找到第n个孩子，然后看看是否和E匹配</li>
+<li><code>E:nth-of-type(n)</code> 匹配同类型中的第n个同级兄弟元素E，也就是说，对父元素里面指定子元素进行排序选择。 先去匹配E ，然后再根据E 找第n个孩子</li>
+</ul>
+</li>
+</ul>
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><blockquote>
+<p>伪元素选择器可以帮助我们利用CSS创建新标签元素，而不需要HTML标签，从而简化HTML结构</p>
+</blockquote>
+<p>|选择符|简介|<br>|:before|在元素内部前面插入内容|<br>|:after|在元素内部后面插入内容|</p>
+<pre class="line-numbers language-css"><code class="language-css">
+  <span class="token selector">div </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/* div::before 权重是2 */</span>
+    <span class="token selector">div<span class="token pseudo-element">::before</span> </span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">/* 这个content是必须要写的 */</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'我'</span><span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">30</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">40</span>px<span class="token punctuation">;</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">div<span class="token pseudo-element">::after</span> </span><span class="token punctuation">{</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'佩奇'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意：</strong></p>
+<ul>
+<li>before 和 after 创建一个元素，但是属于行内元素</li>
+<li>可以和一般元素一样设属性值</li>
+<li>新创建的这个元素在文档树中是找不到的，所以我们称为伪元素</li>
+<li>语法：  element::before {}   </li>
+<li>before 和 after 必须有 content 属性 </li>
+<li>before 在父元素内容的前面创建元素，after 在父元素内容的后面插入元素<br>伪元素选择器和标签选择器一样，权重为 1</li>
+</ul>
+<h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><blockquote>
+<p>CSS3 中可以通过 box-sizing 来指定盒模型，有2个值：即可指定为 content-box、border-box，这样我们计算盒子大小的方式就发生了改变</p>
+</blockquote>
+<p>可以分成两种情况：</p>
+<ul>
+<li>box-sizing: content-box  盒子大小为 width + padding + border  （以前默认的）</li>
+<li>box-sizing: border-box  盒子大小为 width<br>如果盒子模型我们改为了box-sizing: border-box  ， 那padding和border就不会撑大盒子了（前提padding和border不会超过width宽度）</li>
+</ul>
+<h3 id="其他特性"><a href="#其他特性" class="headerlink" title="其他特性"></a>其他特性</h3><h4 id="图片模糊"><a href="#图片模糊" class="headerlink" title="图片模糊"></a>图片模糊</h4><p>filter CSS属性将模糊或颜色偏移等图形效果应用于元素</p>
+<pre class="line-numbers language-css"><code class="language-css"> <span class="token comment" spellcheck="true">/*filter:   函数()*/</span>
+ <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span><span class="token number">5</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*blur模糊处理  数值越大越模糊*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="计算盒子宽度-–-calc-函数"><a href="#计算盒子宽度-–-calc-函数" class="headerlink" title="计算盒子宽度 – calc 函数"></a>计算盒子宽度 – calc 函数</h4><blockquote>
+<p>calc() 此CSS函数让你在声明CSS属性值时执行一些计算</p>
+</blockquote>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">100%</span> - <span class="token number">80</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*表示子元素比父元素短80px*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>括号里面可以使用 + - *  / 来进行计算</p>
+<h4 id="CSS3-过渡（★★★）"><a href="#CSS3-过渡（★★★）" class="headerlink" title="CSS3 过渡（★★★）"></a>CSS3 过渡（★★★）</h4><blockquote>
+<p>过渡（transition)是CSS3中具有颠覆性的特征之一，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</p>
+</blockquote>
+<p><strong>过渡动画：</strong> 是从一个状态 渐渐的过渡到另外一个状态<br>可以让我们页面更好看，更动感十足，虽然 低版本浏览器不支持（ie9以下版本） 但是不会影响页面布局,我们现在经常和 <strong>:hover</strong> 一起 搭配使用。</p>
+<pre class="line-numbers language-css"><code class="language-css">   <span class="token comment" spellcheck="true">/*transition: 要过渡的属性  花费时间  运动曲线  何时开始;*/</span>
+  <span class="token selector">div </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>
+        <span class="token property">transition</span><span class="token punctuation">:</span> width <span class="token number">3</span>s ,height <span class="token number">6</span>s<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*不同属性‘，’隔开*/</span>
+      <span class="token punctuation">}</span>
+      <span class="token selector">div<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">900</span>px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>属性 ： 想要变化的 css 属性， 宽度高度 背景颜色 内外边距都可以 。如果想要所有的属性都变化过渡， 写一个all 就可以</li>
+<li>花费时间： 单位是 秒（必须写单位） 比如 0.5s </li>
+<li>运动曲线： 默认是 ease （可以省略）</li>
+<li>何时开始：单位是 秒（必须写单位）可以设置延迟触发时间  默认是 0s  （可以省略）</li>
+<li><strong>后面两个属性可以省略</strong></li>
+<li><strong>记住过渡的使用口诀： 谁做过渡给谁加</strong></li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -908,7 +1070,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CSS（五）">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CSS（五）">
                         
                         <span class="card-title">CSS（五）</span>
                     </div>
@@ -960,7 +1122,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
+        if (('' + selection).length < Number.parseInt('30')) {
             return;
         }
 
@@ -1097,60 +1259,6 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 0px !important;">
@@ -1163,6 +1271,9 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">23.5k</span>
             
             
             

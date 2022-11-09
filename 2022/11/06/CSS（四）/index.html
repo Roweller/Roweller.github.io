@@ -354,10 +354,15 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-08
+                    2022-11-09
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.1k
+                </div>
                 
 
                 
@@ -801,13 +806,14 @@
 <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'icomoon'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*字体声明*/</span>
 <span class="token property">src</span><span class="token punctuation">:</span>  <span class="token url">url('fonts/icomoon.eot?7kkyc2')</span><span class="token punctuation">;</span>
 <span class="token property">src</span><span class="token punctuation">:</span>  <span class="token url">url('fonts/icomoon.eot?7kkyc2#iefix')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span>,
-  <span class="token url">url('fonts/icomoon.ttf?7kkyc2')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>,
-  <span class="token url">url('fonts/icomoon.woff?7kkyc2')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>,
-  <span class="token url">url('fonts/icomoon.svg?7kkyc2#icomoon')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
-<span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+      <span class="token url">url('fonts/icomoon.ttf?7kkyc2')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>,
+      <span class="token url">url('fonts/icomoon.woff?7kkyc2')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>,
+      <span class="token url">url('fonts/icomoon.svg?7kkyc2#icomoon')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+      <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+      <span class="token property">font-display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><ol start="3">
 <li>在刚刚下载的demo.html文件中复制小图标。<img src = "/images/1571520411345.png" width = "600" />
@@ -816,7 +822,7 @@
 </li>
 <li><ol start="4">
 <li>给标签定义字体。<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">span </span><span class="token punctuation">{</span>
-<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"icomoon"</span><span class="token punctuation">;</span>
+<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'icomoon'</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 注意：务必保证 这个字体和上面@font-face里面的字体保持一致 <h3 id="字体图标的追加"><a href="#字体图标的追加" class="headerlink" title="字体图标的追加"></a>字体图标的追加</h3>如果工作中，原来的字体图标不够用了，我们需要添加新的字体图标到原来的字体文件中。<br>把压缩包里面的 <strong>selection.json</strong> 从新上传，然后选中自己想要新的图标，从新下载压缩包，并替换原来的文件即可。<br><img src="/images/1571520554317.png"></li>
@@ -1021,7 +1027,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="遍历">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="遍历">
                         
                         <span class="card-title">遍历</span>
                     </div>
@@ -1070,7 +1076,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CSS（三）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CSS（三）">
                         
                         <span class="card-title">CSS（三）</span>
                     </div>
@@ -1122,7 +1128,7 @@
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
+        if (('' + selection).length < Number.parseInt('30')) {
             return;
         }
 
@@ -1259,60 +1265,6 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 0px !important;">
@@ -1325,6 +1277,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">23.5k</span>
             
             
             

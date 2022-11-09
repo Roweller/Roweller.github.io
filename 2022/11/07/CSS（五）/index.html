@@ -276,7 +276,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -357,10 +357,15 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-08
+                    2022-11-09
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
                 
 
                 
@@ -488,7 +493,89 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 <span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>更推荐让后台人员来做这个效果，因为后台人员可以设置显示多少个字，操作更简单。</strong></p>
-<h2 id="常见的布局技巧"><a href="#常见的布局技巧" class="headerlink" title="常见的布局技巧"></a>常见的布局技巧</h2><ul>
+<h2 id="常见的布局技巧"><a href="#常见的布局技巧" class="headerlink" title="常见的布局技巧"></a>常见的布局技巧</h2><h3 id="网站标志"><a href="#网站标志" class="headerlink" title="网站标志"></a>网站标志</h3><h4 id="网站-favicon-图标（★★★）"><a href="#网站-favicon-图标（★★★）" class="headerlink" title="网站 favicon 图标（★★★）"></a>网站 favicon 图标（★★★）</h4><blockquote>
+<p>favicon.ico 一般用于作为缩略的网站标志，它显示在浏览器的地址栏或者标签上。目前主要的浏览器都支持 favicon.ico 图标。</p>
+</blockquote>
+<ul>
+<li>制作favicon图标</li>
+</ul>
+<ol>
+<li>把图标切成 <code>png</code> 图片</li>
+<li>把 <code>png</code> 图片转换为 <code>ico</code> 图标，这需要借助于第三方转换网站，例如比特虫：<a target="_blank" rel="noopener" href="http://www.bitbug.net/">http://www.bitbug.net/</a></li>
+</ol>
+<ul>
+<li>使用favicon图标</li>
+</ul>
+<p><strong>favicon图标放到网站根目录下</strong></p>
+<ul>
+<li>HTML页面引入favicon图标<br>在html 页面里面的 <code>&lt;head&gt; &lt;/head&gt;</code>元素之间引入代码<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>favicon.ico<span class="token punctuation">"</span></span>  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>image/x-icon<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="TDK三大标签SEO优化（★★）"><a href="#TDK三大标签SEO优化（★★）" class="headerlink" title="TDK三大标签SEO优化（★★）"></a>TDK三大标签SEO优化（★★）</h4><h5 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h5><blockquote>
+<p><strong>SEO（Search Engine Optimization）</strong>汉译为搜索引擎优化，是一种利用搜索引擎的规则提高网站在有关搜索引擎内自然排名的方式。</p>
+</blockquote>
+<blockquote>
+<p><strong>SEO</strong> 的目的是对网站进行深度的优化，从而帮助网站获取免费的流量，进而在搜索引擎上提升网站的排名，提高网站的知名度。</p>
+</blockquote>
+<p>页面必须有三个标签用来符合 SEO 优化</p>
+<p><img src="/images/SEO%E4%BC%98%E5%8C%96.png"></p>
+<h5 id="TDK"><a href="#TDK" class="headerlink" title="TDK"></a>TDK</h5><ul>
+<li>T – Title（网站标题）</li>
+</ul>
+<p><strong>title</strong> 具有不可替代性，是我们内页的第一个重要标签，是搜索引擎了解网页的入口和对网页主题归属的最佳判断点。<br><strong>建议：</strong>网站名（产品名）- 网站的介绍  （尽量不要超过30个汉字）<br><strong>例如：</strong></p>
+<ul>
+<li><p>京东(JD.COM)-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</p>
+</li>
+<li><p>小米商城 - 小米5s、红米Note 4、小米MIX、小米笔记本官方网站</p>
+</li>
+<li><p> D – description（网站描述）</p>
+</li>
+</ul>
+<p>简要说明我们网站主要是做什么的。<br><strong>我们提倡</strong>，description 作为网站的总体业务和主题概括，多采用“我们是…”、“我们提供…”、“×××网作为…”、“电话：010…”之类语句。<br><strong>例如：</strong><br><code>&lt;meta name=&quot;description&quot; content=&quot;京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!&quot; /&gt;</code></p>
+<ul>
+<li>K – keywords （关键字）</li>
+</ul>
+<p><strong>keywords 是页面关键词</strong>，是搜索引擎的关注点之一。<br>keywords 最好限制为 6～8 个关键词，关键词之间用英文逗号隔开，采用 关键词1,关键词2 的形式<br><strong>例如：</strong><br><code>&lt;meta name= &quot; keywords&quot; content=&quot;网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东&quot; /&gt;</code></p>
+<p><strong>对于我们前端人员来说，我们只需要准备好这三个标签，具体里面的内容，有专门的 SEO 人员准备</strong></p>
+<p><strong>示例代码</strong></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>品优购商城-综合网购首选-正品低价、品质保障、配送及时、轻松购物！
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- 网站说明 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span>
+        <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>品优购商城-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- 关键字 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>keywords<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>LOGO SEO优化<br>在正常开发过程中，<strong>logo的布局其实是有讲究的，需要进行 <code>logoSEO</code>的优化 （★★★）</strong></p>
+</li>
+<li><p><code>logo</code> 里面首先放一个 <code>h1</code> 标签，目的是为了提权，告诉搜索引擎，这个地方很重要</p>
+</li>
+<li><p><code>h1</code> 里面再放一个链接，可以返回首页的，把 <code>logo</code> 的背景图片给链接即可</p>
+</li>
+<li><p>为了搜索引擎收录我们，我们链接里面要放文字（网站名称），但是文字不要显示出来</p>
+</li>
+<li><p>方法1：<code>text-indent</code> 移到盒子外面（<code>text-indent: -9999px</code>) ，然后 <code>overflow:hidden</code> ，淘宝的做法</p>
+</li>
+<li><p>方法2：直接给 <code>font-size: 0;</code>  就看不到文字了，京东的做法</p>
+</li>
+<li><p>最后给链接一个 <code>title</code> 属性，这样鼠标放到 <code>logo</code> 上就可以看到提示文字了</p>
+<p><strong>结构代码</strong></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- logo模块 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.html<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>品优购商城<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>品优购商城<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="主体部分"><a href="#主体部分" class="headerlink" title="主体部分"></a>主体部分</h3><ul>
 <li>margin负值应用</li>
 </ul>
 <img src = "/images/1571522683897.png" width = "600" />
@@ -531,8 +618,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li>CSS初始化<blockquote>
+<h3 id="CSS初始化"><a href="#CSS初始化" class="headerlink" title="CSS初始化"></a>CSS初始化</h3><blockquote>
 <p>不同浏览器对有些标签的默认值是不同的，为了消除不同浏览器对HTML文本呈现的差异，照顾浏览器的兼容，我们需要对CSS 初始化<br>简单理解： CSS初始化是指重设浏览器的样式。 (也称为CSS reset）</p>
 </blockquote>
 </li>
@@ -831,7 +917,7 @@ input </span><span class="token punctuation">{</span>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="A*算法">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="A*算法">
                         
                         <span class="card-title">A*算法</span>
                     </div>
@@ -883,7 +969,7 @@ input </span><span class="token punctuation">{</span>
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
+        if (('' + selection).length < Number.parseInt('30')) {
             return;
         }
 
@@ -1020,60 +1106,6 @@ input </span><span class="token punctuation">{</span>
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 0px !important;">
@@ -1086,6 +1118,9 @@ input </span><span class="token punctuation">{</span>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">23.5k</span>
             
             
             
