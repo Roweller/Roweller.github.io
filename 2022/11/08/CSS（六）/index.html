@@ -355,14 +355,14 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-10
+                    2022-11-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    4.7k
                 </div>
                 
 
@@ -861,6 +861,251 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
 <li>translate中的百分比单位是相对于自身元素的 translate:(50%,50%);</li>
 <li>对行内标签没有效果</li>
 </ul>
+<h4 id="2D转换之旋转-rotate"><a href="#2D转换之旋转-rotate" class="headerlink" title="2D转换之旋转 rotate"></a>2D转换之旋转 rotate</h4><pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*transform:rotate(度数)*/</span>
+<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">45</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>重点</strong></p>
+<ul>
+<li>rotate里面跟度数， 单位是 deg 比如 rotate(45deg)</li>
+<li>角度为正时，顺时针，负时，为逆时针</li>
+<li>默认旋转的中心点是元素的中心点</li>
+</ul>
+<h4 id="2D转换中心点-transform-origin"><a href="#2D转换中心点-transform-origin" class="headerlink" title="2D转换中心点 transform-origin"></a>2D转换中心点 transform-origin</h4><pre class="line-numbers language-css"><code class="language-css"><span class="token property">transform-origin</span><span class="token punctuation">:</span> x y<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*方位名词*/</span>
+<span class="token property">transform-origin</span><span class="token punctuation">:</span> left bottom<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*任意位置*/</span>
+<span class="token property">transform-origin</span><span class="token punctuation">:</span> <span class="token number">50</span>px <span class="token number">50</span>px<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>重点</strong></p>
+<ul>
+<li>注意后面的参数 x 和 y 用空格隔开</li>
+<li>x y 默认转换的中心点是元素的中心点 (50% 50%)</li>
+<li>还可以给x y 设置 像素 或者 方位名词 （top bottom left right center）</li>
+</ul>
+<h4 id="2D转换之缩放scale"><a href="#2D转换之缩放scale" class="headerlink" title="2D转换之缩放scale"></a>2D转换之缩放scale</h4><pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*x y分别表示width height放大的倍数*/</span>
+<span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">scale</span><span class="token punctuation">(</span>x,y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>注意</strong></p>
+<ul>
+<li>注意其中的x和y用逗号分隔</li>
+<li>transform:scale(1,1) ：宽和高都放大一倍，相对于没有放大</li>
+<li>transform:scale(2,2) ：宽和高都放大了2倍</li>
+<li>transform:scale(2) ：只写一个参数，第二个参数则和第一个参数一样，相当于 scale(2,2)</li>
+<li>transform:scale(0.5,0.5)：缩小</li>
+<li>sacle缩放最大的优势：可以设置转换中心点缩放，默认以中心点缩放的，而且不影响其他盒子</li>
+</ul>
+<h4 id="2D转换综合写法"><a href="#2D转换综合写法" class="headerlink" title="2D转换综合写法"></a>2D转换综合写法</h4><pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">400</span>px,<span class="token number">400</span>px<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">360</span>deg<span class="token punctuation">)</span> <span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">1.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意</strong></p>
+<ol>
+<li>同时使用多个转换，其格式为：transform: translate() rotate() scale() …等，</li>
+<li>其顺序会影转换的效果。（先旋转会改变坐标轴方向）</li>
+<li>当我们同时有位移和其他属性的时候，记得要将位移放到最前</li>
+</ol>
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><blockquote>
+<p>动画（animation）是CSS3中具有颠覆性的特征之一，可通过设置多个节点来精确控制一个或一组动画，常<br>用来实现复杂的动画效果。相比较过渡，动画可以实现更多变化，更多控制，连续自动播放等效果。</p>
+</blockquote>
+<h4 id="动画的基本使用"><a href="#动画的基本使用" class="headerlink" title="动画的基本使用"></a>动画的基本使用</h4><ul>
+<li> 动画的基本使用</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@keyframes</span> 动画名称</span> <span class="token punctuation">{</span>
+  <span class="token selector">0%</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token selector">100%</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/*例如*/</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> move</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/*开始状态*/</span>
+  <span class="token selector">0% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">0</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/*结束状态*/</span>
+  <span class="token selector">100% </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">1000</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>动画序列</strong></p>
+<ul>
+<li>0% 是动画的开始，100% 是动画的完成。这样的规则就是动画序列。</li>
+<li>在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。</li>
+<li>动画是使元素从一种样式逐渐变化为另一种样式的效果。您可以改变任意多的样式任意多的次数。</li>
+<li>请用百分比来规定变化发生的时间，或用关键词 “from” 和 “to”，等同于 0% 和 100%。</li>
+</ul>
+<img src = "/images/animation.png" width="400" />
+
+<ul>
+<li> 元素使用动画</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">100</span>px auto<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* 调用动画 */</span>
+  <span class="token property">animation-name</span><span class="token punctuation">:</span> 动画名称<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* 持续时间 */</span>
+  <span class="token property">animation-duration</span><span class="token punctuation">:</span> 持续时间<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="动画常用的属性"><a href="#动画常用的属性" class="headerlink" title="动画常用的属性"></a>动画常用的属性</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@keyframes</td>
+<td>规定动画。</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>所有动画属性的简写属性，除了animation-play-state属性。</td>
+</tr>
+<tr>
+<td>animation-name</td>
+<td>规定@keyframes动画的名称。（必须的）</td>
+</tr>
+<tr>
+<td>animation-duration</td>
+<td>规定动画完成一个周期所花费的秒或毫秒，默认是0。（必须的）</td>
+</tr>
+<tr>
+<td>animation-timing-function</td>
+<td>规定动画的速度曲线，默认是“ease”。</td>
+</tr>
+<tr>
+<td>animation-delay</td>
+<td>规定动画何时开始，默认是0。</td>
+</tr>
+<tr>
+<td>animation-iteration-count</td>
+<td>规定动画被播放的次数，默认是1，还有infinite(无限)</td>
+</tr>
+<tr>
+<td>animation-direction</td>
+<td>规定动画是否在下一周期逆向播放，默认是“normal“,alternate逆播放</td>
+</tr>
+<tr>
+<td>animation-play-state</td>
+<td>规定动画是否正在运行或暂停。默认是”running”,还有”paused”。</td>
+</tr>
+<tr>
+<td>animation-fill-mode</td>
+<td>规定动画结束后状态，保持结束（forwards）  回到起始（backwards）</td>
+</tr>
+</tbody></table>
+<p><strong>示例</strong></p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*调用动画*/</span>
+  <span class="token property">animation-name</span><span class="token punctuation">:</span> move<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*持续时间*/</span>
+  <span class="token property">animation-duration</span><span class="token punctuation">:</span> <span class="token number">6</span>s<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*动画匀速*/</span>
+  <span class="token property">animation-timing-function</span><span class="token punctuation">:</span> ease<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*延迟时间*/</span>
+  <span class="token property">animation-delay</span><span class="token punctuation">:</span> <span class="token number">1</span>s<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*播放无限次*/</span>
+  <span class="token property">animation-iteration-count</span><span class="token punctuation">:</span> infinite<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*下一次逆向播放*/</span>
+  <span class="token property">animation-direction</span><span class="token punctuation">:</span> alternate<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*动画结束停到终点*/</span>
+  <span class="token property">animation-fill-mode</span><span class="token punctuation">:</span> forwards<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">div<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+    <span class="token property">animation-play-state</span><span class="token punctuation">:</span> paused<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*鼠标经过动画停止*/</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>nimation-timing-function规定动画的速度曲线<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>linear</td>
+<td>动画从头到尾的速度是相同的。匀速</td>
+</tr>
+<tr>
+<td>ease</td>
+<td>默认。动画以低速开始，然后加快，在结束前变慢。</td>
+</tr>
+<tr>
+<td>ease-in</td>
+<td>动画以低速开始。</td>
+</tr>
+<tr>
+<td>ease-out</td>
+<td>动画以低速结束。</td>
+</tr>
+<tr>
+<td>ease-in-out</td>
+<td>动画以低速开始和结束。</td>
+</tr>
+<tr>
+<td>steps()</td>
+<td>指定了时间函数中的间隔数量（步长）</td>
+</tr>
+</tbody></table>
+<h4 id="动画简写属性"><a href="#动画简写属性" class="headerlink" title="动画简写属性"></a>动画简写属性</h4></li>
+</ul>
+<blockquote>
+<p>animation：动画名称 持续时间 运动曲线 何时开始 播放次数 是否反方向 动画起始或者结束的状态;</p>
+</blockquote>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*animation: myfirst 5s linear 2s infinite alternate;*/</span>
+<span class="token property">animation</span><span class="token punctuation">:</span> pulse <span class="token number">1.2</span>s linear <span class="token number">2</span>s infinite alternate forwards<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3D转换"><a href="#3D转换" class="headerlink" title="3D转换"></a>3D转换</h3><h4 id="3D转换之移动-translate3d"><a href="#3D转换之移动-translate3d" class="headerlink" title="3D转换之移动 translate3d"></a>3D转换之移动 translate3d</h4><blockquote>
+<p>3D移动在2D移动的基础上多加了一个可以移动的方向，就是z轴方向。</p>
+</blockquote>
+<ul>
+<li>translform:translateX(100px)：仅仅是在x轴上移动</li>
+<li>translform:translateY(100px)：仅仅是在Y轴上移动</li>
+<li>translform:translateZ(100px)：仅仅是在Z轴上移动（注意：translateZ一般用px单位）</li>
+<li>transform:translate3d(x,y,z)：其中 x、y、z 分别指要移动的轴的方向的距离 因为z轴是垂直屏幕，由里指向外面，所以默认是看不到元素在z轴的方向上移动</li>
+</ul>
+<h4 id="3D转换之透视-perspective"><a href="#3D转换之透视-perspective" class="headerlink" title="3D转换之透视 perspective"></a>3D转换之透视 perspective</h4><blockquote>
+<p>在2D平面产生近大远小视觉立体，但是只是效果二维的</p>
+</blockquote>
+<ul>
+<li>如果想要在网页产生3D效果需要透视（理解成3D物体投影在2D平面内）。</li>
+<li>模拟人类的视觉位置，可认为安排一只眼睛去看 </li>
+<li>透视我们也称为视距：视距就是人的眼睛到屏幕的距离</li>
+<li>距离视觉点越近的在电脑平面成像越大，越远成像越小 </li>
+<li>透视的单位是像素<br><font color="red"> <strong>透视写在被观察元素的父盒子上面的</strong></font><br>d：就是视距，视距就是一个距离人的眼睛到屏幕的距离。<br>z：就是 z轴，物体距离屏幕的距离，z轴越大（正值） 我们看到的物体就越大。</li>
+</ul>
+<h4 id="3D转换之旋转-rotate3d"><a href="#3D转换之旋转-rotate3d" class="headerlink" title="3D转换之旋转 rotate3d"></a>3D转换之旋转 rotate3d</h4><blockquote>
+<p>3D旋转指可以让元素在三维平面内沿着 x轴，y轴，z轴或者自定义轴进行旋转。</p>
+</blockquote>
+<p>语法:</p>
+<ul>
+<li>transform:rotateX(45deg)：沿着x轴正方向旋转 45度</li>
+<li>transform:rotateY(45deg) ：沿着y轴正方向旋转 45deg</li>
+<li>transform:rotateZ(45deg) ：沿着Z轴正方向旋转 45deg</li>
+<li>transform:rotate3d(x,y,z,deg)： 沿着自定义轴旋转 deg为角度（了解即可）</li>
+</ul>
+<h4 id="3D转换之呈现-transfrom-style"><a href="#3D转换之呈现-transfrom-style" class="headerlink" title="3D转换之呈现 transfrom-style"></a>3D转换之呈现 transfrom-style</h4><blockquote>
+<p>3D呈现实现3D空间，达到3D效果</p>
+</blockquote>
+<ol>
+<li>控制子元素是否开启三维立体环境。</li>
+<li>transform-style: flat 子元素不开启3d立体空间 默认的</li>
+<li>transform-style: preserve-3d; 子元素开启立体空间</li>
+<li>代码写给父级，但是影响的是子盒子</li>
+<li>这个属性很重要，后面必用</li>
+</ol>
 
                 
             </div>
@@ -1292,7 +1537,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">23.6k</span>
+                        class="white-color">25.3k</span>
             
             
             
