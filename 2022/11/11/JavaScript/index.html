@@ -374,7 +374,7 @@ alert(msg)
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.7k
                 </div>
                 
 
@@ -602,13 +602,58 @@ arr<span class="token punctuation">[</span>arr<span class="token punctuation">.<
     如果函数没有返回值，则会返回undefined
     */</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">var</span> <span class="token keyword">get</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//另外一种函数声明的方式</span>
+<span class="token keyword">var</span> <span class="token keyword">get</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//另外一种函数声明的方式  采用函数表达式赋值的形式</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'13'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用函数 1和100是函数的实参</span>
 <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//当函数个数实参大于形参个数时，多余的实参不会传给形参 123没用</span>
 <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//当形参 个数大于实参个数时，形参相当于一个没有赋值的变量 </span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意：js中会先将所有的var和function提到当前作用域的最前面</strong></p>
+<ul>
+<li><strong>预解析分为 变量预解析（变量提升） 和 函数预解析（函数提升）</strong></li>
+<li><strong>变量提升 就是把所有变量声明提升到当前作用域的最前面 不提升复制操作</strong></li>
+<li><strong>变量提升 就是把所有变量声明提升到当前作用域的最前面 不调用函数</strong></li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><blockquote>
+<p>在JavaScript中，对象是一组无序的相关属性和方法的集合，是指某一特定的事物</p>
+</blockquote>
+<ul>
+<li><p>创建对象</p>
+<ul>
+<li>字面量创建对象<br>```js<br>var obj = {<br>uname: ‘张三’,//属性 不需要声明<br>age: 18, //多个属性值用逗号隔开<br>sayHi: function() { //函数是单独声明调用的<pre><code>console.log(&#39;hi~&#39;);
+</code></pre>
+}<br>}<br>console.log(obj.uname);//对象名.属性名 调用对象的属性<br>console.log(obj[‘age’]);//对象名[‘属性名’] 调用对象的属性<br>obj.sayHi(); //调用对象的方法</li>
+</ul>
+<pre><code>
+- new Object 创建对象
+```js
+  var obj = new Object();//创建了一个空的对象
+  obj.uname = &#39;张三&#39;;//赋值添加对象属性
+  obj.age = 18;
+  obj.sayHi = function() &#123;
+  console.log(&#39;hi ~&#39;);
+  &#125;
+  console.log(obj.uname);//对象名.属性名 调用对象的属性
+ console.log(obj[&#39;age&#39;]);//对象名[&#39;属性名&#39;] 调用对象的属性
+ obj.sayHi(); //调用对象的方法
+</code></pre>
+<ul>
+<li>构造函数创建对象<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Star</span><span class="token punctuation">(</span>uname<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//构造函数的名字首字母大写</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> uname<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//需要this赋值</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>   
+ <span class="token keyword">this</span><span class="token punctuation">.</span>sing <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//属性和函数前面必须要有this</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+<span class="token comment" spellcheck="true">//使用new创建一个对象</span>
+<span class="token keyword">var</span> zs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Star</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+zs<span class="token punctuation">.</span><span class="token function">sing</span><span class="token punctuation">(</span><span class="token string">'冰雨'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用对象的函数</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -1040,7 +1085,7 @@ arr<span class="token punctuation">[</span>arr<span class="token punctuation">.<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.5k</span>
+                        class="white-color">27k</span>
             
             
             
