@@ -374,7 +374,7 @@ alert(msg)
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2k
                 </div>
                 
 
@@ -621,37 +621,147 @@ arr<span class="token punctuation">[</span>arr<span class="token punctuation">.<
 <ul>
 <li><p>创建对象</p>
 <ul>
-<li>字面量创建对象<br>```js<br>var obj = {<br>uname: ‘张三’,//属性 不需要声明<br>age: 18, //多个属性值用逗号隔开<br>sayHi: function() { //函数是单独声明调用的<pre><code>console.log(&#39;hi~&#39;);
+<li><p>字面量创建对象</p>
+<p>```js<br>var obj = {</p>
+<pre><code>uname: &#39;张三&#39;,//属性 不需要声明 
+age: 18, //多个属性值用逗号隔开
+sayHi: function() &#123; //函数是单独声明调用的
+    console.log(&#39;hi~&#39;);
+&#125;
 </code></pre>
-}<br>}<br>console.log(obj.uname);//对象名.属性名 调用对象的属性<br>console.log(obj[‘age’]);//对象名[‘属性名’] 调用对象的属性<br>obj.sayHi(); //调用对象的方法</li>
+<p>}<br>console.log(obj.uname);//对象名.属性名 调用对象的属性<br>console.log(obj[‘age’]);//对象名[‘属性名’] 调用对象的属性<br>obj.sayHi(); //调用对象的方法</p>
+</li>
 </ul>
 <pre><code>
 - new Object 创建对象
+
 ```js
   var obj = new Object();//创建了一个空的对象
   obj.uname = &#39;张三&#39;;//赋值添加对象属性
   obj.age = 18;
-  obj.sayHi = function() &#123;
+  obj.sayHi = function() &#123;//赋值添加函数
   console.log(&#39;hi ~&#39;);
   &#125;
   console.log(obj.uname);//对象名.属性名 调用对象的属性
- console.log(obj[&#39;age&#39;]);//对象名[&#39;属性名&#39;] 调用对象的属性
- obj.sayHi(); //调用对象的方法
+  console.log(obj[&#39;age&#39;]);//对象名[&#39;属性名&#39;] 调用对象的属性
+  obj.sayHi(); //调用对象的方法
 </code></pre>
 <ul>
-<li>构造函数创建对象<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Star</span><span class="token punctuation">(</span>uname<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//构造函数的名字首字母大写</span>
- <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> uname<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//需要this赋值</span>
- <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>   
- <span class="token keyword">this</span><span class="token punctuation">.</span>sing <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//属性和函数前面必须要有this</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span>
-<span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">//使用new创建一个对象</span>
-<span class="token keyword">var</span> zs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Star</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-zs<span class="token punctuation">.</span><span class="token function">sing</span><span class="token punctuation">(</span><span class="token string">'冰雨'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用对象的函数</span>
+<li>构造函数创建对象</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">function</span> <span class="token function">Star</span><span class="token punctuation">(</span>uname<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//构造函数的名字首字母大写</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token operator">=</span> uname<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//需要this赋值</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>   
+   <span class="token keyword">this</span><span class="token punctuation">.</span>sing <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//属性和函数前面必须要有this</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> 
+  <span class="token comment" spellcheck="true">//使用new创建一个对象</span>
+  <span class="token keyword">var</span> zs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Star</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  zs<span class="token punctuation">.</span><span class="token function">sing</span><span class="token punctuation">(</span><span class="token string">'冰雨'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用对象的函数</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>遍历对象<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">;</span>
+age<span class="token punctuation">:</span> <span class="token number">18</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// for (变量 in 对象) {} </span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> k <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出属性名</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出属性值</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
+</li>
+<li><p>内置对象</p>
+<blockquote>
+<p>Mozilia开发者网络（MDN）提供了有关开放网络技术（Open Web）的信息，包括HTML、CSS和万维网及HTML5应用的API<br>MDN: <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">https://developer.mozilla.org/zh-CN/</a></p>
+</blockquote>
+</li>
+<li><p>Math对象</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Math.abs</td>
+<td>取绝对值</td>
+</tr>
+<tr>
+<td>Math.floor</td>
+<td>向下取整</td>
+</tr>
+<tr>
+<td>Math.ceil</td>
+<td>向上取整</td>
+</tr>
+<tr>
+<td>Math.round</td>
+<td>四舍五入</td>
+</tr>
+<tr>
+<td>Math.random</td>
+<td>随机数</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Date对象</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getFullYear()</td>
+<td>获取当前年</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td>获取当前月,得到的月份比实际小1</td>
+</tr>
+<tr>
+<td>getDate()</td>
+<td>获取当前日</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td>获取星期几,星期天返回0</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td>获取当前小时</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td>获取当前分钟</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td>获取当前秒钟</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>返回当前到1970.1.1总的毫秒数</td>
+</tr>
+<tr>
+<td>getTime()</td>
+<td>返回当前到1970.1.1总的毫秒数</td>
+</tr>
+<tr>
+<td>+new Date()</td>
+<td>返回指定时间到1970.1.1总的毫秒数</td>
+</tr>
+<tr>
+<td>Date.now()</td>
+<td>返回当前到1970.1.1总的毫秒数</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 
@@ -1085,7 +1195,7 @@ zs<span class="token punctuation">.</span><span class="token function">sing</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">27k</span>
+                        class="white-color">27.2k</span>
             
             
             
