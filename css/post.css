@@ -18,15 +18,15 @@
 .toc-fixed {
     position: fixed;
     top: 64px;
-
 }
 
 .toc-widget {
-    width: 345px !important;
-    padding-left: 100px;
+    width: 345px !important;  
+    padding-left: 65px;
 }
 
 .toc-widget .toc-title {
+
     padding: 35px 0 15px 17px;
     font-size: 1.5rem;
     font-weight: bold;
