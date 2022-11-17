@@ -23,15 +23,6 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
     <title>CSS（六） | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
-    <style>
-        body{
-            background-image: url();
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-attachment: fixed; 
-        }
-    </style>
-
 
 
     <!-- bg-cover style     -->
@@ -1462,7 +1453,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('2'),
-            headingSelector: 'h2 , h3 , h4'
+            headingSelector: 'h2 , h3 , h4 ,h5'
         });
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height()*0.4 -45);
@@ -1523,7 +1514,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1535,25 +1526,69 @@ HTML5 的新增特性主要是针对于以前的不足，增加了一些新的�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29k</span>
+                        class="white-color">29.2k</span>
             
             
             
             
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "10";
+                        var startDate = "11";
+                        var startHour = "";
+                        var startMinute = "";
+                        var startSecond = "";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
