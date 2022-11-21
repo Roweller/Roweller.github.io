@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="JavaScript, Roweller">
-    <meta name="description" content="简介 ECMAScript DOM BOM 网页特效
+    <meta name="description" content="简介 ECMAScript DOM BOM ES6
 
 
-JavaScript主要包括JavaScript基础（ECMAScript），Web API（DOM BOM）Web API 是浏览器提供的一套操作浏览器功能和页面元素的 API (">
+JavaScript主要包括JavaScript基础（ECMAScript），Web API（DOM BOM）Web API 是浏览器提供的一套操作浏览器功能和页面元素的 API ( ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -353,7 +353,7 @@ JavaScript主要包括JavaScript基础（ECMAScript），Web API（DOM BOM）Web
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11.7k
+                    11.9k
                 </div>
                 
 
@@ -375,7 +375,7 @@ JavaScript主要包括JavaScript基础（ECMAScript），Web API（DOM BOM）Web
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介-ECMAScript-DOM-BOM-网页特效"><a href="#简介-ECMAScript-DOM-BOM-网页特效" class="headerlink" title="简介 ECMAScript DOM BOM 网页特效"></a>简介 ECMAScript DOM BOM 网页特效</h1><span id="more"></span>
+                <h1 id="简介-ECMAScript-DOM-BOM-ES6"><a href="#简介-ECMAScript-DOM-BOM-ES6" class="headerlink" title="简介 ECMAScript DOM BOM ES6"></a>简介 ECMAScript DOM BOM ES6</h1><span id="more"></span>
 
 <blockquote>
 <p>JavaScript主要包括<strong>JavaScript基础（ECMAScript），Web API（DOM BOM）</strong><br>Web API 是浏览器提供的一套操作浏览器功能和页面元素的 API ( BOM 和 DOM )<br>MDN 详细 API : <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API">https://developer.mozilla.org/zh-CN/docs/Web/API</a></p>
@@ -1568,35 +1568,43 @@ ul<span class="token punctuation">.</span><span class="token function">addEventL
 </tr>
 </thead>
 <tbody><tr>
-<td>onclick</td>
+<td>click</td>
 <td>鼠标点击左键触发</td>
 </tr>
 <tr>
-<td>onmouseover</td>
+<td>mouseover</td>
 <td>鼠标经过触发</td>
 </tr>
 <tr>
-<td>onmouseout</td>
+<td>mouseenter</td>
+<td>鼠标经过触发</td>
+</tr>
+<tr>
+<td>mouseout</td>
 <td>鼠标离开触发</td>
 </tr>
 <tr>
-<td>onfocus</td>
+<td>mouseleave</td>
+<td>鼠标离开触发</td>
+</tr>
+<tr>
+<td>focus</td>
 <td>获得鼠标焦点触发</td>
 </tr>
 <tr>
-<td>onblur</td>
+<td>blur</td>
 <td>失去鼠标焦点触发</td>
 </tr>
 <tr>
-<td>onmousemove</td>
+<td>mousemove</td>
 <td>鼠标移动触发</td>
 </tr>
 <tr>
-<td>onmouseup</td>
+<td>mouseup</td>
 <td>鼠标弹起触发</td>
 </tr>
 <tr>
-<td>onmousedown</td>
+<td>mousedown</td>
 <td>鼠标按下触发</td>
 </tr>
 <tr>
@@ -1608,7 +1616,8 @@ ul<span class="token punctuation">.</span><span class="token function">addEventL
 <td>禁止鼠标选中</td>
 </tr>
 </tbody></table>
-<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. contextmenu 我们可以禁用右键菜单</span>
+<pre class="line-numbers language-js"><code class="language-js">
+<span class="token comment" spellcheck="true">// 1. contextmenu 我们可以禁用右键菜单</span>
 document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'contextmenu'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -1616,7 +1625,22 @@ document<span class="token punctuation">.</span><span class="token function">add
 document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'selectstart'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment" spellcheck="true">//mouseover 鼠标经过自身盒子会触发，经过子盒子还会触发。 mouseenter  只会经过自身盒子触发</span>
+<span class="token keyword">var</span> father <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.father'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> son <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.son'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+father<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mouseenter'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//mouseenter不会冒泡</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+father<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mouseover'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+father<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mouseleave'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//mouseleave不会冒泡</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+father<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mouseout'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="鼠标事件对象"><a href="#鼠标事件对象" class="headerlink" title="鼠标事件对象"></a>鼠标事件对象</h4><blockquote>
 <p>event对象代表事件的状态，跟事件相关的一系列信息的集合。现阶段我们主要是用鼠标事件对象 MouseEvent 和键盘事件对象 KeyboardEvent。</p>
 </blockquote>
@@ -1913,7 +1937,7 @@ btn<span class="token punctuation">.</span><span class="token function">addEvent
     history<span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//前进界面</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="网页特效"><a href="#网页特效" class="headerlink" title="网页特效"></a>网页特效</h2><blockquote>
+<h2 id="ES6-网页特效"><a href="#ES6-网页特效" class="headerlink" title="ES6 (网页特效)"></a>ES6 (网页特效)</h2><blockquote>
 <p>网页的<strong>交互</strong>效果称为网页特效</p>
 </blockquote>
 <h3 id="PC端网页特效"><a href="#PC端网页特效" class="headerlink" title="PC端网页特效"></a>PC端网页特效</h3><h4 id="元素偏移量-offset-系列"><a href="#元素偏移量-offset-系列" class="headerlink" title="元素偏移量 offset 系列"></a>元素偏移量 offset 系列</h4><ul>
@@ -2063,6 +2087,16 @@ son<span class="token punctuation">.</span>parentNode<span class="token punctuat
 </tr>
 </tbody></table>
 <p><img src="/images/srcoll.png"></p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>offset系列 经常用于获得元素位置    offsetLeft  offsetTop</li>
+<li>client 经常用于获取元素大小  clientWidth  clientHeight</li>
+<li>scroll 经常用于获取滚动距离  scrollTop  scrollLeft   </li>
+</ol>
+<p>*<em>注意</em>：*页面滚动的距离通过 window.pageXOffset 获得</p>
+<h4 id="动画函数封装"><a href="#动画函数封装" class="headerlink" title="动画函数封装"></a>动画函数封装</h4><blockquote>
+<p>核心原理：通过定时器 setInterval() 不断移动盒子位置</p>
+</blockquote>
 
                 
             </div>
@@ -2249,7 +2283,7 @@ son<span class="token punctuation">.</span>parentNode<span class="token punctuat
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 ECMAScript DOM BOM 网页特效
+                            简介 ECMAScript DOM BOM ES6
                         
                     </div>
                     <div class="publish-info">
@@ -2494,7 +2528,7 @@ son<span class="token punctuation">.</span>parentNode<span class="token punctuat
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">37.2k</span>
+                        class="white-color">37.4k</span>
             
             
             
