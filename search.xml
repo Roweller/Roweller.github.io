@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>移动端</title>
+      <link href="/2022/11/23/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+      <url>/2022/11/23/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介-移动端web"><a href="#简介-移动端web" class="headerlink" title="简介 移动端web"></a>简介 移动端web</h1><span id="more"></span><h2 id="移动端基础"><a href="#移动端基础" class="headerlink" title="移动端基础"></a>移动端基础</h2><blockquote><p>兼容移动端主流浏览器，处理Webkit内核浏览器即可。</p></blockquote><h3 id="常见移动端屏幕尺寸"><a href="#常见移动端屏幕尺寸" class="headerlink" title="常见移动端屏幕尺寸"></a>常见移动端屏幕尺寸</h3><img src = "/images/常见移动端屏幕尺寸.png"><p>注：以上数据均参考自<strong><a href="https://material.io/devices/">https://material.io/devices/</a></strong></p><h3 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h3><blockquote><p>视口（viewport）就是浏览器显示页面内容的屏幕区域。 视口可以分为布局视口、视觉视口和理想视口</p></blockquote><h4 id="布局视口-layout-viewport"><a href="#布局视口-layout-viewport" class="headerlink" title="布局视口 layout viewport"></a>布局视口 layout viewport</h4><ul><li>一般移动设备的浏览器都默认设置了一个布局视口，用于解决早期的PC端页面在手机上显示的问题。</li><li>iOS, Android基本都将这个视口分辨率设置为 980px，所以PC上的网页大多都能在手机上呈现，只不过元素看上去很小，一般默认可以通过手动缩放网页，相当于把网页按比例压缩到手机上</li></ul><p><img src="/images/%E5%B8%83%E5%B1%80%E8%A7%86%E5%8F%A3.png"></p><h4 id="视觉视口-visual-viewport"><a href="#视觉视口-visual-viewport" class="headerlink" title="视觉视口 visual viewport"></a>视觉视口 visual viewport</h4><ul><li>字面意思，它是用户正在看到的网站的区域。<strong>注意：是网站的区域。</strong></li><li>我们可以通过缩放去操作视觉视口，但不会影响布局视口，布局视口仍保持原来的宽度。，相当于只看见了网页的一部分</li></ul><p><img src="/images/%E8%A7%86%E8%A7%89%E8%A7%86%E5%8F%A3.png"></p><h4 id="理想视口-ideal-viewport"><a href="#理想视口-ideal-viewport" class="headerlink" title="理想视口 ideal viewport"></a>理想视口 ideal viewport</h4><ul><li>为了使网站在移动端有最理想的浏览和阅读宽度而设定</li><li>理想视口，对设备来讲，是最理想的视口尺寸</li><li>需要手动添写meta视口标签通知浏览器操作</li><li>meta视口标签的主要目的：布局视口的宽度应该与理想视口的宽度一致，简单理解就是设备有多宽，我们布局的视口就多宽</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 移动端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript</title>
       <link href="/2022/11/11/JavaScript/"/>
       <url>/2022/11/11/JavaScript/</url>
