@@ -277,8 +277,8 @@ article .card> a {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    opacity: 0.5；
+    background-image: linear-gradient(to right, #0f9d58 0%, #0f9d58 100%);
+    opacity: .8;
 }
 
 .text-color {
@@ -1944,6 +1944,7 @@ p.search-result-summary{
     bottom: 15px;
     padding-top: 15px;
     margin-bottom: 0;
+    width: 48px;
     z-index: 998;
 }
 

@@ -5,16 +5,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="web前端">
-    <meta name="description" content="简介 移动端web
+    <meta name="description" content="简介  移动端web开发
+
+移动端Web主要指运行在移动端（手机、ipad）的web页面, 具备HTML5特性也叫H5页面、Web App等
 
 移动端基础
 兼容移动端主流浏览器，处理Webkit内核浏览器即可。
 
 常见移动端屏幕尺寸
 
-注：以上数据均参考自https://material.io/devices/
-视口
-视口（viewport）就是浏览器显示页面">
+注：">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -352,14 +352,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-23
+                    2022-11-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    411
+                    977
                 </div>
                 
 
@@ -381,34 +381,96 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介-移动端web"><a href="#简介-移动端web" class="headerlink" title="简介 移动端web"></a>简介 移动端web</h1><span id="more"></span>
-
+                <h1 id="简介-移动端web开发"><a href="#简介-移动端web开发" class="headerlink" title="简介  移动端web开发"></a>简介  移动端web开发</h1><span id="more"></span>
+<blockquote>
+<p>移动端Web主要指运行在移动端（手机、ipad）的web页面, 具备HTML5特性也叫H5页面、Web App等</p>
+</blockquote>
 <h2 id="移动端基础"><a href="#移动端基础" class="headerlink" title="移动端基础"></a>移动端基础</h2><blockquote>
 <p>兼容移动端主流浏览器，处理Webkit内核浏览器即可。</p>
 </blockquote>
 <h3 id="常见移动端屏幕尺寸"><a href="#常见移动端屏幕尺寸" class="headerlink" title="常见移动端屏幕尺寸"></a>常见移动端屏幕尺寸</h3><img src = "/images/常见移动端屏幕尺寸.png">
 
 <p>注：以上数据均参考自<strong><a target="_blank" rel="noopener" href="https://material.io/devices/">https://material.io/devices/</a></strong></p>
-<h3 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h3><blockquote>
+<h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><blockquote>
 <p>视口（viewport）就是浏览器显示页面内容的屏幕区域。 视口可以分为布局视口、视觉视口和理想视口</p>
 </blockquote>
-<h4 id="布局视口-layout-viewport"><a href="#布局视口-layout-viewport" class="headerlink" title="布局视口 layout viewport"></a>布局视口 layout viewport</h4><ul>
+<h3 id="布局视口-layout-viewport"><a href="#布局视口-layout-viewport" class="headerlink" title="布局视口 layout viewport"></a>布局视口 layout viewport</h3><ul>
 <li>一般移动设备的浏览器都默认设置了一个布局视口，用于解决早期的PC端页面在手机上显示的问题。</li>
 <li>iOS, Android基本都将这个视口分辨率设置为 980px，所以PC上的网页大多都能在手机上呈现，只不过元素看上去很小，一般默认可以通过手动缩放网页，相当于把网页按比例压缩到手机上</li>
 </ul>
 <p><img src="/images/%E5%B8%83%E5%B1%80%E8%A7%86%E5%8F%A3.png"></p>
-<h4 id="视觉视口-visual-viewport"><a href="#视觉视口-visual-viewport" class="headerlink" title="视觉视口 visual viewport"></a>视觉视口 visual viewport</h4><ul>
+<h3 id="视觉视口-visual-viewport"><a href="#视觉视口-visual-viewport" class="headerlink" title="视觉视口 visual viewport"></a>视觉视口 visual viewport</h3><ul>
 <li>字面意思，它是用户正在看到的网站的区域。<strong>注意：是网站的区域。</strong></li>
 <li>我们可以通过缩放去操作视觉视口，但不会影响布局视口，布局视口仍保持原来的宽度。，相当于只看见了网页的一部分</li>
 </ul>
 <p><img src="/images/%E8%A7%86%E8%A7%89%E8%A7%86%E5%8F%A3.png"></p>
-<h4 id="理想视口-ideal-viewport"><a href="#理想视口-ideal-viewport" class="headerlink" title="理想视口 ideal viewport"></a>理想视口 ideal viewport</h4><ul>
+<h3 id="理想视口-ideal-viewport"><a href="#理想视口-ideal-viewport" class="headerlink" title="理想视口 ideal viewport"></a>理想视口 ideal viewport</h3><ul>
 <li>为了使网站在移动端有最理想的浏览和阅读宽度而设定</li>
 <li>理想视口，对设备来讲，是最理想的视口尺寸</li>
 <li>需要手动添写meta视口标签通知浏览器操作</li>
 <li>meta视口标签的主要目的：布局视口的宽度应该与理想视口的宽度一致，简单理解就是设备有多宽，我们布局的视口就多宽</li>
 </ul>
+<h3 id="meta视口标签"><a href="#meta视口标签" class="headerlink" title="meta视口标签"></a>meta视口标签</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//宽度设置为设备宽度 不允许用户缩放 </span>
+<span class="token comment" spellcheck="true">//标准写法</span>
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span><span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>宽度设置的viewport宽度，可以设置divice-width特殊值</td>
+</tr>
+<tr>
+<td>intial-scale</td>
+<td>初始化缩放比，大于0的数字</td>
+</tr>
+<tr>
+<td>maximum-scale</td>
+<td>最大缩放比，大于0的数字</td>
+</tr>
+<tr>
+<td>minimum-scale</td>
+<td>最小缩放比，大于0的数字</td>
+</tr>
+<tr>
+<td>user-scalable</td>
+<td>用户是否可以缩放，yes or no（1/0）</td>
+</tr>
+</tbody></table>
+<h2 id="二倍图"><a href="#二倍图" class="headerlink" title="二倍图"></a>二倍图</h2><h3 id="物理像素-amp-物理像素比"><a href="#物理像素-amp-物理像素比" class="headerlink" title="物理像素&amp;物理像素比"></a>物理像素&amp;物理像素比</h3><ol>
+<li>物理像素点指的是屏幕显示的最小颗粒，是物理真实存在的。这是厂商在出厂时就设置好了,比如苹果6\7\8 是 750* 1334</li>
+<li>我们开发时候的1px 不是一定等于1个物理像素的</li>
+<li>PC端页面，1个px 等于1个物理像素的，但是移动端就不尽相同</li>
+<li>一个px的能显示的物理像素点的个数，称为物理像素比或屏幕像素</li>
+<li>PC端 和 早前的手机屏幕 / 普通手机屏幕: 1CSS像素 = 1 物理像素的</li>
+<li>Retina（视网膜屏幕）是一种显示技术，可以将把更多的物理像素点压缩至一块屏幕里，从而达到更高的分辨率，并提高屏幕显示的细腻程度。</li>
+</ol>
+<img src = "/images/常见移动端屏幕尺寸.png">
 
+<h3 id="多倍图"><a href="#多倍图" class="headerlink" title="多倍图"></a>多倍图</h3><ol>
+<li>对于一张 50px * 50px 的图片,在手机 Retina 屏中打开，按照刚才的物理像素比会放大倍数，这样会造成图片模糊</li>
+<li>在标准的viewport设置中，使用倍图来提高图片质量，解决在高清设备中的模糊问题</li>
+<li>通常使用二倍图， 因为iPhone 6\7\8 的影响,但是现在还存在3倍图4倍图的情况，这个看实际开发公司需求</li>
+<li>背景图片 注意缩放问题</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/* 在 iphone8 下面 */</span>
+<span class="token comment" spellcheck="true">/*对于一张50px*50px的图片，在手机端打开，先准备100px*100px的图片，再添加以下属性*/</span>
+ img<span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true">/*原始图片100*100px*/</span>
+ width<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+ height<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> 
+<span class="token punctuation">.</span>box<span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true">/*原始图片100*100px*/</span>
+ background<span class="token operator">-</span>size<span class="token punctuation">:</span> 50px 50px<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="背景缩放background-size"><a href="#背景缩放background-size" class="headerlink" title="背景缩放background-size"></a>背景缩放background-size</h3>
                 
             </div>
             <hr/>
@@ -424,7 +486,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Roweller</a>
+                    <a href="/about" rel="external nofollow noreferrer">Rowellor</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -447,7 +509,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Roweller</a>
+                    <a href="/about" target="_blank">Rowellor</a>
                     !
                 </span>
             </div>
@@ -594,7 +656,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 移动端web
+                            简介  移动端web开发
                         
                     </div>
                     <div class="publish-info">
@@ -839,7 +901,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">38.4k</span>
+                        class="white-color">39k</span>
             
             
             
