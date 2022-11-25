@@ -277,8 +277,7 @@ article .card> a {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #0f9d58 0%, #0f9d58 100%);
-    opacity: .8;
+    background-image: linear-gradient(to right,#0bb7fbd6 0,#0e91d0 100%);
 }
 
 .text-color {
@@ -875,7 +874,7 @@ header .go-back i {
 
 .recommend .post-card .read-more {
     height: 40px;
-    margin: .6rem 1px;
+    margin: -10px 1px 0;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 40px;
