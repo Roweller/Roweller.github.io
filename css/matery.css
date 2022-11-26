@@ -258,7 +258,7 @@ mark {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 22px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
     width: 100% ;
 }
@@ -272,12 +272,15 @@ article .card> a {
 
 }
 
-.container .row {
+.container .dream .row>.col{
     margin-bottom: 0;
+}
+.container .row .col {
+    font-size: 18px;
 }
 
 .bg-color {
-    background-image: linear-gradient(to right,#0bb7fbd6 0,#0e91d0 100%);
+    background-image: linear-gradient(to right,rgb(15, 157, 88) 0%, rgb(15, 157, 88) 100%);
 }
 
 .text-color {
@@ -735,7 +738,7 @@ header .go-back i {
 
 .dream {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .dream .title,

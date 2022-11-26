@@ -457,6 +457,11 @@
         font-size: 30px;
         text-align: center;
     }
+    .deng-btn .deng-img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
   
 </style>
 <div class="denglong" id="chunjie">
@@ -482,9 +487,12 @@
 <!-- 元宵节灯笼样式结束 -->
 
 </div>
-<div class="deng-btn">
-   春
-</div>
+
+   <a href="javascript:;" class="deng-btn">
+      <img class="deng-img" src="https://zhangxiaocai.cn/js/spring/spring-img/denglong.png" title="传统节日">
+   </a>
+ 
+
 </header>
 <script>
     if((new Date().getMonth()) > 1){
@@ -498,11 +506,12 @@
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
-            flag = !flag;
+            bgcolor.style.backgroundImage = 'linear-gradient(to right,#d8000f 0%, #d8000f 100%)';
         } else {
-            $('.denglong').css('display', 'none');
-            flag = !flag;
+            $('.denglong').css('display', 'none');    
+            bgcolor.style.backgroundImage = 'linear-gradient(to right,rgb(15, 157, 88) 0%, rgb(15, 157, 88) 100%)';
         }
+         flag = !flag;
     })
 </script>
 
@@ -902,7 +911,7 @@ use bjpoernode;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40k</span>
+                        class="white-color">40.1k</span>
             
             
             
