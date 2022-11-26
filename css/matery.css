@@ -272,11 +272,11 @@ article .card> a {
 
 }
 
-.container .dream .row>.col{
+.container .row {
     margin-bottom: 0;
 }
-.container .row .col {
-    font-size: 18px;
+.container .dream .row .col {
+    font-size: 16px;
 }
 
 .bg-color {

@@ -617,7 +617,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    3.4k
                 </div>
                 
 
@@ -806,21 +806,250 @@ initial-scale<span class="token punctuation">=</span>1.0, maximum-scale<span cla
 <ol>
 <li>在firework里面把精灵图等比例缩放为原来的一半</li>
 <li>之后根据大小 测量坐标</li>
-<li>注意代码里面background-size也要写： 精灵图原来宽度的一半<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(sprites.pngno-repeat -80px 0)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*缩放之后的位置*/</span>
+<li>注意代码里面background-size也要写： 精灵图原来宽度的一半<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*先一个@2x的精灵图*/</span>
+<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(sprites.pngno-repeat -80px 0)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*缩放之后的位置*/</span>
 <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token number">200</span>px auto<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*原本精灵图宽度是400px*/</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 </ol>
-<h4 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h4><ul>
-<li>flex布局</li>
-</ul>
-<ol>
+<h4 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h4><h5 id="flex布局效果"><a href="#flex布局效果" class="headerlink" title="flex布局效果"></a>flex布局效果</h5><ol>
 <li>操作方便，布局极为简单，移动端应用很广泛</li>
 <li>PC 端浏览器支持情况较差</li>
 <li>IE 11或更低版本，不支持或仅部分支</li>
 <li>如果是PC端页面布局，我们还是传统布局。</li>
 <li>如果是移动端或者不考虑兼容性问题的PC端页面布局，我们还是使用flex弹性布局</li>
 </ol>
+<h5 id="布局原理"><a href="#布局原理" class="headerlink" title="布局原理"></a>布局原理</h5><ul>
+<li>flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</li>
+</ul>
+<ol>
+<li>当我们为父盒子设为 flex 布局以后，<strong>子元素的 float、clear 和 vertical-align 属性将失效</strong>。</li>
+<li>伸缩布局 = 弹性布局 = 伸缩盒布局 = 弹性盒布局 =flex布</li>
+</ol>
+<ul>
+<li>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”</li>
+</ul>
+<ol>
+<li>体验中 div 就是 flex父容器。</li>
+<li>体验中 span 就是 子容器 flex项目</li>
+<li>子容器可以横向排列也可以纵向排列<img src ="/images/flex布局.png" width="600" height="400"></li>
+</ol>
+<p><strong>总结flex布局原理：</strong><br>就是通过给父盒子添加flex属性(<strong>display: flex</strong>)，来控制子盒子的位置和排列方式</p>
+<h5 id="flex布局父项常见属性"><a href="#flex布局父项常见属性" class="headerlink" title="flex布局父项常见属性"></a>flex布局父项常见属性</h5><ul>
+<li><p> 常见父项属性</p>
+<table>
+<thead>
+<tr>
+<th>常见的父项属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-direction：</td>
+<td>设置主轴的方向</td>
+</tr>
+<tr>
+<td>justify-content：</td>
+<td>设置主轴上的子元素排列方式</td>
+</tr>
+<tr>
+<td>flex-wrap：</td>
+<td>设置子元素是否换行</td>
+</tr>
+<tr>
+<td>align-items：</td>
+<td>设置侧轴上的子元素排列方式（单行）</td>
+</tr>
+<tr>
+<td>align-content：</td>
+<td>设置侧轴上的子元素的排列方式（多行）</td>
+</tr>
+<tr>
+<td>flex-flow：</td>
+<td>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>flex-direction 设置主轴的方向</p>
+<ul>
+<li>主轴与侧轴<br>在 flex 布局中，是分为主轴和侧轴两个方向，同样的叫法有 ： 行和列、x 轴和y 轴<ol>
+<li>默认主轴方向就是 x 轴方向，水平向右</li>
+<li>默认侧轴方向就是 y 轴方向，水平向下</li>
+</ol>
+</li>
+<li>flex-direction 设置主轴的方向<br>flex-direction 属性决定主轴的方向（<strong>即项目的排列方向</strong>）<br>注意： 主轴和侧轴是会变化的，就看 flex-direction 设置谁为主轴，剩下的就是侧轴。而<strong>子元素是跟着主轴来排列的</strong><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row</td>
+<td>默认值从左到右</td>
+</tr>
+<tr>
+<td>row-reverse</td>
+<td>从右到左</td>
+</tr>
+<tr>
+<td>column</td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td>column-reverse</td>
+<td>从下到上</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*默认 x轴是主轴*/</span>
+flex-direction：row-reverse<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*元素从右到左排列*/</span>
+<span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*设置y轴是主轴 元素从上到下*/</span>
+flex-direction：column-reverse<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*元素从下到上排列*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>justify-content 设置主轴上的子元素排列方式<br>justify-content 属性定义了项目在主轴上的对齐方式</p>
+</li>
+</ul>
+<p><strong>注意：</strong> 使用这个属性之前一定要确定好主轴是哪个<br>|属性值|说明|<br>|–|–|<br>|flex-start|默认值 从头部开始 如果主轴是x轴，则从左到右|<br>|flex-end|从尾部开始排列|<br>|center|在主轴居中对齐（如果主轴是x轴则 水平居中）|<br>|space-around|平分剩余空间,子元素外边距改变|<br>|space-between|先两边贴边 再平分剩余空间（重要)|</p>
+<ul>
+<li><p>flex-wrap 设置子元素是否换行<br>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，flex布局中默认是不换行的。</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nowrap</td>
+<td>默认值，不换行</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>换</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*子元素在一行显示，如果装不开 缩小子元素的大小*/</span>
+flex<span class="token operator">-</span>wrap<span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+flex<span class="token operator">-</span>wrap：warp<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*换行*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>align-items 设置侧轴上的子元素排列方式（<strong>单行</strong>）<br>该属性是控制子项在侧轴（默认是y轴）上的排列方式 在子项为<strong>单项（单行）</strong>的时候使用</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>从上到下</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>从下到上</td>
+</tr>
+<tr>
+<td>center</td>
+<td>挤在一起居中（垂直居中）</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>拉伸 （默认值) （子元素没有高度时）</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>align-content 设置侧轴上的子元素的排列方式（多行）<br>设置子项在侧轴上的排列方式 并且只能用于子项出现<strong>换行</strong> 的情况（多行），<strong>在单行下是没有效果</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值在侧轴的头部开始排列</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>在侧轴的尾部开始排列</td>
+</tr>
+<tr>
+<td>center</td>
+<td>在侧轴中间显示</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>子项在侧轴平分剩余空间</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>子项在侧轴先分布在两头，再平分剩余空间</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>设置子项元素高度平分父元素高（子元素没有高度时）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p><img src="/images/flexalign.png"></p>
+<ul>
+<li>flex-flow 复合属性<br>flex-flow 属性是 flex-direction 和 flex-wrap 属性的复合属性<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*flex-flow设置主轴方向 是否换行*/</span>
+<span class="token property">flex-flow</span><span class="token punctuation">:</span>row wrap<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*左右排列 换行*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h5 id="flex布局子项常见属性"><a href="#flex布局子项常见属性" class="headerlink" title="flex布局子项常见属性"></a>flex布局子项常见属性</h5><ul>
+<li><p>常见的子项属性</p>
+<table>
+<thead>
+<tr>
+<th>常见的子项属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex</td>
+<td>定义子项目分配剩余空间</td>
+</tr>
+<tr>
+<td>align-self</td>
+<td>控制子项自己在侧轴上的排列方式</td>
+</tr>
+<tr>
+<td>order</td>
+<td>属性定义项目的排列顺顺序</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>flex 属性<br>flex 属性定义子项目分配剩余空间，用flex来表示占多少<strong>份数</strong></p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.father</span> <span class="token class">.item</span> </span><span class="token punctuation">{</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 默认 0 */</span>
+<span class="token comment" spellcheck="true">/*father的子元素中felx属性之和sum，就是剩余空间的分成的份数*/</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*占据1/sum的剩余空间*/</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>align-self 控制子项自己在侧轴上的排列方式<br>align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">span<span class="token pseudo-class">:nth-child(2)</span> </span><span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">/* 设置自己在侧轴上的排列方式 */</span>
+<span class="token property">align-self</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>order 属性定义项目的排列顺序<br>数值越小，排列越靠前，默认为0。<br>注意：和 z-index 不一样。</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+<span class="token property">order</span><span class="token punctuation">:</span> &lt;number><span class="token punctuation">;</span>
+<span class="token property">order</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
 
                 
             </div>
@@ -1252,7 +1481,7 @@ initial-scale<span class="token punctuation">=</span>1.0, maximum-scale<span cla
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40.1k</span>
+                        class="white-color">41.5k</span>
             
             
             
