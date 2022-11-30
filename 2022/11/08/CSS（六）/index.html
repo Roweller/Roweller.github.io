@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS">
+    <meta name="keywords" content="CSS3,HTML5">
     <meta name="description" content="简介 HTML5新特性、CSS3新特性
 
 
@@ -607,14 +607,14 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-25
+                    2022-11-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.8k
+                    4.9k
                 </div>
                 
 
@@ -944,19 +944,19 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <p><img src="/images/%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8.png"></p>
 <p><strong>示例代码：</strong></p>
 <pre class="line-numbers language-css"><code class="language-css"> <span class="token comment" spellcheck="true">/* 只选择 type =text 文本框的input 选取出来 */</span>
-<span class="token selector">input<span class="token attribute">[type=text]</span> </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*input和[之间没有空格*/</span>
+<span class="token selector">input<span class="token attribute">[type="text"]</span> </span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*input和[之间没有空格*/</span>
     <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">/* 选择首先是div 然后 具有class属性 并且属性值 必须是 icon开头的这些元素 */</span>
-<span class="token selector">div<span class="token attribute">[class^=icon]</span> </span><span class="token punctuation">{</span>
+<span class="token selector">div<span class="token attribute">[class^="icon"]</span> </span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">/* 选择首先是section 然后 具有class属性 并且属性值 必须是 data结尾的这些元素 */</span>
-<span class="token selector">section<span class="token attribute">[class$=data]</span> </span><span class="token punctuation">{</span>
+<span class="token selector">section<span class="token attribute">[class$="data"]</span> </span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">/* 选择首先是section 然后 具有class属性 并且属性值 含有 data 的这些元素 */</span>
-<span class="token selector">section<span class="token attribute">[class*=da]</span></span><span class="token punctuation">{</span>
+<span class="token selector">section<span class="token attribute">[class*="da"]</span></span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1380,6 +1380,26 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <li>代码写给父级，但是影响的是子盒子</li>
 <li>这个属性很重要，后面必用</li>
 </ol>
+<h3 id="浏览器私有前缀"><a href="#浏览器私有前缀" class="headerlink" title="浏览器私有前缀"></a>浏览器私有前缀</h3><blockquote>
+<p>浏览器私有前缀是为了兼容老版本的写法，比较新版本的浏览器无须添加。</p>
+</blockquote>
+<ul>
+<li> 私有前缀</li>
+</ul>
+<ol>
+<li>-moz-：代表 firefox 浏览器私有属性</li>
+<li>-ms-：代表 ie 浏览器私有属性</li>
+<li>-webkit-：代表 safari、chrome 私有属性</li>
+<li>-o-：代表 Opera 私有属性</li>
+</ol>
+<ul>
+<li> 提倡的写法</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
+<span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
+<span class="token property">-o-border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
+<span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>参考<a href ="https://www.bilibili.com/video/BV14J4114768?p=274">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
@@ -1812,7 +1832,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">43.6k</span>
             
             
             

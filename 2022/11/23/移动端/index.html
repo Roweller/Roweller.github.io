@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="web前端">
+    <meta name="keywords" content="web,前端">
     <meta name="description" content="简介  移动端web开发
 
 移动端Web主要指运行在移动端（手机、ipad）的web页面, 具备HTML5特性也叫H5页面、Web App等
@@ -610,14 +610,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-26
+                    2022-11-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    5.4k
                 </div>
                 
 
@@ -774,7 +774,13 @@
  <span class="token comment" spellcheck="true">/*禁用长按页面时的弹出菜单*/</span>
  <span class="token selector">img,a </span><span class="token punctuation">{</span> <span class="token property">-webkit-touch-callout</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="移动端常见布局"><a href="#移动端常见布局" class="headerlink" title="移动端常见布局"></a>移动端常见布局</h2><h3 id="单独移动端页面-1"><a href="#单独移动端页面-1" class="headerlink" title="单独移动端页面"></a>单独移动端页面</h3><h4 id="流式布局（百分比布局"><a href="#流式布局（百分比布局" class="headerlink" title="流式布局（百分比布局)"></a>流式布局（百分比布局)</h4><ol>
+<h2 id="移动端常见布局"><a href="#移动端常见布局" class="headerlink" title="移动端常见布局"></a>移动端常见布局</h2><blockquote>
+<p>相比于PC端，移动端打开网页，主要是这两种界面，<strong>单独制作移动端页面</strong>（主流）,响<strong>应式页面</strong>兼容移动端（其次)</p>
+</blockquote>
+<h3 id="单独移动端页面-1"><a href="#单独移动端页面-1" class="headerlink" title="单独移动端页面"></a>单独移动端页面</h3><h4 id="流式布局（百分比布局"><a href="#流式布局（百分比布局" class="headerlink" title="流式布局（百分比布局)"></a>流式布局（百分比布局)</h4><ul>
+<li>流式布局特点</li>
+</ul>
+<ol>
 <li>流式布局，就是百分比布局，也称非固定像素布局。</li>
 <li>通过盒子的宽度设置成百分比来根据屏幕的宽度来进行伸缩，不受固定像素的限制，内容向两侧填充。</li>
 <li>流式布局方式是移动web开发使用的比较常见的布局方式。</li>
@@ -1050,7 +1056,238 @@ flex<span class="token operator">-</span>wrap：warp<span class="token punctuati
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-
+<h4 id="rem适配布局"><a href="#rem适配布局" class="headerlink" title="rem适配布局"></a>rem适配布局</h4><blockquote>
+<p>rem适配布局能使页面<strong>文字</strong>、<strong>高度</strong>随屏幕大小而变化，元素高度和宽度<strong>等比例</strong>变化</p>
+</blockquote>
+<h5 id="rem单位"><a href="#rem单位" class="headerlink" title="rem单位"></a>rem单位</h5><p>rem (root em)是一个相对单位，类似于em，em是父元素字体大小。（1em=font-size）<br>不同的是rem的基准是相对于<strong>html元素的字体大小</strong>。<br>比如，根元素（html）设置font-size=12px; 非根元素设置width:2rem; 则换成px表示就是24px。</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 根html 为 12px */</span>
+<span class="token selector">html </span><span class="token punctuation">{</span>
+ <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 此时 div 的字体大小就是 24px */</span> 
+<span class="token selector">div </span><span class="token punctuation">{</span>
+ <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">2</span>rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>rem的优势：父元素文字大小可能不一致， 但是整个页面只有一个html，可以很好来控制整个页面的元素大小</p>
+<h5 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h5><ul>
+<li>媒体查询介绍</li>
+</ul>
+<ol>
+<li>媒体查询（Media Query）是CSS3新语法。</li>
+<li>使用 <strong>@media 查询</strong>，可以针对不同的媒体类型定义不同的样式</li>
+<li>@media 可以针对不同的屏幕尺寸设置不同的样式</li>
+<li>当你重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度重新渲染页面</li>
+<li>目前针对很多苹果手机、Android手机，平板等设备都用得到多媒体查询</li>
+</ol>
+<ul>
+<li><p>语法规范</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*@media 开头 注意@符号 mediatype 媒体类型 关键字 and not only*/</span>
+<span class="token atrule"><span class="token rule">@media</span> mediatype and|not|only <span class="token punctuation">(</span>media feature<span class="token punctuation">)</span></span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*媒体特性*/</span>
+CSS-Code<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*仅在屏幕类型上 only可省略 在屏幕400px~600px时，设置样式*/</span>
+<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>mediatype查询类型<br>将不同的终端设备划分成不同的类型，称为<strong>媒体类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all</td>
+<td>用于所有设备</td>
+</tr>
+<tr>
+<td>print</td>
+<td>用于打印机和打印预览</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>用于电脑屏幕，平板电脑，智能手机等</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>关键字<br>关键字将<strong>媒体类型或多个媒体特性</strong>连接到一起做为媒体查询的条件。</p>
+<ol>
+<li>and：可以将多个媒体特性连接到一起，相当于“且”的意思。</li>
+<li>not：排除某个媒体类型，相当于“非”的意思，可以省略。</li>
+<li>only：指定某个特定的<strong>媒体类型</strong>，<strong>可以省略</strong>。</li>
+</ol>
+</li>
+<li><p>媒体特性<br>每种媒体类型都具体各自不同的特性，根据不同媒体类型的媒体特性设置不同的展示风格。注意他们要加小括号包含</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>定义输出设备中页面可见区域的宽度</td>
+</tr>
+<tr>
+<td>min-width</td>
+<td>定义输出设备中页面最小可见区域宽度</td>
+</tr>
+<tr>
+<td>max-width</td>
+<td>定义输出设备中页面最大可见区域宽度</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>媒体查询+rem实现元素动态大小变化</p>
+</li>
+</ul>
+<ol>
+<li>rem单位是跟着html来走的，有了rem页面元素可以设置不同大小尺寸</li>
+<li>媒体查询可以根据不同设备宽度来修改样式</li>
+<li>媒体查询+rem 就可以实现不同设备宽度，实现页面元素大小的动态变化<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*不同的屏幕大小控制html的字体大小*/</span>
+<span class="token atrule"><span class="token rule">@media</span> screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+ <span class="token selector">html </span><span class="token punctuation">{</span>
+     <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span>640px<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
+ <span class="token selector">html </span><span class="token punctuation">{</span>
+     <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*高度 字体大小随html的字体大小*/</span>
+<span class="token selector"><span class="token class">.nav</span> </span><span class="token punctuation">{</span>
+ <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">1</span>rem<span class="token punctuation">;</span>
+ <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">.5</span>rem<span class="token punctuation">;</span>
+ <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+ <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1</span>rem<span class="token punctuation">;</span>
+ <span class="token property">background-color</span><span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>引入资源<br>当样式比较繁多的时候，针对不同的媒体（电脑、平板、手机）使用不同 stylesheets（样式表）。<br>原理，就是直接在link中判断设备的尺寸，然后引用不同的css文件。<pre class="line-numbers language-css"><code class="language-css">&lt;link rel=<span class="token string">"stylesheet"</span> media=<span class="token string">"mediatype and|not|only (media feature)"</span> href=<span class="token string">"mystylesheet.css"</span>>
+<span class="token comment" spellcheck="true">/*400px~799px时调用styleA.css 屏幕尺寸大于800px时 调用styleB.css*/</span>
+&lt;link rel=<span class="token string">"stylesheet"</span> href=<span class="token string">"styleA.css"</span> media=<span class="token string">"screen and (min-width: 400px)"</span>>
+&lt;link rel=<span class="token string">"stylesheet"</span> href=<span class="token string">"styleB.css"</span> media=<span class="token string">"screen and (min-width: 800px)"</span>>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h5 id="less基础（重点）"><a href="#less基础（重点）" class="headerlink" title="less基础（重点）"></a>less基础（重点）</h5><ul>
+<li><p>Less介绍<br>Less （Leaner Style Sheets 的缩写） 是一门 <strong>CSS 扩展语言</strong>，也成为<strong>CSS预处理器</strong>。<br>做为 CSS 的一种形式的扩展，它并没有减少 CSS 的功能，而是在现有的 CSS 语法上，为CSS加入程序式语言的特性。<br>它在 CSS 的语法基础之上，引入了变量，Mixin（混入），运算以及函数等功能，大大简化了 CSS 的编写，并且<br>降低了 CSS 的维护成本，就像它的名称所说的那样，Less 可以让我们用更少的代码做更多的事情。<br>Less中文网址： <a target="_blank" rel="noopener" href="http://lesscss.cn/">http://lesscss.cn/</a><br>常见的CSS预处理器：Sass、Less、Stylus<br>总结：Less 是一门 <strong>CSS 预处理语言，它扩展了CSS的动态特性</strong>。</p>
+</li>
+<li><p>less使用<br>我们首先新建一个后缀名为less的文件， 在这个less文件里面书写less语句。</p>
+<ul>
+<li>less变量<br>变量是指没有固定的值，可以改变的。因为我们CSS中的一些颜色和数值等经常使用<pre class="line-numbers language-less"><code class="language-less"><span class="token comment" spellcheck="true">/*@变量名:值;*/</span>
+<span class="token variable">@color<span class="token punctuation">:</span></span> pink<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*定义一个颜色*/</span>
+<span class="token variable">@font14</span>：<span class="token number">14</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">///定义14px的变量</span>
+<span class="token selector">body</span> <span class="token punctuation">{</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">@color</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//使用变量 颜色为pink</span>
+<span class="token punctuation">}</span>
+<span class="token selector">div</span> <span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">@color</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//使用变量 颜色为pink</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p><strong>命名规范</strong></p>
+<ol>
+<li>必须有@为前缀</li>
+<li>不能包含特殊字符</li>
+<li>不能以数字开头</li>
+<li>大小写敏感</li>
+</ol>
+</li>
+<li><p>less编译<br>本质上，Less 包含一套自定义的语法及一个解析器，用户根据这些语法定义自己的样式规则，这些规则最终会通过解析器，编译生成对应的 CSS 文件。<br>所以，我们需要把我们的 less文件，编译生成为css文件，这样我们的html页面才能使用。<br><strong>vocode Less 插件</strong><br>Easy LESS 插件用来把less文件编译为css文件安装完毕插件，重新加载下 vscode。<br>只要保存一下Less文件，会自动生成CSS文件。</p>
+</li>
+</ul>
+<p><img src="/images/less.png"></p>
+<ul>
+<li>less嵌套<ul>
+<li>经常用到选择器的嵌套<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#header</span> </span><span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#header</span> <span class="token class">.logo</span> </span><span class="token punctuation">{</span>
+<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+less嵌套写法<pre class="line-numbers language-less"><code class="language-less"><span class="token selector">#header</span> <span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token selector">.logo</span> <span class="token punctuation">{</span>
+<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>交集|伪类|伪元素选择器<ol>
+<li>内层选择器的前面没有 &amp; 符号，则它被解析为父选择器的后代；</li>
+<li>如果有 &amp; 符号，它就被解析为父元素自身或父元素的伪类<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:hover</span></span><span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+less嵌套写法<pre class="line-numbers language-less"><code class="language-less"><span class="token selector">a</span><span class="token punctuation">{</span>
+<span class="token selector">&amp;:hover</span><span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>less运算（重点）<br>任何数字、颜色或者变量都可以参与运算。就是Less提供了加（+）、减（-）、乘（*）、除（/）算术运算。<pre class="line-numbers language-less"><code class="language-less"><span class="token comment" spellcheck="true">/*Less 里面写*/</span>
+<span class="token variable">@witdh<span class="token punctuation">:</span></span> <span class="token number">10</span>px <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token selector">div</span> <span class="token punctuation">{</span>
+<span class="token property">border</span><span class="token punctuation">:</span> <span class="token variable">@witdh</span> solid red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*生成的css*/</span>
+<span class="token selector">div</span> <span class="token punctuation">{</span>
+<span class="token property">border</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token number">15</span>px <span class="token operator">/</span> <span class="token number">5</span><span class="token punctuation">)</span>  solid red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//注意‘/’运算要加‘()’</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*Less 甚至还可以这样 */</span>
+<span class="token property">width</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token variable">@width</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ol>
+<li>乘号（*）和除号（/）的写法 </li>
+<li>运算符中间左右有个空格隔开 1px + 5</li>
+<li>对于两个不同的单位的值之间的运算，运算结果的值取第一个值的单位</li>
+<li>如果两个值之间只有一个值有单位，则运算结果就取该单位</li>
+</ol>
+<ul>
+<li>rem适配方案</li>
+</ul>
+<ol>
+<li>让一些不能等比自适应的元素，达到当设备尺寸发生改变的时<br>候，等比例适配当前设备。</li>
+<li>使用媒体查询根据不同设备按比例设置html的字体大小，然后<br>页面元素使用rem做尺寸单位，当html字体大小变化元素尺寸<br>也会发生变化，从而达到等比缩放的适配<br>主要有两种布局方案：less + rem + 媒体查询、flexible.js + rem</li>
+</ol>
+<ul>
+<li>less + rem + 媒体查询<br>该布局主要利用less中的@meida，以及其计算能力，使页面能够适应屏幕<br>@import “common”，能将common.less文件引入到index.less中<br>body样式<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+<span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span>
+<span class="token property">width</span><span class="token punctuation">:</span><span class="token number">15</span>rem<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span>
+<span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+<span class="token property">font-family</span><span class="token punctuation">:</span> Arial,Helvetica<span class="token punctuation">;</span>
+<span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#F2F2F2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>flexible.js + rem<br>flexible.js含有自动调整页面大小以及html字体大小的函数，把我们的界面分为了10等份<br>VSCode的插件cssrem,可以将px转换为rem，默认的htmlwenzhidaxiao</li>
+</ul>
+<h4 id="响应式开发"><a href="#响应式开发" class="headerlink" title="响应式开发"></a>响应式开发</h4>
                 
             </div>
             <hr/>
@@ -1481,7 +1718,7 @@ flex<span class="token operator">-</span>wrap：warp<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">43.6k</span>
             
             
             
