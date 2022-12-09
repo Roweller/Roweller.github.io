@@ -49,6 +49,14 @@
         max-width: 1250px;
     }
 }
+@keyframes revolve {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 pre[class*="language-"].line-numbers > code {
 display: inline-block;
 }
@@ -1683,6 +1691,8 @@ color: #64c45b;
     width: 100%;
     margin: 0 auto;
     transform: translate3d(0, -65%, 0);
+    transform-origin: 50% 50%;
+    animation: revolve 8s linear 0s infinite;
 }
 
 .profile .author {
