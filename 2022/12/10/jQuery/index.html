@@ -603,14 +603,14 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-11
+                    2022-12-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    3.2k
                 </div>
                 
 
@@ -950,6 +950,71 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
+<h4 id="类操作与className区别"><a href="#类操作与className区别" class="headerlink" title="类操作与className区别"></a>类操作与className区别</h4><blockquote>
+<p>原生 JS 中 className 会覆盖元素原先里面的类名。<br>jQuery 里面类操作只是对指定类进行操作，不影响原先的类名</p>
+</blockquote>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// var one = document.querySelector(".one");</span>
+<span class="token comment" spellcheck="true">// one.className = "two";</span>
+<span class="token comment" spellcheck="true">// $(".one").addClass("two");  这个addClass相当于追加类名 不影响以前的类名</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".one"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"two"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="jQuery-效果"><a href="#jQuery-效果" class="headerlink" title="jQuery 效果"></a>jQuery 效果</h3><p>jQuery 给我们封装了很多动画效果，最为常见的如下:<br><img src="/imaes/jQuery.png"></p>
+<h4 id="显示隐藏效果"><a href="#显示隐藏效果" class="headerlink" title="显示隐藏效果"></a>显示隐藏效果</h4><h5 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h5><ol>
+<li>显示语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>显示参数<br>（1）参数都可以省略， 无动画直接显示。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h5><ol>
+<li>隐藏语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>隐藏参数<br>（1）参数都可以省略， 无动画直接显示。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h5><ol>
+<li>切换语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>切换参数<br>（1）参数都可以省略， 无动画直接显示。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。<br>建议：平时一般不带参数，直接显示隐藏即可。</li>
+</ol>
+<h4 id="滑动效果"><a href="#滑动效果" class="headerlink" title="滑动效果"></a>滑动效果</h4><h5 id="下滑"><a href="#下滑" class="headerlink" title="下滑"></a>下滑</h5><ol>
+<li>下滑效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>下滑效果参数<br>（1）参数都可以省略。<br>（2）speed:三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing:(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="上滑"><a href="#上滑" class="headerlink" title="上滑"></a>上滑</h5><ol>
+<li>上滑效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>上滑效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="切换-1"><a href="#切换-1" class="headerlink" title="切换"></a>切换</h5><ol>
+<li>滑动切换效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>滑动切换效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h4 id="事件切换"><a href="#事件切换" class="headerlink" title="事件切换"></a>事件切换</h4><p>hover([over,]out);</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. 事件切换 hover 就是鼠标经过和离开的复合写法</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 2. 事件切换 hover  如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>（1）over:鼠标移到元素上要触发的函数（相当于mouseenter）<br>（2）out:鼠标移出元素要触发的函数（相当于mouseleave）<br>（3）如果只写一个函数，则鼠标经过和离开都会触发它</p>
 
                 
             </div>
@@ -1382,7 +1447,7 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">50.3k</span>
+                        class="white-color">51.2k</span>
             
             
             
