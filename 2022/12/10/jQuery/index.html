@@ -522,7 +522,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -603,14 +603,14 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-12
+                    2022-12-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    5.3k
                 </div>
                 
 
@@ -682,7 +682,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
 </li>
 </ol>
 <h4 id="jQuery-的入口函数"><a href="#jQuery-的入口函数" class="headerlink" title="jQuery 的入口函数"></a>jQuery 的入口函数</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-   <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//  此处是页面DOM加载完成的入口</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//  此处是页面DOM加载完成的入口</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   
@@ -958,7 +958,7 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <span class="token comment" spellcheck="true">// $(".one").addClass("two");  这个addClass相当于追加类名 不影响以前的类名</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".one"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">"two"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="jQuery-效果"><a href="#jQuery-效果" class="headerlink" title="jQuery 效果"></a>jQuery 效果</h3><p>jQuery 给我们封装了很多动画效果，最为常见的如下:<br><img src="/imaes/jQuery.png"></p>
+<h3 id="jQuery-效果"><a href="#jQuery-效果" class="headerlink" title="jQuery 效果"></a>jQuery 效果</h3><p>jQuery 给我们封装了很多动画效果，最为常见的如下:<br><img src="/images/jQuery%E6%95%88%E6%9E%9C.png"></p>
 <h4 id="显示隐藏效果"><a href="#显示隐藏效果" class="headerlink" title="显示隐藏效果"></a>显示隐藏效果</h4><h5 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h5><ol>
 <li>显示语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1002,11 +1002,11 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 </li>
 <li>滑动切换效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
 </ol>
-<h4 id="事件切换"><a href="#事件切换" class="headerlink" title="事件切换"></a>事件切换</h4><p>hover([over,]out);</p>
+<h4 id="事件切换"><a href="#事件切换" class="headerlink" title="事件切换"></a>事件切换</h4><p>hover([over],[out]);</p>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. 事件切换 hover 就是鼠标经过和离开的复合写法</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//经过函数</span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//离开函数</span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 2. 事件切换 hover  如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数</span>
@@ -1015,7 +1015,208 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>（1）over:鼠标移到元素上要触发的函数（相当于mouseenter）<br>（2）out:鼠标移出元素要触发的函数（相当于mouseleave）<br>（3）如果只写一个函数，则鼠标经过和离开都会触发它</p>
+<h4 id="动画队列及其停止排队方法"><a href="#动画队列及其停止排队方法" class="headerlink" title="动画队列及其停止排队方法"></a>动画队列及其停止排队方法</h4><ol>
+<li>动画或效果队列<br>动画或者效果一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行。</li>
+<li>停止排队<pre class="line-numbers language-js"><code class="language-js"><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  必须写在动画的前面</span>
+<span class="token comment" spellcheck="true">//停止上一个动画不管有没有出现完</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+(1）stop() 方法用于停止动画或效果。<br>(2)  注意： stop() 写到动画或者效果的前面， 相当于停止结束上一次的动画。</li>
+</ol>
+<h4 id="淡入淡出效果"><a href="#淡入淡出效果" class="headerlink" title="淡入淡出效果"></a>淡入淡出效果</h4><h5 id="淡入"><a href="#淡入" class="headerlink" title="淡入"></a>淡入</h5><ol>
+<li>淡入效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 淡入 fadeIn()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>淡入效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="淡出"><a href="#淡出" class="headerlink" title="淡出"></a>淡出</h5><ol>
+<li>淡出效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">fadeOut</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 淡出 fadeOut()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fadeOut</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>淡出效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="切换-2"><a href="#切换-2" class="headerlink" title="切换"></a>切换</h5><ol>
+<li>切换效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">fadeToggle</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 淡入淡出切换 fadeToggle()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fadeToggle</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>切换效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h5 id="调整不透明度"><a href="#调整不透明度" class="headerlink" title="调整不透明度"></a>调整不透明度</h5><ol>
+<li>渐进方式调整到指定的不透明度<pre class="line-numbers language-js"><code class="language-js"><span class="token function">fadeTo</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span>speed<span class="token punctuation">]</span><span class="token punctuation">,</span>opacity<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//  修改透明度 fadeTo() 这个速度和透明度要必须写</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fadeTo</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>效果参数<br>（1）<strong>opacity 透明度必须写，取值 0~1 之间</strong>。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<strong>必须写</strong><br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h4 id="自定义动画-animate"><a href="#自定义动画-animate" class="headerlink" title="自定义动画 animate"></a>自定义动画 animate</h4><ol>
+<li>语法<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//params 属性 用对象 ，speed 时间，</span>
+<span class="token function">animate</span><span class="token punctuation">(</span>params<span class="token punctuation">,</span><span class="token punctuation">[</span>speed<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ left<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
+ top<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+ opacity<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token number">4</span><span class="token punctuation">,</span>
+ width<span class="token punctuation">:</span> <span class="token number">500</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>参数<br>（1）<strong>params: 想要更改的样式属性，以对象形式传递，必须写。 属性名可以不用带引号， 如果是复合属性则需要采取驼峰命名法 borderLeft。其余参数都可以省略</strong>。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h3 id="jQuery-属性操作"><a href="#jQuery-属性操作" class="headerlink" title="jQuery 属性操作"></a>jQuery 属性操作</h3><h4 id="元素固有属性值-prop"><a href="#元素固有属性值-prop" class="headerlink" title="元素固有属性值 prop()"></a>元素固有属性值 prop()</h4><blockquote>
+<p>所谓元素固有属性就是元素本身自带的属性，比如 a元素里面的 href ，比如 input元素里面的 type。</p>
+</blockquote>
+<ol>
+<li>获取属性语法<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//element.prop("属性名") 获取元素固有的属性值</span>
+<span class="token function">prop</span><span class="token punctuation">(</span><span class="token string">"属性"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//获取到a的href属性</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>设置属性语法<pre class="line-numbers language-js"><code class="language-js"><span class="token function">prop</span><span class="token punctuation">(</span><span class="token string">"属性"</span><span class="token punctuation">,</span> <span class="token string">"属性值"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//给a设置title属性 属性值为我们都挺好</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span><span class="token string">"title"</span><span class="token punctuation">,</span> <span class="token string">"我们都挺好"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="元素自定义属性值-attr"><a href="#元素自定义属性值-attr" class="headerlink" title="元素自定义属性值 attr()"></a>元素自定义属性值 attr()</h4><blockquote>
+<p>用户自己给元素添加的属性，我们称为自定义属性。 比如给 div 添加 index =“1”。</p>
+</blockquote>
+<ol>
+<li>获取属性语法<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//元素的自定义属性 我们通过 attr()</span>
+<span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"属性"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 类似原生 getAttribute()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>设置属性语法<pre class="line-numbers language-js"><code class="language-js"><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"属性"</span><span class="token punctuation">,</span> <span class="token string">"属性值"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 类似原生 setAttribute()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"index"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+该方法也可以获取 H5 自定义属性</li>
+</ol>
+<h4 id="数据缓存-data"><a href="#数据缓存-data" class="headerlink" title="数据缓存 data()"></a>数据缓存 data()</h4><blockquote>
+<p>data() 方法可以在指定的元素上存取数据，并不会修改 DOM 元素结构。一旦页面刷新，之前存放的数据都将被移除。 </p>
+</blockquote>
+<ol>
+<li>获取数据语法<pre class="line-numbers language-js"><code class="language-js"><span class="token function">data</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 向被选元素附加数据</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"span"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token string">"uname"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>设置属性语法<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//DOM看不到</span>
+<span class="token function">data</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"value"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 向被选元素附加数据</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"span"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token string">"uname"</span><span class="token punctuation">,</span> <span class="token string">"andy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+同时，还可以读取 HTML5 自定义属性  data-index ，得到的是数字型</li>
+</ol>
+<h3 id="jQuery-内容文本值"><a href="#jQuery-内容文本值" class="headerlink" title="jQuery 内容文本值"></a>jQuery 内容文本值</h3><blockquote>
+<p>主要针对元素的内容还有表单的值操作。</p>
+</blockquote>
+<ol>
+<li>普通元素内容 html()（ 相当于原生inner HTML)<pre class="line-numbers language-js"><code class="language-js"><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span>             <span class="token comment" spellcheck="true">// 获取元素的内容</span>
+<span class="token comment" spellcheck="true">//标签也会显示出来</span>
+<span class="token comment" spellcheck="true">//获取设置元素内容 html()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"内容"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 设置元素的内容</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>普通元素文本内容 text()   (相当与原生 innerText)<pre class="line-numbers language-js"><code class="language-js"><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                     <span class="token comment" spellcheck="true">// 获取元素的文本内容</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"文本内容"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 设置元素的文本内容</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>表单的值 val()（ 相当于原生value)<pre class="line-numbers language-js"><code class="language-js"><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span>              <span class="token comment" spellcheck="true">// 获取表单的值</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"内容"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 设置表单的值</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="jQuery-元素操作"><a href="#jQuery-元素操作" class="headerlink" title="jQuery 元素操作"></a>jQuery 元素操作</h3><blockquote>
+<p>主要是遍历、创建、添加、删除元素操作。</p>
+</blockquote>
+<h4 id="遍历元素"><a href="#遍历元素" class="headerlink" title="遍历元素"></a>遍历元素</h4><blockquote>
+<p>jQuery 隐式迭代是对同一类元素做了同样的操作。 如果想要给同一类元素做不同操作，就需要用到遍历。</p>
+</blockquote>
+<ul>
+<li>语法1<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. each() 方法遍历元素 </span>
+<span class="token comment" spellcheck="true">// 回调函数第一个参数一定是索引号  可以自己指定索引号号名称</span>
+<span class="token comment" spellcheck="true">// 回调函数第二个参数一定是 dom元素对象 也是自己命名</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>index<span class="token punctuation">,</span> domEle<span class="token punctuation">)</span> <span class="token punctuation">{</span> xxx<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> domEle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 回调函数第一个参数一定是索引号  可以自己指定索引号号名称</span>
+  <span class="token comment" spellcheck="true">// console.log(index);</span>
+  <span class="token comment" spellcheck="true">// console.log(i);</span>
+  <span class="token comment" spellcheck="true">// 回调函数第二个参数一定是 dom元素对象 也是自己命名</span>
+  <span class="token comment" spellcheck="true">// console.log(domEle);</span>
+  <span class="token comment" spellcheck="true">// domEle.css("color"); dom对象没有css方法</span>
+  <span class="token function">$</span><span class="token punctuation">(</span>domEle<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"color"</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  sum <span class="token operator">+</span><span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span>domEle<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ol>
+<li>each() 方法遍历匹配的每一个元素。<strong>主要用DOM处理</strong>。 each 每一个</li>
+<li>里面的回调函数有2个参数：  index 是每个元素的索引号;  <strong>demEle 是每个DOM元素对象</strong>，不是jquery对象</li>
+<li>所以要想使用jquery方法，需要给这个dom元素转换为jquery对象  <strong>$(domEle)</strong></li>
+</ol>
+<ul>
+<li>语法2<br>```js<br>// 2. $.each() 方法遍历元素 主要用于遍历数据，处理数据<br>// 回调函数第一个参数一定是索引号  可以自己指定索引号号名称<br>// 回调函数第二个参数一定是 dom元素对象 也是自己命名<br>$.each(object，function (index, element) { xxx; });</li>
+</ul>
+<p>var arr = [“red”, “green”, “blue”];<br>$.each($(“div”), function(i, ele) {<br>    console.log(i);<br>    console.log(ele);<br>});<br>$.each(arr, function(i, ele) {<br>    console.log(i);<br>    console.log(ele);<br>})</p>
+<pre><code>1. $.each()方法可用于遍历任何对象。主要用于**数据处理**，比如数组，对象
+2. 里面的函数有2个参数：  index 是每个元素的索引号;  element  遍历内容
 
+#### 创建元素
+- 语法
+```js
+$(&quot;&lt;li&gt;&lt;/li&gt;&quot;);
+var li = $(&quot;&lt;li&gt;新建的li&lt;/li&gt;&quot;);
+</code></pre>
+<p>创建了一个li标签</p>
+<h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><ul>
+<li>内部添加<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//把内容放入匹配元素内部最后面，类似原生 appendChild。</span>
+element<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"内容"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> li <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;li>新建的li&lt;/li>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ul<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//把内容放入匹配元素内部最前面。</span>
+element<span class="token punctuation">.</span><span class="token function">prepend</span><span class="token punctuation">(</span><span class="token string">"内容"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ul<span class="token punctuation">.</span><span class="token function">prepend</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//放在最前边</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+添加的元素放到了下一级元素里，相当于是子代元素<br>外部添加元素，生成之后，他们是兄弟关系</li>
+<li>外部添加<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//  把内容放入目标元素前面</span>
+element<span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span><span class="token string">''</span>内容<span class="token string">''</span><span class="token punctuation">)</span>    
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//  把内容放入目标元素后面</span>
+element<span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span><span class="token string">"内容"</span><span class="token punctuation">)</span>  
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+内部添加元素，生成之后，它们是父子关系</li>
+</ul>
+<h4 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h4><pre class="line-numbers language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//  删除匹配的元素（本身）</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//  删除匹配的元素集合中所有的子节点</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 可以删除匹配的元素里面的子节点 </span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//设置空的字符串</span>
+element<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//  清空匹配的元素内容</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ol>
+<li>remove 删除元素本身</li>
+<li>empt() 和  html(‘’’’) 作用等价，都可以删除元素里面的内容，只不过 html 还可以设置内容。</li>
+</ol>
+<h3 id="jQuery-尺寸、位置操作"><a href="#jQuery-尺寸、位置操作" class="headerlink" title="jQuery 尺寸、位置操作"></a>jQuery 尺寸、位置操作</h3><h4 id="jQuery-尺寸"><a href="#jQuery-尺寸" class="headerlink" title="jQuery 尺寸"></a>jQuery 尺寸</h4>
                 
             </div>
             <hr/>
@@ -1193,7 +1394,7 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="jQuery">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="jQuery">
                         
                         <span class="card-title">jQuery</span>
                     </div>
@@ -1243,7 +1444,7 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="本地储存">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="本地储存">
                         
                         <span class="card-title">本地储存</span>
                     </div>
@@ -1447,7 +1648,7 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">51.2k</span>
+                        class="white-color">53.3k</span>
             
             
             
