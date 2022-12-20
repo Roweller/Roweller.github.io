@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="jQuery,web,前端">
+    <meta name="keywords" content="jQuery,web,JavaScript库">
     <meta name="description" content="简介 jQuery
 
 jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档，操作DOM，执行动画和开发Ajax的操作。jQuery封装了很多预定义的对">
@@ -603,14 +603,14 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-15
+                    2022-12-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.3k
+                    7.4k
                 </div>
                 
 
@@ -1002,27 +1002,6 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 </li>
 <li>滑动切换效果参数<br>（1）参数都可以省略。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
 </ol>
-<h4 id="事件切换"><a href="#事件切换" class="headerlink" title="事件切换"></a>事件切换</h4><p>hover([over],[out]);</p>
-<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. 事件切换 hover 就是鼠标经过和离开的复合写法</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//经过函数</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//离开函数</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 2. 事件切换 hover  如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>（1）over:鼠标移到元素上要触发的函数（相当于mouseenter）<br>（2）out:鼠标移出元素要触发的函数（相当于mouseleave）<br>（3）如果只写一个函数，则鼠标经过和离开都会触发它</p>
-<h4 id="动画队列及其停止排队方法"><a href="#动画队列及其停止排队方法" class="headerlink" title="动画队列及其停止排队方法"></a>动画队列及其停止排队方法</h4><ol>
-<li>动画或效果队列<br>动画或者效果一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行。</li>
-<li>停止排队<pre class="line-numbers language-js"><code class="language-js"><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  必须写在动画的前面</span>
-<span class="token comment" spellcheck="true">//停止上一个动画不管有没有出现完</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-(1）stop() 方法用于停止动画或效果。<br>(2)  注意： stop() 写到动画或者效果的前面， 相当于停止结束上一次的动画。</li>
-</ol>
 <h4 id="淡入淡出效果"><a href="#淡入淡出效果" class="headerlink" title="淡入淡出效果"></a>淡入淡出效果</h4><h5 id="淡入"><a href="#淡入" class="headerlink" title="淡入"></a>淡入</h5><ol>
 <li>淡入效果语法规范<pre class="line-numbers language-js"><code class="language-js"><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token punctuation">[</span>speed<span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">// 淡入 fadeIn()</span>
@@ -1056,9 +1035,9 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <li>效果参数<br>（1）<strong>opacity 透明度必须写，取值 0~1 之间</strong>。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<strong>必须写</strong><br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
 </ol>
 <h4 id="自定义动画-animate"><a href="#自定义动画-animate" class="headerlink" title="自定义动画 animate"></a>自定义动画 animate</h4><ol>
-<li>语法<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//params 属性 用对象 ，speed 时间，</span>
+<li>语法<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//params 属性 用对象 ，speed 时间，fn是动画结束后的执行函数</span>
 <span class="token function">animate</span><span class="token punctuation">(</span>params<span class="token punctuation">,</span><span class="token punctuation">[</span>speed<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>easing<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//属性设置可以用对象的方法</span>
  left<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
  top<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
  opacity<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token number">4</span><span class="token punctuation">,</span>
@@ -1069,6 +1048,27 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li>参数<br>（1）<strong>params: 想要更改的样式属性，以对象形式传递，必须写。 属性名可以不用带引号， 如果是复合属性则需要采取驼峰命名法 borderLeft。其余参数都可以省略</strong>。<br>（2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。<br>（3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。<br>（4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+</ol>
+<h4 id="事件切换"><a href="#事件切换" class="headerlink" title="事件切换"></a>事件切换</h4><p>hover([over],[out]);</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. 事件切换 hover 就是鼠标经过和离开的复合写法</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//经过函数</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//离开函数</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 2. 事件切换 hover  如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".nav>li"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>（1）over:鼠标移到元素上要触发的函数（相当于mouseenter）<br>（2）out:鼠标移出元素要触发的函数（相当于mouseleave）<br>（3）如果只写一个函数，则鼠标经过和离开都会触发它</p>
+<h4 id="动画队列及其停止排队方法"><a href="#动画队列及其停止排队方法" class="headerlink" title="动画队列及其停止排队方法"></a>动画队列及其停止排队方法</h4><ol>
+<li>动画或效果队列<br>动画或者效果一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行。</li>
+<li>停止排队<pre class="line-numbers language-js"><code class="language-js"><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  必须写在动画的前面</span>
+<span class="token comment" spellcheck="true">//停止上一个动画不管有没有出现完</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+(1）stop() 方法用于停止动画或效果。<br>(2)  注意： stop() 写到动画或者效果的前面， 相当于停止结束上一次的动画。</li>
 </ol>
 <h3 id="jQuery-属性操作"><a href="#jQuery-属性操作" class="headerlink" title="jQuery 属性操作"></a>jQuery 属性操作</h3><h4 id="元素固有属性值-prop"><a href="#元素固有属性值-prop" class="headerlink" title="元素固有属性值 prop()"></a>元素固有属性值 prop()</h4><blockquote>
 <p>所谓元素固有属性就是元素本身自带的属性，比如 a元素里面的 href ，比如 input元素里面的 type。</p>
@@ -1126,7 +1126,7 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li>普通元素文本内容 text()   (相当与原生 innerText)<pre class="line-numbers language-js"><code class="language-js"><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                     <span class="token comment" spellcheck="true">// 获取元素的文本内容</span>
+<li>普通元素文本内容 text()   (相当与原生 innerText)<pre class="line-numbers language-js"><code class="language-js"><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 获取元素的文本内容，不会获取标签</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"文本内容"</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">// 设置元素的文本内容</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1171,19 +1171,32 @@ myDiv<span class="token punctuation">.</span>style<span class="token punctuation
 <li>所以要想使用jquery方法，需要给这个dom元素转换为jquery对象  <strong>$(domEle)</strong></li>
 </ol>
 <ul>
-<li>语法2<br>```js<br>// 2. $.each() 方法遍历元素 主要用于遍历数据，处理数据<br>// 回调函数第一个参数一定是索引号  可以自己指定索引号号名称<br>// 回调函数第二个参数一定是 dom元素对象 也是自己命名<br>$.each(object，function (index, element) { xxx; });</li>
+<li>语法2<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 2. $.each() 方法遍历元素 主要用于遍历数据，处理数据</span>
+<span class="token comment" spellcheck="true">// 回调函数第一个参数一定是索引号  可以自己指定索引号号名称</span>
+<span class="token comment" spellcheck="true">// 回调函数第二个参数一定是 dom元素对象 也是自己命名</span>
+$<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>object，<span class="token keyword">function</span> <span class="token punctuation">(</span>index<span class="token punctuation">,</span> element<span class="token punctuation">)</span> <span class="token punctuation">{</span> xxx<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+$<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> ele<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> ele<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ul>
-<p>var arr = [“red”, “green”, “blue”];<br>$.each($(“div”), function(i, ele) {<br>    console.log(i);<br>    console.log(ele);<br>});<br>$.each(arr, function(i, ele) {<br>    console.log(i);<br>    console.log(ele);<br>})</p>
-<pre><code>1. $.each()方法可用于遍历任何对象。主要用于**数据处理**，比如数组，对象
-2. 里面的函数有2个参数：  index 是每个元素的索引号;  element  遍历内容
-
-#### 创建元素
-- 语法
-```js
-$(&quot;&lt;li&gt;&lt;/li&gt;&quot;);
-var li = $(&quot;&lt;li&gt;新建的li&lt;/li&gt;&quot;);
-</code></pre>
-<p>创建了一个li标签</p>
+<ol>
+<li>$.each()方法可用于遍历任何对象。主要用于<strong>数据处理</strong>，比如数组，对象</li>
+<li>里面的函数有2个参数：  index 是每个元素的索引号;  element  遍历内容</li>
+</ol>
+<h4 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h4><ul>
+<li>语法<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;li>&lt;/li>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> li <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;li>新建的li&lt;/li>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+创建了一个li标签</li>
+</ul>
 <h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><ul>
 <li>内部添加<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//把内容放入匹配元素内部最后面，类似原生 appendChild。</span>
 element<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"内容"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1214,9 +1227,261 @@ element<span class="token punctuation">.</span><span class="token function">html
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ol>
 <li>remove 删除元素本身</li>
-<li>empt() 和  html(‘’’’) 作用等价，都可以删除元素里面的内容，只不过 html 还可以设置内容。</li>
+<li>empt() 和  html(“”) 作用等价，都可以删除元素里面的内容，只不过 html 还可以设置内容。</li>
 </ol>
-<h3 id="jQuery-尺寸、位置操作"><a href="#jQuery-尺寸、位置操作" class="headerlink" title="jQuery 尺寸、位置操作"></a>jQuery 尺寸、位置操作</h3><h4 id="jQuery-尺寸"><a href="#jQuery-尺寸" class="headerlink" title="jQuery 尺寸"></a>jQuery 尺寸</h4>
+<h3 id="jQuery-尺寸、位置操作"><a href="#jQuery-尺寸、位置操作" class="headerlink" title="jQuery 尺寸、位置操作"></a>jQuery 尺寸、位置操作</h3><h4 id="jQuery-尺寸"><a href="#jQuery-尺寸" class="headerlink" title="jQuery 尺寸"></a>jQuery 尺寸</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width()/height()</td>
+<td>取得匹配元素的高度和宽度 只算width/height</td>
+</tr>
+<tr>
+<td>innerWidth()/innerHeight()</td>
+<td>取得匹配元素的高度和宽度 包括padding</td>
+</tr>
+<tr>
+<td>outerWidth()/outerHeight()</td>
+<td>取得匹配元素的高度和宽度 包括padding、border</td>
+</tr>
+<tr>
+<td>outerWidth(true)/outerHeight(true)</td>
+<td>取得匹配元素的高度和宽度 包括padding、border、margin</td>
+</tr>
+</tbody></table>
+<ol>
+<li>以上参数为空，则是获取相应值，返回的是数字型。</li>
+<li>如果参数为数字，则是修改相应值。</li>
+<li>参数可以不必写单位。</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. width() / height() 获取设置元素 width和height大小 </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// $("div").width(300);</span>
+
+<span class="token comment" spellcheck="true">// 2. innerWidth() / innerHeight()  获取设置元素 width和height + padding 大小 </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">innerWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 3. outerWidth()  / outerHeight()  获取设置元素 width和height + padding + border 大小 </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outerWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 4. outerWidth(true) / outerHeight(true) 获取设置 width和height + padding + border + margin</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">outerWidth</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="jQuery-位置"><a href="#jQuery-位置" class="headerlink" title="jQuery 位置"></a>jQuery 位置</h4><blockquote>
+<p>位置主要有三个： offset()、position()、scrollTop()/scrollLeft()</p>
+</blockquote>
+<ul>
+<li>offset() 设置或获取元素偏移</li>
+</ul>
+<ol>
+<li>offset() 方法设置或返回被选元素相对于<strong>文档</strong>的偏移坐标，跟<strong>父级没有关系</strong>。</li>
+<li>该方法有2个属性 left、top 。offset().top  用于获取距离文档顶部的距离，offset().left 用于获取距离文档左侧的距离。</li>
+<li>可以设置元素的偏移：offset({ top: 10, left: 30 });</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. 获取设置距离文档的位置（偏移） offset</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".son"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".son"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".son"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    top<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+    left<span class="token punctuation">:</span> <span class="token number">200</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>position() 获取元素偏移</li>
+</ul>
+<ol>
+<li>position() 方法用于返回被选元素相对于<strong>带有定位的父级</strong>偏移坐标，如果父级都没有定位，则以文档为准。</li>
+<li>该方法有2个属性 left、top。position().top 用于获取距离定位父级顶部的距离，position().left 用于获取距离定位父级左侧的距离。</li>
+<li>该方法<strong>只能获取</strong>。</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 2. 获取距离带有定位父级位置（偏移） position   如果没有带有定位的父级，则以文档为准</span>
+<span class="token comment" spellcheck="true">// 这个方法只能获取不能设置偏移</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".son"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">position</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// $(".son").position({</span>
+<span class="token comment" spellcheck="true">//     top: 200,</span>
+<span class="token comment" spellcheck="true">//     left: 200</span>
+<span class="token comment" spellcheck="true">// });</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>scrollTop()/scrollLeft() 设置或获取元素被卷去的头部和左侧<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">scrollTop</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 被卷去的头部 scrollTop()  / 被卷去的左侧 scrollLeft()</span>
+<span class="token comment" spellcheck="true">// 页面滚动事件</span>
+<span class="token comment" spellcheck="true">//动画也可以做返回效果，不能是文档，只能是元素</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"body,html"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>scrollTop<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h2><h3 id="jQuery-事件注册"><a href="#jQuery-事件注册" class="headerlink" title="jQuery 事件注册"></a>jQuery 事件注册</h3></li>
+<li>单个事件注册<pre class="line-numbers language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">事件</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+   事件处理程序 
+<span class="token punctuation">}</span><span class="token punctuation">)</span>       
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+其他事件和原生基本一致。<br>比如mouseover、mouseout、blur、focus、change、keydown、keyup、resize、scroll 等<br>同一个元素需要一个一个注册事件，可用on()绑定不同的事件<h3 id="jQuery-事件处理"><a href="#jQuery-事件处理" class="headerlink" title="jQuery 事件处理"></a>jQuery 事件处理</h3><h4 id="事件处理-on-绑定事件"><a href="#事件处理-on-绑定事件" class="headerlink" title="事件处理 on() 绑定事件"></a>事件处理 on() 绑定事件</h4><blockquote>
+<p>on() 方法在匹配元素上绑定一个或多个事件的事件处理函数</p>
+</blockquote>
+</li>
+</ul>
+<p>element.on(events,[selector],fn);</p>
+<ol>
+<li>events:一个或多个用空格分隔的事件类型，如”click”或”keydown” 。</li>
+<li>selector: 元素的子元素选择器 。</li>
+<li>fn:回调函数 即绑定在元素身上的侦听函数。 </li>
+</ol>
+<ul>
+<li><p>on() 方法优势1：<br>可以绑定多个事件，多个处理事件处理程序。 </p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//采用对象的方式</span>
+mouseover<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
+mouseout<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+click<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>    
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果事件处理程序相同</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//经过和离开都会触发事件</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"mouseover mouseout"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggleClass</span><span class="token punctuation">(</span><span class="token string">"current"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>on() 方法优势2：<br>可以事件委派操作 。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//事件绑定到了ul身上，但是触发对象是li</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token string">'li'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'hello world!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在此之前有bind(), live() delegate()等方法来处理事件绑定或者事件委派，用on替代他们。</p>
+</li>
+<li><p>on() 方法优势3：<br>动态创建的元素，click() 没有办法绑定事件， on() 可以给<strong>动态生成的元素</strong>绑定事件 </p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span><span class="token string">"p"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"可以给动态生成的元素绑定事件"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;p>我是动态创建的p&lt;/p>"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="事件处理-off-解绑事件"><a href="#事件处理-off-解绑事件" class="headerlink" title="事件处理 off() 解绑事件"></a>事件处理 off() 解绑事件</h4><blockquote>
+<p>off() 方法可以移除通过 on() 方法添加的事件处理程序。</p>
+</blockquote>
+</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 解绑p元素所有事件处理程序</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 解绑p元素上面的点击事件 后面的 foo 是侦听函数名</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 解绑事件委托</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>如果有的事件只想触发一次， 可以使用 one() 来绑定事件。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// one() 但是它只能触发事件一次</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">one</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="自动触发事件-trigger"><a href="#自动触发事件-trigger" class="headerlink" title="自动触发事件 trigger()"></a>自动触发事件 trigger()</h4><blockquote>
+<p>有些事件希望自动触发, 比如轮播图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发。</p>
+</blockquote>
+<pre class="line-numbers language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 第一种简写形式</span>
+element<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">"type"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 第二种自动触发模式</span>
+element<span class="token punctuation">.</span><span class="token function">triggerHandler</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 第三种自动触发模式 不会触发元素的默认行为</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 1. 元素.事件()</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//会触发元素的默认行为</span>
+<span class="token comment" spellcheck="true">// 2. 元素.trigger("事件")</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//会触发元素的默认行为</span>
+<span class="token comment" spellcheck="true">// 3. 元素.triggerHandler("事件") 就是不会触发元素的默认行为</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">triggerHandler</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>triggerHandler模式不会触发元素的默认行为，这是和前面两种的区别。</p>
+<h3 id="jQuery-事件对象"><a href="#jQuery-事件对象" class="headerlink" title="jQuery 事件对象"></a>jQuery 事件对象</h3><p>事件被触发，就会有事件对象的产生</p>
+<pre class="line-numbers language-js"><code class="language-js">element<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span>events<span class="token punctuation">,</span><span class="token punctuation">[</span>selector<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> 
+<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"点击了document"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"点击了div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//阻止冒泡</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li>阻止默认行为：event.preventDefault()   或者 return  false </li>
+<li>阻止冒泡： event.stopPropagation()    </li>
+</ol>
+<h2 id="jQuery-其他方法"><a href="#jQuery-其他方法" class="headerlink" title="jQuery 其他方法"></a>jQuery 其他方法</h2><h3 id="jQuery-对象拷贝"><a href="#jQuery-对象拷贝" class="headerlink" title="jQuery 对象拷贝"></a>jQuery 对象拷贝</h3><blockquote>
+<p>如果想要把某个对象拷贝（合并） 给另外一个对象使用，此时可以使用 $.extend() 方法</p>
+</blockquote>
+<p>语法：</p>
+<pre class="line-numbers language-js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">[</span>deep<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">,</span> object1<span class="token punctuation">,</span> <span class="token punctuation">[</span>objectN<span class="token punctuation">]</span><span class="token punctuation">)</span> 
+<span class="token keyword">var</span> targetObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    msg<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        sex<span class="token punctuation">:</span> <span class="token string">'男'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"andy"</span><span class="token punctuation">,</span>
+    msg<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        age<span class="token punctuation">:</span> <span class="token number">18</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// // 1. 浅拷贝把原来对象里面的复杂数据类型地址拷贝给目标对象</span>
+$<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span>targetObj<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 会覆盖targetObj 里面原来的数据</span>
+targetObj<span class="token punctuation">.</span>msg<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//obj和targetObj的age都会变化</span>
+<span class="token comment" spellcheck="true">// 2. 深拷贝把里面的数据完全复制一份给目标对象 如果里面有不冲突的属性,会合并到一起 </span>
+$<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> targetObj<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// console.log(targetObj); // 会覆盖targetObj 里面原来的数据</span>
+targetObj<span class="token punctuation">.</span>msg<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//targetObj的age会变化 obj不会改变</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li>deep: 如果设为true 为深拷贝， 默认为false  浅拷贝 </li>
+<li>target: 要拷贝的目标对象</li>
+<li>object1:待拷贝到第一个对象的对象。</li>
+<li>objectN:待拷贝到第N个对象的对象。</li>
+<li>浅拷贝是把<strong>被拷贝的对象复杂数据类型中的地址</strong>拷贝给目标对象，<strong>修改目标对象会影响被拷贝对象</strong>。</li>
+<li>深拷贝，前面加true， 完全克隆(拷贝的对象,而不是地址)，<strong>修改目标对象不会影响被拷贝对象</strong>。</li>
+</ol>
+<h3 id="jQuery-多库共存"><a href="#jQuery-多库共存" class="headerlink" title="jQuery 多库共存"></a>jQuery 多库共存</h3><ul>
+<li>问题<br>jQuery使用$作为标示符，随着jQuery的流行,其他 js 库也会用这$作为标识符， 这样一起使用会引起冲突。</li>
+<li>需求<br>需要一个解决方案，让jQuery 和其他的js库不存在冲突，可以同时存在，这就叫做多库共存。</li>
+<li>jQuery 解决方案</li>
+</ul>
+<ol>
+<li>把里面的 $ 符号 统一改为 jQuery。 比如 jQuery(‘’div’’)</li>
+<li> jQuery 变量规定新的名称：$.noConflict()        var xx = $.noConflict();<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//$("div")可用下面的方式表示</span>
+<span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> xx <span class="token operator">=</span> $<span class="token punctuation">.</span><span class="token function">noConflict</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xx</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="jQuery-插件"><a href="#jQuery-插件" class="headerlink" title="jQuery 插件"></a>jQuery 插件</h3><blockquote>
+<p>jQuery 功能比较有限，想要更复杂的特效效果，可以借助于 jQuery 插件完成。 </p>
+</blockquote>
+<p>注意: 这些插件也是依赖于jQuery来完成的，所以必须要先引入jQuery文件，因此也称为 jQuery 插件</p>
+<ul>
+<li>jQuery 插件常用的网站：</li>
+</ul>
+<ol>
+<li> jQuery 插件库  <a target="_blank" rel="noopener" href="http://www.jq22.com/">http://www.jq22.com/</a>     </li>
+<li> jQuery 之家   <a target="_blank" rel="noopener" href="http://www.htmleaf.com/">http://www.htmleaf.com/</a> </li>
+</ol>
+<ul>
+<li>jQuery 插件使用步骤：</li>
+</ul>
+<ol>
+<li> 引入相关文件。（jQuery 文件 和 插件文件）    </li>
+<li> 复制相关html、css、js (调用插件)。</li>
+</ol>
+<ul>
+<li><p>图片懒加载<br>图片使用延迟加载在可提高网页下载速度。它也能帮助减轻服务器负载。<br>当我们页面滑动到可视区域，再显示图片。<br><img data-lazy-src="images/9.jpg"> 将src替换成data-lazy-src才会出现懒加载<br>我们使用jquery 插件库  EasyLazyload。<br>注意，此时的js引入文件和js调用必须写到 <strong>DOM元素（图片）最后面</strong></p>
+</li>
+<li><p>全屏滚动（fullpage.js）<br>gitHub： <a target="_blank" rel="noopener" href="https://github.com/alvarotrigo/fullPage.js">https://github.com/alvarotrigo/fullPage.js</a><br>中文翻译网站： <a target="_blank" rel="noopener" href="http://www.dowebok.com/demo/2014/77/">http://www.dowebok.com/demo/2014/77/</a></p>
+</li>
+<li><p>bootstrap JS 插件<br>bootstrap 框架也是依赖于 jQuery 开发的，因此里面的 js插件使用 ，也必须引入jQuery 文件。</p>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -1648,7 +1913,7 @@ element<span class="token punctuation">.</span><span class="token function">html
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">53.3k</span>
+                        class="white-color">55.4k</span>
             
             
             
