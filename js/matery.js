@@ -169,6 +169,9 @@ $(function () {
 
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
+    $("#disqus_thread").hide();
+    $(".container .dream .row .col").css("fontSize","20px");
+
 });
 
 //黑夜模式提醒开启功能

@@ -54,11 +54,12 @@ div {
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -159,6 +160,17 @@ div {
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -239,6 +251,17 @@ div {
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -487,14 +510,15 @@ div {
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -505,6 +529,7 @@ div {
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -512,7 +537,7 @@ div {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -573,8 +598,8 @@ div {
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -593,7 +618,7 @@ div {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-02
+                    2023-01-03
                 </div>
                 
 
@@ -624,7 +649,7 @@ div {
             <div id="articleContent">
                 <h1 id="简介-CSS特性、盒子模型、浮动、基础布局"><a href="#简介-CSS特性、盒子模型、浮动、基础布局" class="headerlink" title="简介 CSS特性、盒子模型、浮动、基础布局"></a>简介 CSS特性、盒子模型、浮动、基础布局</h1><span id="more"></span>
 <h2 id="CSS三大特性"><a href="#CSS三大特性" class="headerlink" title="CSS三大特性"></a>CSS三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><blockquote>
-<p>层叠性主要解决样式冲突的问题<br>层叠性原则：<br>    1.样式冲突，<font color = "red">就近原则</font>，哪个样式离结构近，选择那个样式<br>    2.样式不冲突，不重叠</p>
+<p>层叠性主要解决样式冲突的问题<br>层叠性原则：<br>    1.样式冲突，<font color="red">就近原则</font>，哪个样式离结构近，选择那个样式<br>    2.样式不冲突，不重叠</p>
 </blockquote>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
     <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*会被覆盖*/</span>
@@ -640,7 +665,7 @@ div {
     <span class="token property">font</span><span class="token punctuation">:</span> <span class="token number">15</span>px/<span class="token number">1.5</span> <span class="token string">'Microsoft YaHei'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*1.5表示当前文字的1.5倍行高*/</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>当一个元素指定多个选择器，就会有优先级的产生<br>    1.选择器相同，则执行层叠性<br>    2.选择器不同，则根据<font color = "red" >选择器权重</font>执行</p>
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>当一个元素指定多个选择器，就会有优先级的产生<br>    1.选择器相同，则执行层叠性<br>    2.选择器不同，则根据<font color="red">选择器权重</font>执行</p>
 <ul>
 <li>  选择器的权重<table>
 <thead>
@@ -679,7 +704,7 @@ div {
 </tr>
 </tbody></table>
 </li>
-<li>权重叠加<br>复合选择器会有权重叠加，<font color = "red" >权重叠加不会进位</font><h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2></li>
+<li>权重叠加<br>复合选择器会有权重叠加，<font color="red">权重叠加不会进位</font><h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2></li>
 <li>盒子模型组成<table>
 <thead>
 <tr>
@@ -706,7 +731,7 @@ div {
 </tbody></table>
 </li>
 </ul>
-<img src="/images/盒子模型.png" width="600" />
+<img src="/images/盒子模型.png" width="600">
 
 <ul>
 <li><p>边框</p>
@@ -819,7 +844,7 @@ td ,<span class="token comment" spellcheck="true">/*表格的表头*/</span>
 <li><p>外边距应用</p>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span>  auto<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*0设置上下外边距，auto水平居中对齐*/</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><font color="red" ><b>注意：</b></font>以上方法是块元素居中，行内元素或者是行内块元素居中是给其父元素添加<font color="red" ><b>text-align:center</b></font>即可</p>
+<p><font color="red"><b>注意：</b></font>以上方法是块元素居中，行内元素或者是行内块元素居中是给其父元素添加<font color="red"><b>text-align:center</b></font>即可</p>
 </li>
 </ul>
 <ul>
@@ -1121,7 +1146,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
 <p>​    ① 如果是扩展功能的是灰色的，表示就是绿色版的，需要重新安装PS</p>
 <p>​    ② 如果是扩展功能右侧是可以使用的，表示就是完整版的，可以安装cutterman插件快速切图</p>
 <p><img src="/images/1571302032310.png"></p>
-<p>官网: <a href ="http://www.cutterman.cn/zh/cutterman">http://www.cutterman.cn/zh/cutterman</a></p>
+<p>官网: <a target="_blank" rel="noopener" href="http://www.cutterman.cn/zh/cutterman">http://www.cutterman.cn/zh/cutterman</a></p>
 <p>当cutterman 安装完成后，重启PS，会发现扩展功能里面多了一个cutterman工具：</p>
 <p><img src="/images/1571302286467.png"></p>
 <p>使用步骤</p>
@@ -1132,7 +1157,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
 <p>​    ⑤ 点击 “导出选中图层” 按钮</p>
 <p><img src="/images/1571303715362.png"> </p>
 <p>示意图：</p>
-<img src="/images/sample1.gif" /> 
+<img src="/images/sample1.gif"> 
 
 <h2 id="CSS布局"><a href="#CSS布局" class="headerlink" title="CSS布局"></a>CSS布局</h2><h3 id="CSS书写规范"><a href="#CSS书写规范" class="headerlink" title="CSS书写规范"></a>CSS书写规范</h3><p>建议遵循以下顺序：</p>
 <ol>
@@ -1162,7 +1187,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
 <p>​    3.一行中的列模块经常浮动布局, 先确定每个列的大小,之后确定列的位置.  页面布局第二准则</p>
 <p>​    4.制作 HTML 结构。我们还是遵循，先有结构，后有样式的原则。结构永远最重要.</p>
 <p>​    5.所以, 先理清楚<strong>布局结构</strong>,再写代码尤为重要. 这需要我们多写多积累.</p>
-<h3 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h3><p><font color ="red">实际开发中，<strong>重要的导航栏</strong>，我们不会直接用链接a ，而是<strong>用 li  包含链接(li+a)的做法</strong></font></p>
+<h3 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h3><p><font color="red">实际开发中，<strong>重要的导航栏</strong>，我们不会直接用链接a ，而是<strong>用 li  包含链接(li+a)的做法</strong></font></p>
 <p>​    1.li+a 语义更清晰，一看这就是有条理的列表型内容。</p>
 <p>​    2.如果直接用a，搜索引擎容易辨别为有堆砌关键字嫌疑（故意堆砌关键字容易被搜索引擎有降权的风险），从而影响网站排名</p>
 <p><strong>注意:</strong> </p>
@@ -1170,7 +1195,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
 <p>​    2.这个nav导航栏可以不给宽度,将来可以继续添加其余文字</p>
 <p>​    3.因为导航栏里面文字不一样多,所以最好给链接 a 左右padding 撑开盒子,而不是指定宽度 </p>
 <blockquote>
-<p>参考<a href ="https://www.bilibili.com/video/BV14J4114768?p=129&vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=129&amp;vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
 
                 
@@ -1348,8 +1373,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
                 <a href="/2022/11/06/CSS%EF%BC%88%E5%9B%9B%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS（四）">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CSS（四）">
                         
                         <span class="card-title">CSS（四）</span>
                     </div>
@@ -1368,8 +1392,8 @@ border-radius：<span class="token number">10</span>px <span class="token number
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1397,8 +1421,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
                 <a href="/2022/10/29/CSS%EF%BC%88%E4%BA%8C%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CSS（二）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CSS（二）">
                         
                         <span class="card-title">CSS（二）</span>
                     </div>
@@ -1417,8 +1440,8 @@ border-radius：<span class="token number">10</span>px <span class="token number
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1640,7 +1663,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1905,10 +1928,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

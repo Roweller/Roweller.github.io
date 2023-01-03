@@ -55,11 +55,12 @@
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -160,6 +161,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -240,6 +252,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -488,14 +511,15 @@
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -506,6 +530,7 @@
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -513,7 +538,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -594,7 +619,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-23
+                    2023-01-03
                 </div>
                 
 
@@ -628,9 +653,9 @@
 <ul>
 <li>介绍</li>
 </ul>
-<p>1.广度优先遍历（BFS）：类似于树中的层次遍历，需要用队列来体现结点访问的次序关系。<br>2.深度优先遍历（DFS）：类似于树中的先序遍历，整体思想是：先输出当前结点，在根据一定的次序去递归查找孩子。<br><img src = "images/sample.gif" width="600" /></p>
+<p>1.广度优先遍历（BFS）：类似于树中的层次遍历，需要用队列来体现结点访问的次序关系。<br>2.深度优先遍历（DFS）：类似于树中的先序遍历，整体思想是：先输出当前结点，在根据一定的次序去递归查找孩子。<br><img src="images/sample.gif" width="600"></p>
 <h3 id="广度遍历和最短路径"><a href="#广度遍历和最短路径" class="headerlink" title="广度遍历和最短路径"></a>广度遍历和最短路径</h3><p>广度优先遍历从某个顶点 v 出发，首先访问这个结点，并将其标记为已访问过，然后顺序访问结点v的所有未被访问的邻接点 {vi,..,vj} ，并将其标记为已访问过，然后将 {vi,…,vj} 中的每一个节点重复节点v的访问方法，直到所有结点都被访问完为止。</p>
-<p>我们可以分为三个步骤：<br>（1）使用一个辅助队列 q，首先将顶点 v 入队，将其标记为已访问，然后循环检测队列是否为空。<br>（2）如果队列不为空，则取出队列第一个元素，并将与该元素相关联的所有未被访问的节点入队，将这些节点标记为已访问。<br>（3）如果队列为空，则说明已经按照广度优先遍历了所有的节点。<br>下图所示，右边蓝色表示从 0 开始遍历节点的顺序，下面是记录距离 0 的距离，<strong>可知广度优先遍历能求出无权图的最短路径</strong>。<br><img src="images/shortest-01.png" width="600" /><br>下面用代码展示如何用广度优先遍历方式完成遍历，并且查询到最短路径。我们在上一小节代码的基础上增加一全局变量 ord 数组，记录路径中节点的次序。ord[i] 表示 i 节点在路径中的次序。同时构造函数做出相应调整，在遍历相邻节点时 每访问一个未被访问的节点进行 ord[i] = ord[v] + 1记录距离。邻接表的广度优先遍历时间复杂度为 O(V+E)，邻接矩阵的时间复杂度为O(V^2)。</p>
+<p>我们可以分为三个步骤：<br>（1）使用一个辅助队列 q，首先将顶点 v 入队，将其标记为已访问，然后循环检测队列是否为空。<br>（2）如果队列不为空，则取出队列第一个元素，并将与该元素相关联的所有未被访问的节点入队，将这些节点标记为已访问。<br>（3）如果队列为空，则说明已经按照广度优先遍历了所有的节点。<br>下图所示，右边蓝色表示从 0 开始遍历节点的顺序，下面是记录距离 0 的距离，<strong>可知广度优先遍历能求出无权图的最短路径</strong>。<br><img src="images/shortest-01.png" width="600"><br>下面用代码展示如何用广度优先遍历方式完成遍历，并且查询到最短路径。我们在上一小节代码的基础上增加一全局变量 ord 数组，记录路径中节点的次序。ord[i] 表示 i 节点在路径中的次序。同时构造函数做出相应调整，在遍历相邻节点时 每访问一个未被访问的节点进行 ord[i] = ord[v] + 1记录距离。邻接表的广度优先遍历时间复杂度为 O(V+E)，邻接矩阵的时间复杂度为O(V^2)。</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 * 广度遍历找路
 * x，y加下点的坐标
@@ -776,7 +801,7 @@ list1<span class="token punctuation">.</span><span class="token function">remove
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>参考:<a href = "https://blog.csdn.net/qq_40232834/article/details/121061244">深度优先遍历（DFS）和广度优先遍历（BFS）</a><br>参考:<a href = "https://www.runoob.com/data-structures/graph-theory-short-path.html">广度优先遍历与最短路径</a></p>
+<p>参考:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40232834/article/details/121061244">深度优先遍历（DFS）和广度优先遍历（BFS）</a><br>参考:<a target="_blank" rel="noopener" href="https://www.runoob.com/data-structures/graph-theory-short-path.html">广度优先遍历与最短路径</a></p>
 </blockquote>
 
                 
@@ -954,8 +979,7 @@ list1<span class="token punctuation">.</span><span class="token function">remove
                 <a href="/2022/11/07/A%E6%98%9F%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="A*算法">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="A*算法">
                         
                         <span class="card-title">A*算法</span>
                     </div>
@@ -1003,8 +1027,7 @@ list1<span class="token punctuation">.</span><span class="token function">remove
                 <a href="/2022/11/06/CSS%EF%BC%88%E5%9B%9B%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS（四）">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CSS（四）">
                         
                         <span class="card-title">CSS（四）</span>
                     </div>
@@ -1023,8 +1046,8 @@ list1<span class="token punctuation">.</span><span class="token function">remove
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1246,7 +1269,7 @@ list1<span class="token punctuation">.</span><span class="token function">remove
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1511,10 +1534,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

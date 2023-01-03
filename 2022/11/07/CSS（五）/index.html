@@ -54,11 +54,12 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -159,6 +160,17 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -239,6 +251,17 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -487,14 +510,15 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -505,6 +529,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -512,7 +537,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -573,8 +598,8 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -593,7 +618,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-25
+                    2023-01-03
                 </div>
                 
 
@@ -702,7 +727,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 <td>把元素底端与行内最高元素的底端对齐</td>
 </tr>
 </tbody></table>
-<img src = "/images/1571522040645.png" width = "600" />
+<img src="/images/1571522040645.png" width="600">
 
 <h3 id="图片、表单和文字对齐"><a href="#图片、表单和文字对齐" class="headerlink" title="图片、表单和文字对齐"></a>图片、表单和文字对齐</h3><p>图片、表单都属于行内块元素，默认的 vertical-align 是基线对齐。<br>此时可以给图片、表单这些行内块元素的 <strong>vertical-align 属性设置为 middle</strong> 就可以让文字和图片垂直居中对齐了。</p>
 <h3 id="解决图片底部默认空白缝隙问题"><a href="#解决图片底部默认空白缝隙问题" class="headerlink" title="解决图片底部默认空白缝隙问题"></a>解决图片底部默认空白缝隙问题</h3><p>bug：图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。</p>
@@ -718,15 +743,15 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="多行文本溢出显示省略号（了解）"><a href="#多行文本溢出显示省略号（了解）" class="headerlink" title="多行文本溢出显示省略号（了解）"></a>多行文本溢出显示省略号（了解）</h3><p>多行文本溢出显示省略号，<strong>有较大兼容性问题</strong>，适合于webKit浏览器或移动端（移动端大部分是webkit内核）</p>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*1. 超出的部分隐藏 */</span>
-<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token property">overflow</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>hidden<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/*2. 文字用省略号替代超出的部分 */</span>
-<span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+<span class="token property">text-overflow</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>ellipsis<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* 3. 弹性伸缩盒子模型显示 */</span>
-<span class="token property">display</span><span class="token punctuation">:</span> -webkit-box<span class="token punctuation">;</span>
+<span class="token property">display</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>-webkit-box<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* 4. 限制在一个块元素显示的文本的行数 */</span>
-<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span><span class="token number">2</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* 5. 设置或检索伸缩盒对象的子元素的排列方式 */</span>
-<span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span>
+<span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>vertical<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>更推荐让后台人员来做这个效果，因为后台人员可以设置显示多少个字，操作更简单。</strong></p>
 <h2 id="常见的布局技巧"><a href="#常见的布局技巧" class="headerlink" title="常见的布局技巧"></a>常见的布局技巧</h2><h3 id="网站标志"><a href="#网站标志" class="headerlink" title="网站标志"></a>网站标志</h3><h4 id="网站-favicon-图标（★★★）"><a href="#网站-favicon-图标（★★★）" class="headerlink" title="网站 favicon 图标（★★★）"></a>网站 favicon 图标（★★★）</h4><blockquote>
@@ -765,11 +790,11 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 <li><p> D – description（网站描述）</p>
 </li>
 </ul>
-<p>简要说明我们网站主要是做什么的。<br><strong>我们提倡</strong>，description 作为网站的总体业务和主题概括，多采用“我们是…”、“我们提供…”、“×××网作为…”、“电话：010…”之类语句。<br><strong>例如：</strong><br><code>&lt;meta name=&quot;description&quot; content=&quot;京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!&quot; /&gt;</code></p>
+<p>简要说明我们网站主要是做什么的。<br><strong>我们提倡</strong>，description 作为网站的总体业务和主题概括，多采用“我们是…”、“我们提供…”、“×××网作为…”、“电话：010…”之类语句。<br><strong>例如：</strong><br><code>&lt;meta name="description" content="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" /&gt;</code></p>
 <ul>
 <li>K – keywords （关键字）</li>
 </ul>
-<p><strong>keywords 是页面关键词</strong>，是搜索引擎的关注点之一。<br>keywords 最好限制为 6～8 个关键词，关键词之间用英文逗号隔开，采用 关键词1,关键词2 的形式<br><strong>例如：</strong><br><code>&lt;meta name= &quot; keywords&quot; content=&quot;网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东&quot; /&gt;</code></p>
+<p><strong>keywords 是页面关键词</strong>，是搜索引擎的关注点之一。<br>keywords 最好限制为 6～8 个关键词，关键词之间用英文逗号隔开，采用 关键词1,关键词2 的形式<br><strong>例如：</strong><br><code>&lt;meta name= " keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东" /&gt;</code></p>
 <p><strong>对于我们前端人员来说，我们只需要准备好这三个标签，具体里面的内容，有专门的 SEO 人员准备</strong></p>
 <p><strong>示例代码</strong></p>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -811,7 +836,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 <h3 id="主体部分"><a href="#主体部分" class="headerlink" title="主体部分"></a>主体部分</h3><ul>
 <li>margin负值应用</li>
 </ul>
-<img src = "/images/1571522683897.png" width = "600" />
+<img src="/images/1571522683897.png" width="600">
 1.让每个盒子margin 往左侧移动 -1px 正好压住相邻盒子边框
 2.鼠标经过某个盒子的时候，提高当前盒子的层级即可（如果没有有定位，则加相对定位（保留位置），如果有定位，则加z-index）
 
@@ -925,7 +950,7 @@ input </span><span class="token punctuation">{</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>Unicode编码字体：</strong><br>把中文字体的名称用相应的Unicode编码来代替，这样就可以有效的避免浏览器解释CSS代码时候出现乱码的问题。<br>比如：<br>黑体 \9ED1\4F53<br>宋体 \5B8B\4F53<br>微软雅黑 \5FAE\8F6F\96C5\9ED1</p>
 <blockquote>
-<p>参考<a href ="https://www.bilibili.com/video/BV14J4114768?p=261&vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=261&amp;vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
 
                 
@@ -1103,8 +1128,7 @@ input </span><span class="token punctuation">{</span>
                 <a href="/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="CSS（六）">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="CSS（六）">
                         
                         <span class="card-title">CSS（六）</span>
                     </div>
@@ -1123,8 +1147,8 @@ input </span><span class="token punctuation">{</span>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1152,8 +1176,7 @@ input </span><span class="token punctuation">{</span>
                 <a href="/2022/11/07/A%E6%98%9F%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="A*算法">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="A*算法">
                         
                         <span class="card-title">A*算法</span>
                     </div>
@@ -1395,7 +1418,7 @@ input </span><span class="token punctuation">{</span>
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1660,10 +1683,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

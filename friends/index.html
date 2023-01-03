@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, Roweller">
+    <meta name="keywords" content="friends, Roweller">
     <meta name="description" content="Roweller">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | Roweller</title>
+    <title>friends | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -576,274 +576,331 @@
     
     </div>
 </div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构: 2">
-                   
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #F9EBEA;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >数据结构                                  
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-        
-                </a>
-                
-                
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
-                   
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #F5EEF8;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >数据库                                  
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-        
-                </a>
-                
-                
-                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 3">
-                   
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #D5F5E3;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >算法                                  
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-        
-                </a>
-                
-                
-                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 12">
-                   
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #E8F8F5;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >前端                                  
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-        
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
 <style>
-    /* 文章分类书本样式 */
-    .chip-container .tag-chips {
+    .friends-container {
+        margin-top: -100px;
+        margin-bottom: 30px;
+    }
+
+    .friends-container .tag-title {
+        margin-bottom: 10px;
+        color: #3C4858;
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+
+    .frind-ship img {
+        border-radius: 50%;
+    }
+
+    /* 一下是按钮样式 */
+
+    .frind-ship {
+        padding: 10px 20px;
+    }
+
+    .frind-ship .title {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .chip-container .tag-chips a {
-        margin: 0 7px 10px;
-    }
-    .chip-container .chip {
-        max-width: calc(100% / 4);
-        min-width: 10em;
-        height: 200px;
-        position: relative;
-        transition: .5s linear;
-        padding: 19px 0;
-        line-height: 20px;
-        z-index: 990;
-        border-radius: 5px 15px 15px 5px;
-        transform-origin: left center 0;
-    }
-    .chip-container .notebook-cover::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: calc(100% + 2px);
-        top: -1px;
-        z-index: 100;
-        border-radius: 2px;
-        right: 25px;
-        transition: 2s ease;
-        /* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */
-        background: linear-gradient(to right,#1e606e 0,#2e95aa 12%,#1e606e 25%,#2e95aa 37%,#1e606e 50%,#2e95aa 62%,#1e606e 75%,#2e95aa 87%,#1e606e 100%);
+        align-items: center;
     }
 
-    .chip .notebook-skin {
-        height: 50px;
-        width: 100%;
-        background: #e8e8e0;
-        margin-top: 42px;
-        padding: 10px 32px 64px 10px;
-        font-size: 19px;
-        position: relative;
-        z-index: 10;
-        color: #222;
-        text-align: left;
-        box-shadow: 0 1px 1px rgba(0,0,0,.2);
-    }
-    .chip .notebook-skin:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 15px;
-        left: 0;
-        bottom: 0;
-        background: #cddc39;
-    }
-    .notebook-cover {
-        background: #cc4b48;
-        height: 200px;
-        width: 140px;
-        position: absolute;
-        border-radius: 5px 15px 15px 5px;
-        z-index: 10;
-        transition: .5s linear;
-        transform-style: preserve-3d;
-        transform-origin: left center 0;
+    .frind-ship .title div {
+        color: #fff;
+        padding-left: 10px;
     }
 
-    .moleskine-wrapper {
-        max-width: calc(100% / 4);
-        min-width: 10em;
+    .frind-ship .title img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
     }
-    .moleskine-notebook:hover .notebook-cover {
-        transform: rotateY(-50deg);
-        z-index: 99;
-        box-shadow: 20px 10px 50px rgba(0,0,0,.2);
-    }
-    .moleskine-notebook {
-        height: 200px;
+
+    .frind-ship .title h1 {
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
         position: relative;
+        top:-15px;
+        left: 3px;
+    }
+
+    .friend-button {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        transition: .5s linear;
-        border-radius: 5px 15px 15px 5px;
-        transform-origin: left center 0;
+        justify-content: center;
+        margin-bottom: -27px;
     }
-    .moleskine-notebook:hover {
-        transform: rotateZ(-10deg);
-    }
-    .notebook-page.dotted {
-        background: linear-gradient(to bottom,#fbfae8 9px,#e4e4e4 1px);
-        background-size: 100% 10px;
-    }
-    .chip-container .chip:hover {
-        background: none;
-    }
-    .notebook-page {
-        height: 100%;
-        width: 140px;
-        position: absolute;
-        top: 10px;
-        background-color: #fbfae8;
-        z-index: 0;
-        border-radius: 5px 16px 16px 5px;
-        overflow: hidden;
-    }
-    </style>
 
+    .friend-button a {
+        border-radius: 40px;
+    }
 
+    .friend-all .tag-post {
+        margin-bottom: 30px;
+    }
 
-    
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
+    .button-caution {
+        background-color: #FF4351;
+        border-color: #FF4351;
+        color: #FFF;
+    }
+
+    .button {
+        font-weight: 300;
+        font-size: 16px;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 40px;
+        margin: 0;
+        display: inline-block;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+    }
+
+    .title {
+        margin-bottom: 0rem !important;
+    }
+
+    .card {
+        margin: 3rem 0 1rem 0 !important;
+    }
+
+    .button-glow.button-caution {
+        -webkit-animation-name: glowing-caution;
+        animation-name: glowing-caution;
+    }
+
+    @-webkit-keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+    }
+
+    @keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+    }
+
+    .button-caution:hover {
+        background-color: #ff7680;
+        border-color: #ff7680;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .frind-card1 {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .frind-card2 {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .frind-card3 {
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    }
+
+    .frind-card4 {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    }
+
+    .frind-card5 {
+        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    }
+
+    .frind-card6 {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+
+    .frind-card7 {
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    }
+
+    .frind-card8 {
+        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    }
+
+    .frind-card9 {
+        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    }
+
+    .frind-card10 {
+        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    }
+
+    article .card {
+        overflow: visible !important;
     }
 </style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
+<main class="content">
+    <div class="container friends-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;友情链接
+                </div>
+                <article id="friends-link">
+                    
+                    
+                    <div class="row tags-posts friend-all">
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://code-xushuai.github.io/images/ayer-side.svg" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">Xu</h1>
+                                            <p style="position: relative;top: -35px;">面朝大海，心暖花开</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://code-xushuai.github.io/" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去学习
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="http://image.luokangyuan.com/4027734.jpeg" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">闪烁之狐</h1>
+                                            <p style="position: relative;top: -35px;">编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://blinkfox.github.io/" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去学习
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card3">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="http://image.luokangyuan.com/avatar.jpg" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">Kris</h1>
+                                            <p style="position: relative;top: -35px;">Find something useful for you.</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://krisxf.github.io/" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去学习
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </article>
+            </div>
+        </div>
+
+        
+
+        <div class="card">
+
+            
+
+            
+
+            
+            <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
 <script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"数据结构","max":14},{"name":"数据库","max":14},{"name":"算法","max":14},{"name":"前端","max":14}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [2,2,3,12],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
+    disqus_config = function () {
+        this.page.url = 'https://roweller.github.io/friends/index.html';
+        this.page.identifier = '/friends/index.html';
+        this.page.title = 'friends';
     };
+    let disqus_shortname = '';
 
-    radarChart.setOption(option);
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
-    
+            
 
+            
+
+            
+
+            
+
+            
+
+        </div>
+    </div>
 </main>
+
+<script>
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
+    });
+</script>
 
 
     <footer class="page-footer bg-color">

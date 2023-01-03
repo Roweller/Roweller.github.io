@@ -49,11 +49,12 @@
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -154,6 +155,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -234,6 +246,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -482,14 +505,15 @@
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -500,6 +524,7 @@
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -697,8 +722,7 @@
                     <a href="/2022/11/08/CSS%EF%BC%88%E5%85%AD%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="CSS（六）">
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="CSS（六）">
                             
                             <span class="card-title">CSS（六）</span>
                         </div>
@@ -712,8 +736,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                                 </a>
                                 
                                 
@@ -729,8 +753,7 @@
                     <a href="/2022/11/07/CSS%EF%BC%88%E4%BA%94%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CSS（五）">
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="CSS（五）">
                             
                             <span class="card-title">CSS（五）</span>
                         </div>
@@ -744,8 +767,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                                 </a>
                                 
                                 
@@ -761,8 +784,7 @@
                     <a href="/2022/11/06/CSS%EF%BC%88%E5%9B%9B%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSS（四）">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CSS（四）">
                             
                             <span class="card-title">CSS（四）</span>
                         </div>
@@ -776,8 +798,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                                 </a>
                                 
                                 
@@ -793,8 +815,7 @@
                     <a href="/2022/10/30/CSS%EF%BC%88%E4%B8%89%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="CSS（三）">
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CSS（三）">
                             
                             <span class="card-title">CSS（三）</span>
                         </div>
@@ -808,8 +829,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                                 </a>
                                 
                                 
@@ -825,8 +846,7 @@
                     <a href="/2022/10/29/CSS%EF%BC%88%E4%BA%8C%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CSS（二）">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CSS（二）">
                             
                             <span class="card-title">CSS（二）</span>
                         </div>
@@ -840,8 +860,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                                 </a>
                                 
                                 
@@ -857,8 +877,7 @@
                     <a href="/2022/10/22/CSS%EF%BC%88%E4%B8%80%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSS（一）">
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="CSS（一）">
                             
                             <span class="card-title">CSS（一）</span>
                         </div>
@@ -872,8 +891,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                                 </a>
                                 
                                 
@@ -945,7 +964,7 @@
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1210,10 +1229,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

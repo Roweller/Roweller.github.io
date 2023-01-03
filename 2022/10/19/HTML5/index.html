@@ -55,11 +55,12 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -160,6 +161,17 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -240,6 +252,17 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -488,14 +511,15 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -506,6 +530,7 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -513,7 +538,7 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -574,8 +599,8 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -594,7 +619,7 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-25
+                    2023-01-03
                 </div>
                 
 
@@ -792,8 +817,8 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>与标题标签用法相同,表示一个段落</p>
 <h2 id="标签的属性"><a href="#标签的属性" class="headerlink" title="标签的属性"></a>标签的属性</h2></li>
-<li><p> 标签属性的分类<br><a href = "https://blog.csdn.net/u013519551/article/details/52525855" target = "_blank">标签属性分类</a>转自<strong>独家记忆0408</p>
-</li>
+<li><p> 标签属性的分类<br><a href="https://blog.csdn.net/u013519551/article/details/52525855" target="_blank">标签属性分类</a>转自<strong>独家记忆0408</strong></p><strong>
+</strong></li><strong>
 <li><p> 标签属性的使用</p>
 <table>
 <thead>
@@ -871,7 +896,7 @@ html标签的子标签&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
 </tr>
 </tbody></table>
 </li>
-</ul>
+</strong></ul><strong>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
 <li><p>无序列表<br>ul表示列表标签<br>li表示列表的项</p>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
@@ -1159,15 +1184,14 @@ src放网址，width和height设置大小，framebordor边框设置</li>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>contrals是否允许用户控制播放<br>sourse用于windows9以上的浏览器<br>embed用于windows8以下的浏览器</p>
-<h3 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h3><iframe src="//player.bilibili.com/player.html?aid=77217003&bvid=BV1XJ411X7Ud&cid=132017557&page=26" scrolling="no" border="0"         
-frameborder="no" framespacing="0" allowfullscreen="true"> 
+<h3 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h3><iframe src="//player.bilibili.com/player.html?aid=77217003&amp;bvid=BV1XJ411X7Ud&amp;cid=132017557&amp;page=26" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> 
 </iframe> 
 
 <p>视频和音频一般较大，会占用外存和内存，可将自己的视频音频借用第三方网页进行打开，不会占用自己的网页空间<br>找到视频下的分享链接，复制代码即可  </p>
 <blockquote>
-<p>参考<a href ="https://www.bilibili.com/video/BV14J4114768?p=1&vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=1&amp;vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
-
+</strong>
                 
             </div>
             <hr/>
@@ -1343,8 +1367,7 @@ frameborder="no" framespacing="0" allowfullscreen="true">
                 <a href="/2022/10/22/CSS%EF%BC%88%E4%B8%80%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSS（一）">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="CSS（一）">
                         
                         <span class="card-title">CSS（一）</span>
                     </div>
@@ -1363,8 +1386,8 @@ frameborder="no" framespacing="0" allowfullscreen="true">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1392,8 +1415,7 @@ frameborder="no" framespacing="0" allowfullscreen="true">
                 <a href="/2022/10/11/MySQL%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MySQL操作">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL操作">
                         
                         <span class="card-title">MySQL操作</span>
                     </div>
@@ -1635,7 +1657,7 @@ frameborder="no" framespacing="0" allowfullscreen="true">
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1900,10 +1922,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

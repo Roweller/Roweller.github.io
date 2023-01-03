@@ -49,11 +49,12 @@
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -154,6 +155,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -234,6 +246,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -482,14 +505,15 @@
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -500,6 +524,7 @@
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -672,8 +697,7 @@
                         <a href="/2022/12/10/jQuery/">
                             <div class="card-image">
                                 
-                                
-                                <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="jQuery">
+                                <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="jQuery">
                                 
                                 <span class="card-title">jQuery</span>
                             </div>
@@ -694,8 +718,8 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                                     
                                     <i class="fas fa-bookmark fa-fw icon-category"></i>
                                     
-                                    <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                                    <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                     </a>
                                     
                                     
@@ -733,8 +757,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                         <a href="/2022/12/10/%E6%9C%AC%E5%9C%B0%E5%82%A8%E5%AD%98/">
                             <div class="card-image">
                                 
-                                
-                                <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="本地储存">
+                                <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="本地储存">
                                 
                                 <span class="card-title">本地储存</span>
                             </div>
@@ -742,13 +765,12 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    
-简介  web本地储存
+                                    简介  web本地储存
 
 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案。
 
 
-本地储存特性1、数据存储在用户浏览器中2、设置、
+本地储存特性1、数据存储在用户浏览器中2、设置、读
                                 
                             </div>
                             <div class="publish-info">
@@ -759,8 +781,8 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                                     
                                     <i class="fas fa-bookmark fa-fw icon-category"></i>
                                     
-                                    <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                                    <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                     </a>
                                     
                                     
@@ -842,7 +864,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1107,10 +1129,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

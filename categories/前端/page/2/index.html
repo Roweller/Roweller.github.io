@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: web前端, Roweller">
+    <meta name="keywords" content="分类: 前端, Roweller">
     <meta name="description" content="Roweller">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: web前端 | Roweller</title>
+    <title>分类: 前端 | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -49,11 +49,12 @@
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -154,6 +155,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -234,6 +246,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -482,14 +505,15 @@
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -500,6 +524,7 @@
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -585,32 +610,13 @@
                 </a>
                 
                 
-                <a href="/categories/web%E5%89%8D%E7%AB%AF/" title="web前端: 12">
-                   
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-active "
-                                    style="background-color: #F5EEF8;">                                               
-                                <div class="notebook-skin
-                                     chip-active "
-                                    >web前端                                  
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-        
-                </a>
-                
-                
                 <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库: 2">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-notebook">
                             <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                                    style="background-color: #D5F5E3;">                                               
+                                    style="background-color: #F5EEF8;">                                               
                                 <div class="notebook-skin
                                      chip-default "
                                     >数据库                                  
@@ -629,10 +635,29 @@
                         <div class="moleskine-notebook">
                             <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                                    style="background-color: #E8F8F5;">                                               
+                                    style="background-color: #D5F5E3;">                                               
                                 <div class="notebook-skin
                                      chip-default "
                                     >算法                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
+        
+                </a>
+                
+                
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 12">
+                   
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
+                             chip-active "
+                                    style="background-color: #E8F8F5;">                                               
+                                <div class="notebook-skin
+                                     chip-active "
+                                    >前端                                  
                                 </div>
                             </div>
                             <div class="notebook-page dotted"></div>
@@ -769,8 +794,7 @@
                     <a href="/2022/10/22/CSS%EF%BC%88%E4%B8%80%EF%BC%89/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSS（一）">
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="CSS（一）">
                             
                             <span class="card-title">CSS（一）</span>
                         </div>
@@ -795,8 +819,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                                 
                                 
@@ -821,8 +845,7 @@
                     <a href="/2022/10/19/HTML5/">
                         <div class="card-image tag-image">
                             
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HTML5">
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="HTML5">
                             
                             <span class="card-title">HTML5</span>
                         </div>
@@ -847,8 +870,8 @@ html标签的子标签&lt;head&gt;&lt;/head&gt;
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                                 
                                 
@@ -877,7 +900,7 @@ html标签的子标签&lt;head&gt;&lt;/head&gt;
     <div class="row">
         <div class="col s6 m4 l4">
             
-            <a href="/categories/web%E5%89%8D%E7%AB%AF/"
+            <a href="/categories/%E5%89%8D%E7%AB%AF/"
                class="left btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-left"></i>
             </a>
@@ -954,7 +977,7 @@ html标签的子标签&lt;head&gt;&lt;/head&gt;
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1219,10 +1242,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

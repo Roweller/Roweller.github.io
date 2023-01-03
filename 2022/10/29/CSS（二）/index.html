@@ -55,11 +55,12 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -160,6 +161,17 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -240,6 +252,17 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -488,14 +511,15 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -506,6 +530,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -513,7 +538,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -574,8 +599,8 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -594,7 +619,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-26
+                    2023-01-03
                 </div>
                 
 
@@ -723,7 +748,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
 </tbody></table>
 <p>按照:link - :visited -:hover -:active的顺序声明<br>经常使用:hover选择器</p>
 </li>
-<li><p>focus伪类选择器<br>focus伪类选择器用于获得光标的<font color = "red">表单元素</font>，一般input类表单元素才能获取.</p>
+<li><p>focus伪类选择器<br>focus伪类选择器用于获得光标的<font color="red">表单元素</font>，一般input类表单元素才能获取.</p>
 </li>
 </ul>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token selector">input<span class="token pseudo-class">:focus</span></span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">/*选择input表单中光标点击的元素*/</span>
@@ -857,7 +882,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
 </li>
 </ul>
 <blockquote>
-<p>参考<a href ="https://www.bilibili.com/video/BV14J4114768?p=97&vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=97&amp;vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
 
                 
@@ -1035,8 +1060,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
                 <a href="/2022/10/30/CSS%EF%BC%88%E4%B8%89%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="CSS（三）">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CSS（三）">
                         
                         <span class="card-title">CSS（三）</span>
                     </div>
@@ -1055,8 +1079,8 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1084,8 +1108,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
                 <a href="/2022/10/29/%E5%93%88%E5%B8%8C%E8%A1%A8/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="哈希表">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="哈希表">
                         
                         <span class="card-title">哈希表</span>
                     </div>
@@ -1327,7 +1350,7 @@ Emmet语法可以快速生成CSS语法和HTML语法，提高了代码书写
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -1592,10 +1615,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

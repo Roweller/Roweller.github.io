@@ -58,11 +58,12 @@
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -163,6 +164,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -243,6 +255,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -491,14 +514,15 @@
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -509,6 +533,7 @@
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -516,7 +541,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -577,8 +602,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -597,7 +622,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-08
+                    2023-01-03
                 </div>
                 
 
@@ -633,7 +658,7 @@
 <h2 id="移动端基础"><a href="#移动端基础" class="headerlink" title="移动端基础"></a>移动端基础</h2><blockquote>
 <p>兼容移动端主流浏览器，处理Webkit内核浏览器即可。</p>
 </blockquote>
-<h3 id="常见移动端屏幕尺寸"><a href="#常见移动端屏幕尺寸" class="headerlink" title="常见移动端屏幕尺寸"></a>常见移动端屏幕尺寸</h3><img src = "/images/常见移动端屏幕尺寸.png">
+<h3 id="常见移动端屏幕尺寸"><a href="#常见移动端屏幕尺寸" class="headerlink" title="常见移动端屏幕尺寸"></a>常见移动端屏幕尺寸</h3><img src="/images/常见移动端屏幕尺寸.png">
 
 <p>注：以上数据均参考自<strong><a target="_blank" rel="noopener" href="https://material.io/devices/">https://material.io/devices/</a></strong></p>
 <h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><blockquote>
@@ -695,7 +720,7 @@
 <li>PC端 和 早前的手机屏幕 / 普通手机屏幕: 1CSS像素 = 1 物理像素的</li>
 <li>Retina（视网膜屏幕）是一种显示技术，可以将把更多的物理像素点压缩至一块屏幕里，从而达到更高的分辨率，并提高屏幕显示的细腻程度。</li>
 </ol>
-<img src = "/images/常见移动端屏幕尺寸.png">
+<img src="/images/常见移动端屏幕尺寸.png">
 
 <h3 id="多倍图"><a href="#多倍图" class="headerlink" title="多倍图"></a>多倍图</h3><ol>
 <li>对于一张 50px * 50px 的图片,在手机 Retina 屏中打开，按照刚才的物理像素比会放大倍数，这样会造成图片模糊</li>
@@ -834,7 +859,7 @@ initial-scale<span class="token punctuation">=</span>1.0, maximum-scale<span cla
 <ol>
 <li>体验中 div 就是 flex父容器。</li>
 <li>体验中 span 就是 子容器 flex项目</li>
-<li>子容器可以横向排列也可以纵向排列<img src ="/images/flex布局.png" width="600" height="400"></li>
+<li>子容器可以横向排列也可以纵向排列<img src="/images/flex布局.png" width="600" height="400"></li>
 </ol>
 <p><strong>总结flex布局原理：</strong><br>就是通过给父盒子添加flex属性(<strong>display: flex</strong>)，来控制子盒子的位置和排列方式</p>
 <h5 id="flex布局父项常见属性"><a href="#flex布局父项常见属性" class="headerlink" title="flex布局父项常见属性"></a>flex布局父项常见属性</h5><ul>
@@ -1614,7 +1639,7 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
 </ul>
 <p>Bootstrap 其他（按钮、表单、表格） 请参考Bootstrap 文档</p>
 <blockquote>
-<p>参考<a hraf = 'https://www.bilibili.com/video/BV14J4114768?p=391&vd_source=580cd891d54084c6f0158e0c631311d8'>黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
+<p>参考<a hraf="https://www.bilibili.com/video/BV14J4114768?p=391&amp;vd_source=580cd891d54084c6f0158e0c631311d8">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
 
                 
@@ -1792,8 +1817,7 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
                 <a href="/2022/12/10/%E6%9C%AC%E5%9C%B0%E5%82%A8%E5%AD%98/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="本地储存">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="本地储存">
                         
                         <span class="card-title">本地储存</span>
                     </div>
@@ -1801,8 +1825,7 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-简介  web本地储存
+                            简介  web本地储存
                         
                     </div>
                     <div class="publish-info">
@@ -1813,8 +1836,8 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1842,8 +1865,7 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
                 <a href="/2022/11/11/JavaScript/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JavaScript">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="JavaScript">
                         
                         <span class="card-title">JavaScript</span>
                     </div>
@@ -1862,8 +1884,8 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -2089,7 +2111,7 @@ less嵌套写法<pre class="line-numbers language-less"><code class="language-le
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -2354,10 +2376,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

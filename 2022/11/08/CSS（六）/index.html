@@ -55,11 +55,12 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
     
 
   
-
-
-
-
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -160,6 +161,17 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -240,6 +252,17 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -488,14 +511,15 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 
 </header>
 <script>
+    var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) > 1){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
     }
     var flag = true;
     var dengbtn = document.querySelector('.deng-btn');
-    var bgcolor = document.querySelector('.bg-color');
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
@@ -506,6 +530,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
         }
          flag = !flag;
     })
+
 </script>
 
 
@@ -513,7 +538,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -574,8 +599,8 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -594,7 +619,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-27
+                    2023-01-03
                 </div>
                 
 
@@ -640,7 +665,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <li><code>&lt;aside&gt;</code> 侧边栏标签</li>
 <li><code>&lt;footer&gt;</code> 尾部标签</li>
 </ul>
-<img src = "/images/语义化标签.png" width =  "600"/>
+<img src="/images/语义化标签.png" width="600">
 
 <p><strong>注意：</strong></p>
 <ol>
@@ -879,7 +904,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li>新增加的输入类型<img src = "/images/新增input表单.png" width= "700" /></li>
+<li>新增加的输入类型<img src="/images/新增input表单.png" width="700"></li>
 </ul>
 <h3 id="新增加的表单属性"><a href="#新增加的表单属性" class="headerlink" title="新增加的表单属性"></a>新增加的表单属性</h3><table>
 <thead>
@@ -990,17 +1015,17 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <ul>
 <li>匹配到父元素的第2个子元素  </li>
 </ul>
-<p>  <code>ul li:nth-child(2)&#123;&#125;</code></p>
+<p>  <code>ul li:nth-child(2){}</code></p>
 <ul>
 <li>匹配到父元素的序号为奇数的子元素</li>
 </ul>
-<p>  <code>ul li:nth-child(odd)&#123;&#125;</code>    <strong>odd</strong> 是关键字  奇数的意思（3个字母 ）</p>
+<p>  <code>ul li:nth-child(odd){}</code>    <strong>odd</strong> 是关键字  奇数的意思（3个字母 ）</p>
 <ul>
 <li>匹配到父元素的序号为偶数的子元素</li>
 </ul>
-<p>  <code>ul li:nth-child(even)&#123;&#125;</code>   <strong>even</strong>（4个字母 ）</p>
+<p>  <code>ul li:nth-child(even){}</code>   <strong>even</strong>（4个字母 ）</p>
 <ul>
-<li><strong>匹配到父元素的前3个子元素</strong><br><code>ul li:nth-child(-n+3)&#123;&#125;</code>    这里面必须是<strong>n</strong><br>nth-child(n) 从0开始 每次加1 往后面计算  这里面必须是n 不能是其他的字母 选择了所有的孩子</li>
+<li><strong>匹配到父元素的前3个子元素</strong><br><code>ul li:nth-child(-n+3){}</code>    这里面必须是<strong>n</strong><br>nth-child(n) 从0开始 每次加1 往后面计算  这里面必须是n 不能是其他的字母 选择了所有的孩子</li>
 </ul>
 </li>
 <li><p><strong>nth-of-type（n）和nth-child（n）用法大致相同，但子元素不是相同的标签会有不同点</strong><br><img src="/images/nth-child%E4%B8%8Enth-of-type%E5%8C%BA%E5%88%AB.png"></p>
@@ -1195,7 +1220,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <li>动画是使元素从一种样式逐渐变化为另一种样式的效果。您可以改变任意多的样式任意多的次数。</li>
 <li>请用百分比来规定变化发生的时间，或用关键词 “from” 和 “to”，等同于 0% 和 100%。</li>
 </ul>
-<img src = "/images/animation.png" width="400" />
+<img src="/images/animation.png" width="400">
 
 <ul>
 <li> 元素使用动画</li>
@@ -1336,7 +1361,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <h4 id="3D转换之透视-perspective"><a href="#3D转换之透视-perspective" class="headerlink" title="3D转换之透视 perspective"></a>3D转换之透视 perspective</h4><blockquote>
 <p>在2D平面产生近大远小视觉立体，但是只是效果二维的</p>
 </blockquote>
-<img src = "/images/perspective.png" />
+<img src="/images/perspective.png">
 
 <ul>
 <li>如果想要在网页产生3D效果需要透视（理解成3D物体投影在2D平面内）。</li>
@@ -1358,7 +1383,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <h4 id="3D转换之呈现-transfrom-style"><a href="#3D转换之呈现-transfrom-style" class="headerlink" title="3D转换之呈现 transfrom-style"></a>3D转换之呈现 transfrom-style</h4><blockquote>
 <p>3D呈现实现3D空间，达到3D效果</p>
 </blockquote>
- <img src = "/images/transfrom-style.png" width = "800"/>
+ <img src="/images/transfrom-style.png" width="800">
 
 <ol>
 <li>控制子元素是否开启三维立体环境。</li>
@@ -1388,7 +1413,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>参考<a href ="https://www.bilibili.com/video/BV14J4114768?p=274">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14J4114768?p=274">黑马程序员pink老师前端入门教程，零基础必看的h5(html5)+css3+移动端前端视频教程</a></p>
 </blockquote>
 
                 
@@ -1566,8 +1591,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                 <a href="/2022/11/11/JavaScript/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JavaScript">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="JavaScript">
                         
                         <span class="card-title">JavaScript</span>
                     </div>
@@ -1586,8 +1610,8 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1619,8 +1643,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                 <a href="/2022/11/07/CSS%EF%BC%88%E4%BA%94%EF%BC%89/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="CSS（五）">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="CSS（五）">
                         
                         <span class="card-title">CSS（五）</span>
                     </div>
@@ -1639,8 +1662,8 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1862,7 +1885,7 @@ HTML5 的新增特性主要是针对于以前的不足，增加">
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
-                        if (startYear === String(todayYear)) {
+                        if (diffDays + diffYears * 365 < 365) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
@@ -2127,10 +2150,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->
