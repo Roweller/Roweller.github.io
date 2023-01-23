@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="jQuery,web,JavaScript库">
-    <meta name="description" content="简介 jQuery
+    <meta name="description" content="简介 JavaScript库—jQuery
 
-jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档，操作DOM，执行动画和开发Ajax的操作。jQuery封装了很多预定义的对">
+jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档，操作DOM，执行动画和开发Ajax的操作。jQue">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -622,7 +622,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.4k
+                    7.5k
                 </div>
                 
 
@@ -644,7 +644,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介-jQuery"><a href="#简介-jQuery" class="headerlink" title="简介 jQuery"></a>简介 jQuery</h1><span id="more"></span>
+                <h1 id="简介-JavaScript库—jQuery"><a href="#简介-JavaScript库—jQuery" class="headerlink" title="简介 JavaScript库—jQuery"></a>简介 JavaScript库—jQuery</h1><span id="more"></span>
 <blockquote>
 <p>jQuery是一个优秀的<strong>JavaScript库</strong>，是一个凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档，操作DOM，执行动画和开发Ajax的操作。jQuery封装了很多<strong>预定义的对象和函数</strong>。其理念：<strong>write less,do more</strong>.</p>
 </blockquote>
@@ -1357,7 +1357,7 @@ click<span class="token punctuation">:</span> <span class="token keyword">functi
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li><p>on() 方法优势2：<br>可以事件委派操作 。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。</p>
+<li><p>on() 方法优势2：<br>可以事件委派操作，事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。</p>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//事件绑定到了ul身上，但是触发对象是li</span>
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token string">'li'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'hello world!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1366,11 +1366,12 @@ click<span class="token punctuation">:</span> <span class="token keyword">functi
 <p>在此之前有bind(), live() delegate()等方法来处理事件绑定或者事件委派，用on替代他们。</p>
 </li>
 <li><p>on() 方法优势3：<br>动态创建的元素，click() 没有办法绑定事件， on() 可以给<strong>动态生成的元素</strong>绑定事件 </p>
-<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span><span class="token string">"p"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span><span class="token string">"p"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//div不是创建的元素 且p是div的子元素</span>
   <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"可以给动态生成的元素绑定事件"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"&lt;p>我是动态创建的p&lt;/p>"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//无效 click无法绑定动态创建的元素p</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="事件处理-off-解绑事件"><a href="#事件处理-off-解绑事件" class="headerlink" title="事件处理 off() 解绑事件"></a>事件处理 off() 解绑事件</h4><blockquote>
 <p>off() 方法可以移除通过 on() 方法添加的事件处理程序。</p>
 </blockquote>
@@ -1677,7 +1678,7 @@ targetObj<span class="token punctuation">.</span>msg<span class="token punctuati
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 Ajax
+                            简介 Ajax（Web数据交互）
                         
                     </div>
                     <div class="publish-info">
@@ -1692,6 +1693,10 @@ targetObj<span class="token punctuation">.</span>msg<span class="token punctuati
                                     前端
                                 </a>
                             
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    数据交互
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1701,6 +1706,10 @@ targetObj<span class="token punctuation">.</span>msg<span class="token punctuati
                     
                     <a href="/tags/Ajax/">
                         <span class="chip bg-color">Ajax</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">异步编程</span>
                     </a>
                     
                 </div>
@@ -1920,7 +1929,7 @@ targetObj<span class="token punctuation">.</span>msg<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56.2k</span>
+                        class="white-color">68.5k</span>
             
             
             
