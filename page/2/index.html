@@ -413,7 +413,7 @@
         src: url('https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/box/font/huawenxingkai.ttf');
     }
     .deng-t {
-        font-family: 华文行楷;
+        font-family: '华文行楷';
         font-size: 26px;
         color: #dc8f03;
         font-weight: bold;
@@ -513,7 +513,7 @@
     dengbtn.addEventListener('click',function(){
         if(flag){
             $('.denglong').css('display', 'block');
-            bgcolor.style.backgroundImage = 'linear-gradient(to right,#d8000f 0%, #d8000f 100%)';
+            bgcolor.style.backgroundImage = 'linear-gradient(to right,#da4b54 0%, #da4b54 100%)';
         } else {
             $('.denglong').css('display', 'none');    
             bgcolor.style.backgroundImage = 'linear-gradient(to right,rgb(15, 157, 88) 0%, rgb(15, 157, 88) 100%)';
@@ -584,6 +584,54 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/10/29/CSS%EF%BC%88%E4%BA%8C%EF%BC%89/">
+                        <div class="card-image">
+                            
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CSS（二）">
+                            
+                            <span class="card-title">CSS（二）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                简介 复合选择器、背景设置
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CSS/">
+                            <span class="chip bg-color">CSS</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -981,7 +1029,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">68.5k</span>
+                        class="white-color">72.3k</span>
             
             
             
