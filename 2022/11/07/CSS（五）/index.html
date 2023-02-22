@@ -511,7 +511,7 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 </header>
 <script>
     var bgcolor = document.querySelector('.bg-color');
-    if((new Date().getMonth()) > 1){
+    if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
@@ -743,15 +743,15 @@ CSS用户界面样式鼠标样式 li {/*选择要改变的标签*/
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="多行文本溢出显示省略号（了解）"><a href="#多行文本溢出显示省略号（了解）" class="headerlink" title="多行文本溢出显示省略号（了解）"></a>多行文本溢出显示省略号（了解）</h3><p>多行文本溢出显示省略号，<strong>有较大兼容性问题</strong>，适合于webKit浏览器或移动端（移动端大部分是webkit内核）</p>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*1. 超出的部分隐藏 */</span>
-<span class="token property">overflow</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>hidden<span class="token punctuation">;</span>
+<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/*2. 文字用省略号替代超出的部分 */</span>
-<span class="token property">text-overflow</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>ellipsis<span class="token punctuation">;</span>
+<span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* 3. 弹性伸缩盒子模型显示 */</span>
-<span class="token property">display</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>-webkit-box<span class="token punctuation">;</span>
+<span class="token property">display</span><span class="token punctuation">:</span> -webkit-box<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* 4. 限制在一个块元素显示的文本的行数 */</span>
-<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span><span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* 5. 设置或检索伸缩盒对象的子元素的排列方式 */</span>
-<span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span>&amp;nbsp<span class="token punctuation">;</span>vertical<span class="token punctuation">;</span>
+<span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>更推荐让后台人员来做这个效果，因为后台人员可以设置显示多少个字，操作更简单。</strong></p>
 <h2 id="常见的布局技巧"><a href="#常见的布局技巧" class="headerlink" title="常见的布局技巧"></a>常见的布局技巧</h2><h3 id="网站标志"><a href="#网站标志" class="headerlink" title="网站标志"></a>网站标志</h3><h4 id="网站-favicon-图标（★★★）"><a href="#网站-favicon-图标（★★★）" class="headerlink" title="网站 favicon 图标（★★★）"></a>网站 favicon 图标（★★★）</h4><blockquote>
@@ -1379,7 +1379,7 @@ input </span><span class="token punctuation">{</span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">72.3k</span>
+                        class="white-color">79.7k</span>
             
             
             
@@ -1764,4 +1764,6 @@ $(function () {
         }
         </script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

@@ -20,8 +20,14 @@
     .content .index-card .container .card>.card-content {
         padding: 18px !important;
     }
+    #navContainer .nav-menu li:nth-child(n+7){
+        margin: 16px -173px 0 173px;
+    }
+    body {
+        overflow-x: hidden!important;
+    }
+   
 }
-
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 602px) and (max-width: 992px) {
     .container {
@@ -993,7 +999,7 @@ article .article-tags .chip {
     font-size: 0.8rem;
     font-weight: 400;
     height: 22px;
-    line-height: 22px;
+    line-height: 19px;
     color: #fff;
     border-radius: 10px;
 }

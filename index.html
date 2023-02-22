@@ -543,7 +543,7 @@
 </header>
 <script>
     var bgcolor = document.querySelector('.bg-color');
-    if((new Date().getMonth()) > 1){
+    if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
@@ -770,6 +770,41 @@
     
     <div class="col s12 m6" >
         
+             <div class="post-card" style="background-image: url('/medias/featureimages/19.jpg')">
+        
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category">前端</a>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/" class="category">数据交互</a>
+                        
+                    
+                </div>
+                <a href="/2023/01/02/Ajax/">
+                    <h3 class="post-title">Ajax</h3>
+                </a>
+                <p class="post-description">
+                    
+                        简介 Ajax（Web数据交互）
+服务器的基本概念
+了解服务器的基本概念与初识Ajax
+
+客户端与服务器
+服务器上网过程中，负责存放和对外提
+                    
+                </p>
+                <a href="/2023/01/02/Ajax/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" >
+        
              <div class="post-card" style="background-image: url('/medias/featureimages/18.jpg')">
         
             <div class="post-body">
@@ -791,37 +826,7 @@
 JavaScript主要包括JavaScript基础（ECMAScript）Web 
                     
                 </p>
-                <a href="/2022/11/11/JavaScript/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" >
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/15.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category">前端</a>
-                        
-                    
-                </div>
-                <a href="/2022/11/23/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
-                    <h3 class="post-title">移动端</h3>
-                </a>
-                <p class="post-description">
-                    
-                        简介  移动端web开发
-
-移动端Web主要指运行在移动端（手机、ipad）的web页面, 具备HTML5特性也叫H5页面、Web App等
-                    
-                </p>
-                <a href="/2022/11/23/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                <a href="/2022/11/11/JavaScript/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -861,7 +866,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
     
     <div class="col s12 m6" data-aos="zoom-in-up">
         
-             <div class="post-card" style="background-image: url('/medias/featureimages/19.jpg')">
+             <div class="post-card" style="background-image: url('/medias/featureimages/15.jpg')">
         
             <div class="post-body">
                 <div class="post-categories">
@@ -869,24 +874,19 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                         
                             <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category">前端</a>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/" class="category">数据交互</a>
-                        
                     
                 </div>
-                <a href="/2023/01/02/Ajax/">
-                    <h3 class="post-title">Ajax</h3>
+                <a href="/2022/11/23/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                    <h3 class="post-title">移动端</h3>
                 </a>
                 <p class="post-description">
                     
-                        简介 Ajax（Web数据交互）
-服务器的基本概念
-了解服务器的基本概念与初识Ajax
+                        简介  移动端web开发
 
-客户端与服务器
-服务器上网过程中，负责存放和对外提
+移动端Web主要指运行在移动端（手机、ipad）的web页面, 具备HTML5特性也叫H5页面、Web App等
                     
                 </p>
-                <a href="/2023/01/02/Ajax/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                <a href="/2022/11/23/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1555,7 +1555,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">72.3k</span>
+                        class="white-color">79.7k</span>
             
             
             
@@ -1940,4 +1940,6 @@ $(function () {
         }
         </script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

@@ -514,7 +514,7 @@ URL地址U">
 </header>
 <script>
     var bgcolor = document.querySelector('.bg-color');
-    if((new Date().getMonth()) > 1){
+    if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
@@ -629,7 +629,7 @@ URL地址U">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-24
+                    2023-02-04
                 </div>
                 
 
@@ -1085,15 +1085,17 @@ $<span class="token punctuation">.</span><span class="token function">each</span
 <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/html"</span> id<span class="token operator">=</span><span class="token string">"tpl"</span><span class="token operator">></span>
  <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span> <span class="token punctuation">{</span>nowtime <span class="token operator">|</span> defeFormat<span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-template<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>imports<span class="token punctuation">.</span>defeFormat <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">{</span>
-       <span class="token keyword">var</span> year <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-       <span class="token keyword">var</span> month <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span> 
-       <span class="token keyword">var</span> day <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-       <span class="token keyword">return</span> year <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> day
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>nowtime<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
-<span class="token keyword">var</span> str  <span class="token operator">=</span> <span class="token function">template</span><span class="token punctuation">(</span><span class="token string">'tpl'</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//调用template函数,id值tpl不需要#</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+ template<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>imports<span class="token punctuation">.</span>defeFormat <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">var</span> year <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token keyword">var</span> month <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span> 
+          <span class="token keyword">var</span> day <span class="token operator">=</span> time<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token keyword">return</span> year <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> day
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+ <span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>nowtime<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+ <span class="token keyword">var</span> str  <span class="token operator">=</span> <span class="token function">template</span><span class="token punctuation">(</span><span class="token string">'tpl'</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//调用template函数,id值tpl不需要#</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -2620,7 +2622,7 @@ axios<span class="token punctuation">.</span><span class="token function">post</
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">72.3k</span>
+                        class="white-color">79.7k</span>
             
             
             
@@ -3005,4 +3007,6 @@ $(function () {
         }
         </script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

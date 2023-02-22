@@ -506,7 +506,7 @@
 </header>
 <script>
     var bgcolor = document.querySelector('.bg-color');
-    if((new Date().getMonth()) > 1){
+    if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
@@ -608,100 +608,10 @@
                 </a>
                 
                 
-                <a href="/tags/HTML5/" title="HTML5: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="HTML5" style="background-color: #D5F5E3;">HTML5
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/MySQL/" title="MySQL: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MySQL" style="background-color: #E8F8F5;">MySQL
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%A7%BB%E9%99%A4/" title="移除: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="移除" style="background-color: #FEF9E7;">移除
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BF%BB%E8%BD%AC/" title="翻转: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="翻转" style="background-color: #F8F9F9;">翻转
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%9B%BF%E6%8D%A2/" title="替换: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="替换" style="background-color: #82E0AA;">替换
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/JavaScript/" title="JavaScript: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="JavaScript" style="background-color: #D7BDE2;">JavaScript
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="移动端: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="移动端" style="background-color: #A3E4D7;">移动端
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%82%A8%E5%AD%98/" title="储存: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="储存" style="background-color: #85C1E9;">储存
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/jQuery/" title="jQuery: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="jQuery" style="background-color: #F8C471;">jQuery
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ES6/" title="ES6: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ES6" style="background-color: #F9E79F;">ES6
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Ajax/" title="Ajax: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Ajax" style="background-color: #F8F9F9;">Ajax
+                            data-tagname="Ajax" style="background-color: #D5F5E3;">Ajax
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -710,7 +620,88 @@
                 <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" title="异步编程: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="异步编程" style="background-color: #FFF;">异步编程
+                            data-tagname="异步编程" style="background-color: #E8F8F5;">异步编程
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/HTML5/" title="HTML5: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="HTML5" style="background-color: #FEF9E7;">HTML5
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/MySQL/" title="MySQL: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="MySQL" style="background-color: #F8F9F9;">MySQL
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/JavaScript/" title="JavaScript: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="JavaScript" style="background-color: #82E0AA;">JavaScript
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/ES6/" title="ES6: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="ES6" style="background-color: #D7BDE2;">ES6
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/jQuery/" title="jQuery: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="jQuery" style="background-color: #A3E4D7;">jQuery
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%A7%BB%E9%99%A4/" title="移除: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="移除" style="background-color: #85C1E9;">移除
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BF%BB%E8%BD%AC/" title="翻转: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="翻转" style="background-color: #F8C471;">翻转
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%9B%BF%E6%8D%A2/" title="替换: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="替换" style="background-color: #F9E79F;">替换
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%82%A8%E5%AD%98/" title="储存: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="储存" style="background-color: #FEF9E7;">储存
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -738,6 +729,15 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="组件" style="background-color: #82E0AA;">组件
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="移动端: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="移动端" style="background-color: #E8F8F5;">移动端
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -806,7 +806,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">72.3k</span>
+                        class="white-color">79.7k</span>
             
             
             
@@ -1191,4 +1191,6 @@ $(function () {
         }
         </script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

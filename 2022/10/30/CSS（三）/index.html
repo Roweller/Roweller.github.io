@@ -511,7 +511,7 @@ div {
 </header>
 <script>
     var bgcolor = document.querySelector('.bg-color');
-    if((new Date().getMonth()) > 1){
+    if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
         $('.denglong').css('display', 'none');
     }else{
         $('.denglong').css('display', 'block');
@@ -1624,7 +1624,7 @@ border-radius：<span class="token number">10</span>px <span class="token number
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">72.3k</span>
+                        class="white-color">79.7k</span>
             
             
             
@@ -2009,4 +2009,6 @@ $(function () {
         }
         </script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
