@@ -450,23 +450,30 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                 -webkit-transform: rotate(-10deg)
         }
     }
-    .deng-btn {
+    .deng-btn,
+    .off-on {
         width: 48px;
         height: 48px;
         display: block;
         position: fixed;
         border-radius: 50%;
         left: 15px;
-        bottom: 230px;
         height: 48px;
         margin-bottom: 0;
         z-index: 998;
-        background: #d8000f;
         color: #dc8f03;
         font-size: 30px;
         text-align: center;
     }
-    .deng-btn .deng-img{
+    .off-on{
+        bottom: 230px;
+        background: #fa5502;
+    }
+    .deng-btn {
+      bottom: 290px;    
+      background: #d8000f; 
+    }
+    .deng-img{
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -496,13 +503,13 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
 <!-- 元宵节灯笼样式结束 -->
 
 </div>
-
    <a href="javascript:;" class="deng-btn">
-      <img class="deng-img" src="https://zhangxiaocai.cn/js/spring/spring-img/denglong.png" title="传统节日">
+      <img class="deng-img" src="/medias/images/denglong.png" title="传统节日">
    </a>
- 
-
 </header>
+  <div class="off-on">
+    <img class="deng-img" src="/medias/images/fengye.png" title="落叶">
+  </div>
 <script>
     var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
@@ -525,7 +532,6 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
     })
 
 </script>
-
 
     
 
@@ -612,7 +618,7 @@ jQuery是一个优秀的JavaScript库，是一个凭借简洁的语法和跨平�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-02-21
+                    2023-03-16
                 </div>
                 
 
@@ -1492,7 +1498,7 @@ targetObj<span class="token punctuation">.</span>msg<span class="token punctuati
 </li>
 </ul>
 <blockquote>
-<p>参考&lt;/a href=”<a href="https://www.bilibili.com/video/BV1a4411w7Gx?p=1&amp;vd_source=3454561facad353c9c9484537a58c988&quot;>%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%7CjQuery%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%A1%88%E4%BE%8B%E7%B2%BE%E8%AE%B2">https://www.bilibili.com/video/BV1a4411w7Gx?p=1&amp;vd_source=3454561facad353c9c9484537a58c988"&gt;黑马程序员前端基础教程|jQuery网页开发案例精讲</a></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1a4411w7Gx?p=1&amp;vd_source=3454561facad353c9c9484537a58c988">黑马程序员前端基础教程|jQuery网页开发案例精讲</a></p>
 </blockquote>
 
                 
@@ -1929,7 +1935,7 @@ targetObj<span class="token punctuation">.</span>msg<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">85.7k</span>
+                        class="white-color">87.5k</span>
             
             
             
@@ -2199,15 +2205,6 @@ $(function () {
         </script>
     
 
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
     
     <!--动态背景-->
 <div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>

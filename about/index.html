@@ -448,23 +448,30 @@
                 -webkit-transform: rotate(-10deg)
         }
     }
-    .deng-btn {
+    .deng-btn,
+    .off-on {
         width: 48px;
         height: 48px;
         display: block;
         position: fixed;
         border-radius: 50%;
         left: 15px;
-        bottom: 230px;
         height: 48px;
         margin-bottom: 0;
         z-index: 998;
-        background: #d8000f;
         color: #dc8f03;
         font-size: 30px;
         text-align: center;
     }
-    .deng-btn .deng-img{
+    .off-on{
+        bottom: 230px;
+        background: #fa5502;
+    }
+    .deng-btn {
+      bottom: 290px;    
+      background: #d8000f; 
+    }
+    .deng-img{
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -494,13 +501,13 @@
 <!-- 元宵节灯笼样式结束 -->
 
 </div>
-
    <a href="javascript:;" class="deng-btn">
-      <img class="deng-img" src="https://zhangxiaocai.cn/js/spring/spring-img/denglong.png" title="传统节日">
+      <img class="deng-img" src="/medias/images/denglong.png" title="传统节日">
    </a>
- 
-
 </header>
+  <div class="off-on">
+    <img class="deng-img" src="/medias/images/fengye.png" title="落叶">
+  </div>
 <script>
     var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
@@ -523,7 +530,6 @@
     })
 
 </script>
-
 
     <style type="text/css">
     /* don't remove. */
@@ -590,7 +596,7 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">20</a></span>
+    <span class="count"><a href="/">21</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -620,7 +626,7 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">20</a></span>
+    <span class="count"><a href="/">21</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -760,7 +766,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03"]
+            data: ["2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04"]
         },
         yAxis: {
             type: 'value',
@@ -770,7 +776,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,9,7,2,2,0,0],
+                data: [0,0,0,0,0,0,9,7,2,2,0,1,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -812,7 +818,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"数据结构","value":2},{"name":"前端","value":12},{"name":"数据交互","value":1},{"name":"数据库","value":2},{"name":"算法","value":3},{"name":"微信小程序","value":1}],
+                data: [{"name":"数据结构","value":2},{"name":"前端","value":13},{"name":"数据交互","value":1},{"name":"数据库","value":2},{"name":"算法","value":3},{"name":"微信小程序","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -836,7 +842,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["CSS","查找","MySQL","Ajax","异步编程","HTML5","JavaScript","ES6","jQuery","移除"]
+                data: ["CSS","查找","MySQL","JavaScript","Ajax","异步编程","HTML5","ES6","jQuery","移除"]
             }
         ],
         yAxis: [
@@ -849,7 +855,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [6,5,2,1,1,1,1,1,1,1],
+                data: [6,5,2,2,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -1150,7 +1156,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">85.7k</span>
+                        class="white-color">87.5k</span>
             
             
             
@@ -1420,15 +1426,6 @@ $(function () {
         </script>
     
 
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
     
     <!--动态背景-->
 <div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>

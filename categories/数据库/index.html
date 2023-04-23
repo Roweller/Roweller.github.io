@@ -448,23 +448,30 @@
                 -webkit-transform: rotate(-10deg)
         }
     }
-    .deng-btn {
+    .deng-btn,
+    .off-on {
         width: 48px;
         height: 48px;
         display: block;
         position: fixed;
         border-radius: 50%;
         left: 15px;
-        bottom: 230px;
         height: 48px;
         margin-bottom: 0;
         z-index: 998;
-        background: #d8000f;
         color: #dc8f03;
         font-size: 30px;
         text-align: center;
     }
-    .deng-btn .deng-img{
+    .off-on{
+        bottom: 230px;
+        background: #fa5502;
+    }
+    .deng-btn {
+      bottom: 290px;    
+      background: #d8000f; 
+    }
+    .deng-img{
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -494,13 +501,13 @@
 <!-- 元宵节灯笼样式结束 -->
 
 </div>
-
    <a href="javascript:;" class="deng-btn">
-      <img class="deng-img" src="https://zhangxiaocai.cn/js/spring/spring-img/denglong.png" title="传统节日">
+      <img class="deng-img" src="/medias/images/denglong.png" title="传统节日">
    </a>
- 
-
 </header>
+  <div class="off-on">
+    <img class="deng-img" src="/medias/images/fengye.png" title="落叶">
+  </div>
 <script>
     var bgcolor = document.querySelector('.bg-color');
     if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
@@ -523,7 +530,6 @@
     })
 
 </script>
-
 
     <div class="bg-cover pd-header about-cover">
     <div class="container">
@@ -607,7 +613,7 @@
                 </a>
                 
                 
-                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 12">
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 13">
                    
                     <div class="moleskine-wrapper">
                         <div class="moleskine-notebook">
@@ -956,7 +962,7 @@ MySQL的配置配置环境变量
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">85.7k</span>
+                        class="white-color">87.5k</span>
             
             
             
@@ -1226,15 +1232,6 @@ $(function () {
         </script>
     
 
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
     
     <!--动态背景-->
 <div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>

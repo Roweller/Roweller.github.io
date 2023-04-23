@@ -4,19 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="查找">
-    <meta name="description" content="简介 二分法查找数据
+    <meta name="keywords" content="JavaScript,web,后端">
+    <meta name="description" content="简介 Node.js
+初识Node.js与内置模块初识 Node.js
 
-
-思路
-
-二分查找适用于有序列表，当数组中含有重复元素时，可能会返回的下标不是唯一的。可看教程二分法
-
-写法定义target在一个的区间内，用区间的的范围查找target，边界值的取值是二分法的核心
-
-
-
-写法一：w">
+什么是 Node.jsNode.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>二分查找 | Roweller</title>
+    <title>Nodejs | Roweller</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -49,7 +41,9 @@
 
 
 
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
+
 
 
 
@@ -544,12 +538,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">二分查找</h1>
+                    <h1 class="description center-align post-title">Nodejs</h1>
                 </div>
             </div>
         </div>
@@ -579,10 +573,12 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -591,8 +587,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                <span class="chip bg-color">查找</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -603,8 +599,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -616,21 +612,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2023-03-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-03
+                    2023-04-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    315
+                    1.8k
                 </div>
                 
 
@@ -652,67 +648,127 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介-二分法查找数据"><a href="#简介-二分法查找数据" class="headerlink" title="简介 二分法查找数据"></a>简介 二分法查找数据</h1><span id="more"></span>
-
-<ul>
-<li>思路</li>
-</ul>
-<p>二分查找适用于有序列表，当数组中含有重复元素时，可能会返回的下标不是唯一的。可看教程<a href="https://www.bilibili.com/video/BV1fA4y1o715/?vd_source=580cd891d54084c6f0158e0c631311d8" target="_blank">二分法</a></p>
-<ul>
-<li>写法<br>定义target在一个的区间内，用区间的的范围查找target，边界值的取值是二分法的核心</li>
-</ul>
-<ul>
-<li><ul>
-<li>写法一：while(start&lt; end) [start,end)区间 if(nums[(start+end)/2]&gt;=target),令end=(start+end)/2 , if(nums[(start+end)/2]&lt;=target),令start=(start+end)/2+1 注意等号的取值<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token operator">></span>nums<span class="token punctuation">[</span>end<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">||</span>target<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         <span class="token keyword">int</span> mid<span class="token operator">=</span> <span class="token punctuation">(</span>start<span class="token operator">+</span>end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
-            end<span class="token operator">=</span>mid<span class="token punctuation">;</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span> 
-            start<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    
-        <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//nums[mid]==target</span>
-            <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="简介-Node-js"><a href="#简介-Node-js" class="headerlink" title="简介 Node.js"></a>简介 Node.js</h1><span id="more"></span>
+<h2 id="初识Node-js与内置模块"><a href="#初识Node-js与内置模块" class="headerlink" title="初识Node.js与内置模块"></a>初识Node.js与内置模块</h2><h3 id="初识-Node-js"><a href="#初识-Node-js" class="headerlink" title="初识 Node.js"></a>初识 Node.js</h3><ul>
+<li><ol>
+<li>什么是 Node.js<br>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<br>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。<br>Node.js 的官网地址： <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Node.js 可以做什么<br>Node.js 作为一个 JavaScript 的运行环境，仅仅提供了基础的功能和 API。然而，基于 Node.js 提供的这些基础能，很多强大<br>的工具和框架如雨后春笋，层出不穷，所以学会了 Node.js ，可以让前端程序员胜任更多的工作和岗位：<br>① 基于 Express 框架（<a target="_blank" rel="noopener" href="http://www.expressjs.com.cn/%EF%BC%89%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA">http://www.expressjs.com.cn/），可以快速构建</a> Web 应用<br>② 基于 Electron 框架（<a target="_blank" rel="noopener" href="https://electronjs.org/%EF%BC%89%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%9E%84%E5%BB%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">https://electronjs.org/），可以构建跨平台的桌面应用</a><br>③ 基于 restify 框架（<a target="_blank" rel="noopener" href="http://restify.com/%EF%BC%89%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA">http://restify.com/），可以快速构建</a> API 接口项目<br>④ 读写和操作数据库、创建实用的命令行工具辅助前端开发、etc…<br>总之：Node.js 是大前端时代的“大宝剑”，有了 Node.js 这个超级 buff 的加持，前端程序员的行业竞争力会越来越强！</li>
+</ol>
 </li>
 </ul>
-</li>
-<li><ul>
-<li>写法二：while(start&lt;=end)，要用&lt;=，因为start==end也是会产生target [start,end]区间 if(nums[(start+end)/2]&gt;target),令end=(start+end)/2-1 , if(nums[(start+end)/2]&lt; target) , 令start=(start+end)/2+1 注意等号的取值<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token operator">></span>nums<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token operator">||</span>target<span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>start<span class="token operator">&lt;=</span>end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>start<span class="token operator">+</span>end<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                index <span class="token operator">=</span>mid<span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
-            end<span class="token operator">=</span>mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span> 
-            start<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> index<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>参考<a href="https://www.programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#_704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" target="_blank">二分查找</a></p>
+<h3 id="fs-文件系统模块"><a href="#fs-文件系统模块" class="headerlink" title="fs 文件系统模块"></a>fs 文件系统模块</h3><blockquote>
+<p>fs 模块是 Node.js 官方提供的、用来操作文件的模块。它提供了一系列的方法和属性，用来满足用户对文件的操作需求。</p>
 </blockquote>
+<p>例如：<br>⚫ fs.readFile() 方法，用来读取指定文件中的内容<br>⚫ fs.writeFile() 方法，用来向指定的文件中写入内容</p>
+<h4 id="读取指定文件中的内容"><a href="#读取指定文件中的内容" class="headerlink" title="读取指定文件中的内容"></a>读取指定文件中的内容</h4><ol>
+<li><p>fs.readFile() 的语法格<br>使用 fs.readFile() 方法，可以读取指定文件中的内容，语法格式如下：</p>
+<pre class="line-numbers language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span><span class="token punctuation">[</span>option<span class="token punctuation">]</span><span class="token punctuation">,</span>callback<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>参数解读：<br>⚫ 参数1：必选参数，字符串，表示文件的路径。<br>⚫ 参数2：可选参数，表示以什么编码格式来读取文件。<br>⚫ 参数3：必选参数，文件读取完成后，通过回调函数拿到读取的结果。</p>
+</li>
+<li><p>fs.readFile() 的示例代码<br>以 utf8 的编码格式，读取指定文件的内容，并打印 err 和 dataStr 的值</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. 导入 fs 模块，来操作文件</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 2. 调用 fs.readFile() 方法读取文件</span>
+<span class="token comment" spellcheck="true">//    参数1：读取文件的存放路径</span>
+<span class="token comment" spellcheck="true">//    参数2：读取文件时候采用的编码格式，一般默认指定 utf8</span>
+<span class="token comment" spellcheck="true">//    参数3：回调函数，拿到读取失败和成功的结果  err  dataStr</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./files/11.txt'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> dataStr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">// 2.1 打印失败的结果</span>
+<span class="token comment" spellcheck="true">// 如果读取成功，则 err 的值为 null</span>
+<span class="token comment" spellcheck="true">// 如果读取失败，则 err 的值为 错误对象，dataStr 的值为 undefined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'-------'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 2.2 打印成功的结果</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dataStr<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>判断文件是否读取成功<br>可以判断 err 对象是否为 null，从而知晓文件读取的结果</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./files/11.txt'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> dataStr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'读取文件失败！'</span> <span class="token operator">+</span> err<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'读取文件成功！'</span> <span class="token operator">+</span> dataStr<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="向指定的文件中写入内容"><a href="#向指定的文件中写入内容" class="headerlink" title="向指定的文件中写入内容"></a>向指定的文件中写入内容</h3><ol>
+<li><p>fs.writeFile() 的语法格式<br>使用 fs.writeFile() 方法，可以向指定的文件中写入内容，语法格式如下：</p>
+<pre class="line-numbers language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span>data<span class="token punctuation">,</span><span class="token punctuation">[</span>option<span class="token punctuation">]</span><span class="token punctuation">,</span>callback<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>参数解读：<br>⚫ 参数1：必选参数，需要指定一个文件路径的字符串，表示文件的存放路径。<br>⚫ 参数2：必选参数，表示要写入的内容。<br>⚫ 参数3：可选参数，表示以什么格式写入文件内容，默认值是 utf8。<br>⚫ 参数4：必选参数，文件写入完成后的回调函数</p>
+</li>
+<li><p>fs.writeFile() 的示例代码<br>向指定的文件路径中，写入文件内容<br>```js<br>// 1. 导入 fs 文件系统模块<br>const fs = require(‘fs’)</p>
+</li>
+</ol>
+<p>// 2. 调用 fs.writeFile() 方法，写入文件的内容<br>//    参数1：表示文件的存放路径<br>//    参数2：表示要写入的内容<br>//    参数3：回调函数<br>fs.writeFile(‘./files/3.txt’, ‘ok123’, function(err) {<br>    console.log(err)<br>})</p>
+<pre><code>
+3. 判断文件是否写入成功
+可以判断 err 对象是否为 null，从而知晓文件写入的结果：
+```js
+fs.writeFile('./files/3.txt', 'ok123', function(err) {
+  // 2.1 如果文件写入成功，则 err 的值等于 null
+  // 2.2 如果文件写入失败，则 err 的值等于一个 错误对象
+  // console.log(err)
+
+  if (err) {
+    return console.log('文件写入失败！' + err.message)
+  }
+  console.log('文件写入成功！')
+})
+</code></pre>
+<ol start="4">
+<li> fs 模块 - 路径动态拼接的问题<br>在使用 fs 模块操作文件时，如果提供的操作路径是以 ./ 或 ../ 开头的相对路径时，很容易出现路径动态拼接错误的问题。<br>原因：代码在运行的时候，会以执行 node 命令时所处的目录，动态拼接出被操作文件的完整路径。<br>解决方案：在使用 fs 模块操作文件时，直接提供完整的路径，不要提供 ./ 或 ../ 开头的相对路径，从而防止路径动态拼接的问题。<h3 id="path-路径模块"><a href="#path-路径模块" class="headerlink" title="path 路径模块"></a>path 路径模块</h3><blockquote>
+<p>path 模块是 Node.js 官方提供的、用来处理路径的模块。它提供了一系列的方法和属性，用来满足用户对路径的处理<br>需求。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="路径拼接"><a href="#路径拼接" class="headerlink" title="路径拼接"></a>路径拼接</h4><ul>
+<li><p>path.join() 的语法格式<br>使用 path.join() 方法，可以把多个路径片段拼接为完整的路径字符串，语法格式如下：</p>
+<pre class="line-numbers language-js"><code class="language-js">path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>paths<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>参数解读：<br>⚫ …paths <string> 路径片段的序列<br>⚫ 返回值: <string></string></string></p>
+</li>
+<li><p>path.join() 的代码示例<br>使用 path.join() 方法，可以把多个路径片段拼接为完整的路径字符串：<br>```js<br>const path = require(‘path’)<br>const fs = require(‘fs’)</p>
+</li>
+</ul>
+<p>// 注意：  ../ 会抵消前面的路径<br>// const pathStr = path.join(‘/a’, ‘/b/c’, ‘../../‘, ‘./d’, ‘e’)<br>// console.log(pathStr)  // \a\b\d\e</p>
+<p>// fs.readFile(__dirname + ‘/files/1.txt’)</p>
+<p>fs.readFile(path.join(__dirname, ‘./files/1.txt’), ‘utf8’, function(err, dataStr) {<br>  if (err) {<br>    return console.log(err.message)<br>  }<br>  console.log(dataStr)<br>})</p>
+<pre><code>注意：今后凡是涉及到路径拼接的操作，都要使用 path.join() 方法进行处理。不要直接使用 + 进行字符串的拼接
+
+###  获取路径中的文件名
+1. path.basename() 的语法格式
+使用 path.basename() 方法，可以获取路径中的最后一部分，经常通过这个方法获取路径中的文件名，语法格式如下：
+```js
+path.basename(path,[ext])
+</code></pre>
+<p>参数解读：<br>⚫ path <string> 必选参数，表示一个路径的字符串<br>⚫ ext <string> 可选参数，表示文件扩展名<br>⚫ 返回: <string> 表示路径中的最后一部分</string></string></string></p>
+<ol start="2">
+<li>path.basename() 的代码示例<br>使用 path.basename() 方法，可以从一个文件路径中，获取到文件的名称部分<br>```js<br>const path = require(‘path’)</li>
+</ol>
+<p>// 定义文件的存放路径<br>const fpath = ‘/a/b/c/index.html’</p>
+<p>// const fullName = path.basename(fpath)<br>// console.log(fullName)</p>
+<p>const nameWithoutExt = path.basename(fpath, ‘.html’)<br>console.log(nameWithoutExt)</p>
+<pre><code>
+####  获取路径中的文件扩展名
+1. path.extname() 的语法格式
+使用 path.extname() 方法，可以获取路径中的扩展名部分，语法格式如下：
+```js
+path.extname(path)
+</code></pre>
+<p>参数解读：<br>⚫ path <string>必选参数，表示一个路径的字符串<br>⚫ 返回: <string> 返回得到的扩展名字符串</string></string></p>
+<ol start="2">
+<li>path.extname() 的代码示例<br>使用 path.extname() 方法，可以获取路径中的扩展名部分:<br>```js<br>const path = require(‘path’)</li>
+</ol>
+<p>// 这是文件的存放路径<br>const fpath = ‘/a/b/c/index.html’</p>
+<p>const fext = path.extname(fpath)<br>console.log(fext)<br>```</p>
 
                 
             </div>
@@ -729,7 +785,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Roweller</a>
+                    <a href="/about" rel="external nofollow noreferrer">Rowellor</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -739,7 +795,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://roweller.github.io/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">https://roweller.github.io/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</a>
+                    <a href="https://roweller.github.io/2023/03/11/nodejs/">https://roweller.github.io/2023/03/11/nodejs/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -752,7 +808,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Roweller</a>
+                    <a href="/about" target="_blank">Rowellor</a>
                     !
                 </span>
             </div>
@@ -777,8 +833,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                    <span class="chip bg-color">查找</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -850,9 +906,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://roweller.github.io/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/';
-        this.page.identifier = '/2022/10/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/';
-        this.page.title = '二分查找';
+        this.page.url = 'https://roweller.github.io/2023/03/11/nodejs/';
+        this.page.identifier = '/2023/03/11/nodejs/';
+        this.page.title = 'Nodejs';
     };
     let disqus_shortname = '';
 
@@ -882,87 +938,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/10/26/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                <a href="/2023/03/11/nodejs/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="双指针">
                         
-                        <span class="card-title">双指针</span>
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Nodejs">
+                        
+                        <span class="card-title">Nodejs</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介 双指针操作数组
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">查找</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%A7%BB%E9%99%A4/">
-                        <span class="chip bg-color">移除</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BF%BB%E8%BD%AC/">
-                        <span class="chip bg-color">翻转</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9B%BF%E6%8D%A2/">
-                        <span class="chip bg-color">替换</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/10/22/CSS%EF%BC%88%E4%B8%80%EF%BC%89/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="CSS（一）">
-                        
-                        <span class="card-title">CSS（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            简介 基础选择器、字体、文本
+                            简介 Node.js
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-11
                             </span>
                         <span class="publish-author">
                             
@@ -976,11 +974,68 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/01/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="微信小程序">
+                        
+                        <span class="card-title">微信小程序</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介 微信小程序开发
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    微信小程序
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/">
+                        <span class="chip bg-color">数据请求</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%86%E5%8C%85/">
+                        <span class="chip bg-color">分包</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                        <span class="chip bg-color">组件</span>
                     </a>
                     
                 </div>
@@ -1053,6 +1108,82 @@
 
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2 , h3 , h4 ,h5'
+        });
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height()*0.4 -45);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll11 = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll11 > 0) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>
