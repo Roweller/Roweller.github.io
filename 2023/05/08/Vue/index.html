@@ -1,0 +1,1921 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="vue">
+    <meta name="description" content="简介 Vue的基础介绍
+Vue基础
+Vue简介
+
+
+JavaScript框架
+简化Dom操作
+响应式数据驱动
+
+
+Vue程序
+参考文档https://cn.vuejs.org
+
+
+
+
+导入开发版本的Vue.js
+创建Vue实例对象, 设置e">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Vue | Roweller</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+  
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+     <script src="//i2.wp.com/sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    
+    <div id="loading-box">
+      <div class="loading-left-bg"></div>
+      <div class="loading-right-bg"></div>
+      <div class="spinner-box">
+        <div class="configure-border-1">
+          <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+          <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+      </div>
+    </div>
+    <!-- 页面加载动画 -->
+    <script>
+      $(document).ready(function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+      })
+    </script>
+  
+  
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span mytitle">Roweller</span>
+
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Roweller</div>
+        <div class="logo-desc">
+            
+            小白
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+<!-- 元宵节灯笼样式开始 -->
+<style>
+    @media only screen and (min-width: 1124px) {
+        .nav-menu {
+            padding-right: 96px;
+        }
+    }
+    @media only screen and (max-width: 760px) {
+        .right {
+            float: left!important;
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .right {
+            float: left!important;
+        }
+    }
+    .deng-box {
+        position: fixed;
+       /* top: -30px; */
+        top: 13px;
+        right: -20px;
+        z-index: 999;
+    }
+    .deng-box1 {
+        position: fixed;
+        top: 13px;
+        /* right: 10px; */
+        z-index: 999;
+    }
+    .deng-box1 .deng {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        margin: 50px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.8);
+        border-radius: 50% 50%;
+        -webkit-transform-origin: 50% -100px;
+        -webkit-animation: swing 5s infinite ease-in-out;
+        box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+    }
+    .deng {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        margin: 50px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.8);
+        border-radius: 50% 50%;
+        -webkit-transform-origin: 50% -100px;
+        -webkit-animation: swing 3s infinite ease-in-out;
+        box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+    }
+    .deng-a {
+        width: 100px;
+        height: 90px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.1);
+        margin: 12px 8px 8px 10px;
+        border-radius: 50% 50%;
+        border: 2px solid #dc8f03;
+    }
+    .deng-b {
+        width: 45px;
+        height: 90px;
+        background: #d8000f;
+        background: rgba(216, 0, 15, 0.1);
+        margin: -4px 8px 8px 26px;
+        border-radius: 50% 50%;
+        border: 2px solid #dc8f03;
+    }
+    .xian {
+        position: absolute;
+        /* top: -20px; */
+        top: -69px;
+        left: 60px;
+        width: 2px;
+        /*  height: 20px; */
+        height: 70px;
+
+        background: #dc8f03;
+    }
+    .shui-a {
+        position: relative;
+        width: 5px;
+        height: 20px;
+        margin: -5px 0 0 59px;
+        -webkit-animation: swing 4s infinite ease-in-out;
+        -webkit-transform-origin: 50% -45px;
+        background: #ffa500;
+        border-radius: 0 0 5px 5px;
+    }
+    .shui-b {
+        position: absolute;
+        top: 14px;
+        left: -2px;
+        width: 10px;
+        height: 10px;
+        background: #dc8f03;
+        border-radius: 50%;
+    }
+    .shui-c {
+        position: absolute;
+        top: 18px;
+        left: -2px;
+        width: 10px;
+        height: 35px;
+        background: #ffa500;
+        border-radius: 0 0 0 5px;
+    }
+    .deng:before {
+        position: absolute;
+        top: -7px;
+        left: 29px;
+        height: 12px;
+        width: 60px;
+        content: " ";
+        display: block;
+        z-index: 999;
+        border-radius: 5px 5px 0 0;
+        border: solid 1px #dc8f03;
+        background: #ffa500;
+        background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+    }
+    .deng:after {
+        position: absolute;
+        bottom: -7px;
+        left: 10px;
+        height: 12px;
+        width: 60px;
+        content: " ";
+        display: block;
+        margin-left: 20px;
+        border-radius: 0 0 5px 5px;
+        border: solid 1px #dc8f03;
+        background: #ffa500;
+        background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+    }
+    @font-face {
+        font-family: "华文行楷";
+        src: url('https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/box/font/huawenxingkai.ttf');
+    }
+    .deng-t {
+        font-family: '华文行楷';
+        font-size: 26px;
+        color: #dc8f03;
+        font-weight: bold;
+        line-height: 44px;
+        text-align: center;
+    }
+    .night .deng-t,
+    .night .deng-box,
+    .night .deng-box1 {
+        background: transparent !important;
+    }
+    @-moz-keyframes swing {
+        0% {
+                -moz-transform: rotate(-10deg)
+        }
+        50% {
+             -moz-transform: rotate(10deg)
+        }
+        100% {
+                -moz-transform: rotate(-10deg)
+        }
+    }
+    @-webkit-keyframes swing {
+        0% {
+                -webkit-transform: rotate(-10deg)
+        }
+        50% {
+                -webkit-transform: rotate(10deg)
+        }
+        100% {
+                -webkit-transform: rotate(-10deg)
+        }
+    }
+    .deng-btn,
+    .off-on {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: fixed;
+        border-radius: 50%;
+        left: 15px;
+        height: 48px;
+        margin-bottom: 0;
+        z-index: 998;
+        color: #dc8f03;
+        font-size: 30px;
+        text-align: center;
+    }
+    .off-on{
+        bottom: 230px;
+        background: #fa5502;
+    }
+    .deng-btn {
+      bottom: 290px;    
+      background: #d8000f; 
+    }
+    .deng-img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+  
+</style>
+<div class="denglong" id="chunjie">
+<div class="deng-box">
+    <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+            <div class="deng-b"><div class="deng-t">喜迎</div></div>
+        </div>
+        <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+    </div>
+</div>
+<div class="deng-box1">
+    <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+            <div class="deng-b"><div class="deng-t">春节</div></div>
+        </div>
+        <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+    </div>
+</div>
+
+<!-- 元宵节灯笼样式结束 -->
+
+</div>
+   <a href="javascript:;" class="deng-btn">
+      <img class="deng-img" src="/medias/images/denglong.png" title="传统节日">
+   </a>
+</header>
+  <div class="off-on">
+    <img class="deng-img" src="/medias/images/fengye.png" title="落叶">
+  </div>
+<script>
+    var bgcolor = document.querySelector('.bg-color');
+    if((new Date().getMonth()) >= 1  || $(window).width() >= 600){
+        $('.denglong').css('display', 'none');
+    }else{
+        $('.denglong').css('display', 'block');
+        bgcolor.style.background = '#da4b54';
+    }
+    var flag = true;
+    var dengbtn = document.querySelector('.deng-btn');
+    dengbtn.addEventListener('click',function(){
+        if(flag){
+            $('.denglong').css('display', 'block');
+            bgcolor.style.backgroundImage = 'linear-gradient(to right,#da4b54 0%, #da4b54 100%)';
+        } else {
+            $('.denglong').css('display', 'none');    
+            bgcolor.style.backgroundImage = 'linear-gradient(to right,rgb(15, 157, 88) 0%, rgb(15, 157, 88) 100%)';
+        }
+         flag = !flag;
+    })
+
+</script>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Vue</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%A1%86%E6%9E%B6/">
+                                <span class="chip bg-color">框架</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-05-08
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-05-09
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.3k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-1"], pre[class*="language-1"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="简介-Vue的基础介绍"><a href="#简介-Vue的基础介绍" class="headerlink" title="简介 Vue的基础介绍"></a>简介 Vue的基础介绍</h1><span id="more"></span>
+<h2 id="Vue基础"><a href="#Vue基础" class="headerlink" title="Vue基础"></a>Vue基础</h2><ul>
+<li>Vue简介</li>
+</ul>
+<ol>
+<li>JavaScript框架</li>
+<li>简化Dom操作</li>
+<li>响应式数据驱动</li>
+</ol>
+<ul>
+<li>Vue程序<blockquote>
+<p>参考文档<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org</a></p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>导入开发版本的Vue.js</li>
+<li>创建Vue实例对象, 设置el属性和data属性</li>
+<li>使用简洁的模板语法把数据渲染到页面上<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ { { message } }
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+ data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+ message<span class="token punctuation">:</span><span class="token string">" 你好 小黑! "</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>el:挂载点</li>
+</ul>
+<ol>
+<li>el是用来设置Vue实例挂载（管理）的元素</li>
+<li>Vue会管理el选项<strong>命中的元素</strong>及其内部的<strong>后代元素</strong></li>
+<li>可以使用其他的选择器,但是建议使用<strong>ID选择器</strong></li>
+<li>可以使用其他的双标签,不能使用<strong>HTML</strong>和<strong>BODY</strong><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true">// el:"#app",</span>
+ <span class="token comment" spellcheck="true">// el:".app",</span>
+ <span class="token comment" spellcheck="true">// el:"div",</span>
+ el<span class="token punctuation">:</span><span class="token string">"#body"</span><span class="token punctuation">,</span>
+ data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+ message<span class="token punctuation">:</span><span class="token string">"黑马程序员"</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>data:数据对象</li>
+</ul>
+<ol>
+<li>Vue中用到的数据定义在data中</li>
+<li>data中可以写复杂类型的数据</li>
+<li>渲染复杂类型数据时,遵守js的语法即可<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ { { message } }
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span> { { school.name } } { { school.mobile } }<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>{ { campus[0] } }<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>{ { campus[3] } }<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         message<span class="token punctuation">:</span><span class="token string">"你好 小黑!"</span><span class="token punctuation">,</span>
+         school<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             name<span class="token punctuation">:</span><span class="token string">"黑马程序员"</span><span class="token punctuation">,</span>
+             mobile<span class="token punctuation">:</span><span class="token string">"400-618-9090"</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         campus<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"北京校区"</span><span class="token punctuation">,</span><span class="token string">"上海校区"</span><span class="token punctuation">,</span><span class="token string">"广州校区"</span><span class="token punctuation">,</span><span class="token string">"深圳校区"</span><span class="token punctuation">]</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="本地应用"><a href="#本地应用" class="headerlink" title="本地应用"></a>本地应用</h2></li>
+<li>通过Vue实现常见的网页效果</li>
+<li>学习Vue指令,以案例巩固知识点</li>
+<li>Vue指令指的是,以v-开头的一组特殊语法</li>
+</ol>
+<ul>
+<li><p>内容绑定,事件绑定</p>
+<ul>
+<li>v-text</li>
+</ul>
+<ol>
+<li><strong>v-tex</strong>t指令的作用是:设置标签的内容(textContent)</li>
+<li>默认写法会替换全部内容,使用**差值表达式{ {} }**可以替换指定内容</li>
+<li>内部支持写<strong>表达式</strong><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">v-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>message+<span class="token punctuation">'</span>!<span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>深圳<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">v-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>info+<span class="token punctuation">'</span>!<span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>深圳<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>{ { message +'!'} }深圳<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         message<span class="token punctuation">:</span><span class="token string">"黑马程序员!!!"</span><span class="token punctuation">,</span>
+         info<span class="token punctuation">:</span><span class="token string">"前端与移动教研部"</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>v-html</li>
+</ul>
+<ol>
+<li><strong>v-html</strong>指令的作用是:设置元素的<strong>innerHTML</strong></li>
+<li>内容中有<strong>html</strong>结构会被解析为<strong>标签</strong></li>
+<li><strong>v-text</strong>指令无论内容是什么,只会解析为<strong>文本</strong></li>
+<li>解析文本使用<strong>v-text</strong>,需要解析<strong>html</strong>结构使用<strong>v-html</strong><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         content<span class="token punctuation">:</span><span class="token string">"黑马程序员"</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>v-on基础</li>
+</ul>
+<ol>
+<li><strong>v-on</strong>指令的作用是:为元素绑定<strong>事件</strong></li>
+<li>事件名不需要写<strong>on</strong></li>
+<li>指令可以简写为@</li>
+<li>绑定的方法定义在<strong>methods</strong>属性中</li>
+<li>方法内部通过<strong>this</strong>关键字可以访问定义在<strong>data</strong>中数据<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doIt(666,<span class="token punctuation">'</span>老铁<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sayHi<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 1.开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+         doIt<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>p1<span class="token punctuation">,</span>p2<span class="token punctuation">)</span><span class="token punctuation">{</span>
+             console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"做it"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+             console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+             console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         sayHi<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"吃了没"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+</li>
+<li><p>显示切换,属性绑定</p>
+<ul>
+<li>v-show</li>
+</ul>
+<ol>
+<li><strong>v-show</strong>指令的作用是:根据真假切换元素的显示状态</li>
+<li>原理是修改元素的display,实现显示隐藏</li>
+<li>指令后面的内容,最终都会解析为<strong>布尔值</strong></li>
+<li>值为<strong>true</strong>元素显示,值为<strong>false</strong>元素隐藏</li>
+<li>数据改变之后,对应元素的显示状态会<strong>同步更新</strong><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>切换显示状态<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>changeIsShow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>累加年龄<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>addAge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isShow<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./img/monkey.gif<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>age<span class="token punctuation">></span><span class="token punctuation">=</span>18<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./img/monkey.gif<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 1.开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+  isShow<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span><span class="token number">17</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  changeIsShow<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  addAge<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>v-if</li>
+</ul>
+<ol>
+<li><strong>v-if</strong>指令的作用是:根据表达式的真假切换元素的显示状态</li>
+<li>本质是通过操纵<strong>dom</strong>元素来切换显示状态</li>
+<li>表达式的值为<strong>true</strong>,元素存在于<strong>dom</strong>树中,为<strong>false</strong>,从<strong>dom</strong>树中移除</li>
+<li>频繁的切换<strong>v-show</strong>,反之使用<strong>v-if</strong>,前者的切换消耗小<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>切换显示<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>toggleIsShow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isShow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>黑马程序员<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isShow<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>黑马程序员 - v-show修饰<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>temperature<span class="token punctuation">></span><span class="token punctuation">=</span>35<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>热死啦<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         isShow<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+         temperature<span class="token punctuation">:</span><span class="token number">20</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+         toggleIsShow<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>isShow<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>v-bind</li>
+</ul>
+<ol>
+<li><strong>v-bind</strong>指令的作用是:为元素绑定属性</li>
+<li>完整写法是 <strong>v-bind:属性名</strong></li>
+<li>简写的话可以直接省略<strong>v-bind</strong>,只保留 <strong>:属性名</strong></li>
+<li>需要动态的增删<strong>class</strong>建议使用对象的方式<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name"><span class="token namespace">v-bind:</span>src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>imgSrc<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>imgSrc<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">:title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>imgTitle+<span class="token punctuation">'</span>!!!<span class="token punctuation">'</span><span class="token punctuation">"</span></span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isActive?<span class="token punctuation">'</span>active<span class="token punctuation">'</span>:<span class="token punctuation">'</span><span class="token punctuation">'</span><span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>toggleActive<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>imgSrc<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">:title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>imgTitle+<span class="token punctuation">'</span>!!!<span class="token punctuation">'</span><span class="token punctuation">"</span></span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{active:isActive}<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>toggleActive<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         imgSrc<span class="token punctuation">:</span><span class="token string">"http://www.itheima.com/images/logo.png"</span><span class="token punctuation">,</span>
+         imgTitle<span class="token punctuation">:</span><span class="token string">"黑马程序员"</span><span class="token punctuation">,</span>
+         isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+         toggleActive<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>isActive <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>isActive<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>v-for</li>
+</ul>
+<ol>
+<li><p>v-for指令的作用是:根据数据生成列表结构</p>
+</li>
+<li><p>数组经常和v-for结合使用</p>
+</li>
+<li><p>语法是( item,index ) in 数据</p>
+</li>
+<li><p>item 和 index 可以结合其他指令一起使用</p>
+</li>
+<li><p>数组长度的更新会同步到页面上,是响应式的</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>添加数据<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>add<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>移除数据<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>remove<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>(it,index) in arr<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+         { { index+1 } }黑马程序员校区:{ { it } }
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in vegetables<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">v-bind:</span>title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+     { { item.name } }
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 1.开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         arr<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"北京"</span><span class="token punctuation">,</span><span class="token string">"上海"</span><span class="token punctuation">,</span><span class="token string">"广州"</span><span class="token punctuation">,</span><span class="token string">"深圳"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         vegetables<span class="token punctuation">:</span><span class="token punctuation">[</span>
+             <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"西兰花炒蛋"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+             <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"蛋炒西蓝花"</span><span class="token punctuation">}</span>
+         <span class="token punctuation">]</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+         add<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>vegetables<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span><span class="token string">"花菜炒蛋"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         remove<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>vegetables<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>v-model</li>
+</ul>
+<ol>
+<li><strong>v-model</strong>指令的作用是便捷的设置和获取表单元素的值</li>
+<li>绑定的数据会和表单元素<strong>值</strong>相关联</li>
+<li>绑定的数据←→表单元素的值<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>修改message<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>setM<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>message<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>getM<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>{ { message } }<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+ <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     el<span class="token punctuation">:</span><span class="token string">"#app"</span><span class="token punctuation">,</span>
+     data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         message<span class="token punctuation">:</span><span class="token string">"黑马程序员"</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+         getM<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         setM<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>message <span class="token operator">=</span><span class="token string">"酷丁鱼"</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="网络应用"><a href="#网络应用" class="headerlink" title="网络应用"></a>网络应用</h2><blockquote>
+<p>参考文档 <a target="_blank" rel="noopener" href="https://github.com/axios/axios">https://github.com/axios/axios</a></p>
+</blockquote>
+<ul>
+<li>axios</li>
+</ul>
+<ol>
+<li>axios必须先导入才可以使用</li>
+<li>使用get或post方法即可发送对应的请求</li>
+<li>then方法中的回调函数会在请求成功或失败时触发</li>
+<li>通过回调函数的形参可以获取响应内容,或错误信息<br>```html<input type="button" value="get请求" class="get">
+<input type="button" value="post请求" class="post">
+<!-- 官网提供的 axios 在线地址 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+ /*
+     接口1:随机笑话
+     请求地址:https://autumnfish.cn/api/joke/list
+     请求方法:get
+     请求参数:num(笑话条数,数字)
+     响应内容:随机笑话
+ */
+ document.querySelector(".get").onclick = function () {
+     axios.get("https://autumnfish.cn/api/joke/list?num=6")
+     // axios.get("https://autumnfish.cn/api/joke/list1234?num=6")
+     .then(function (response) {
+         console.log(response);
+         },function(err){
+             console.log(err);
+         })
+ }
+ /*
+         接口2:用户注册
+         请求地址:https://autumnfish.cn/api/user/reg
+         请求方法:post
+         请求参数:username(用户名,字符串)
+         响应内容:注册成功或失败
+     */
+ document.querySelector(".post").onclick = function () {
+     axios.post("https://autumnfish.cn/api/user/reg",{username:"盐焗西兰花"})
+     .then(function(response){
+         console.log(response);
+         console.log(this.skill);
+     },function (err) {
+         console.log(err);
+         })
+     }</li>
+</ol>
+<p></script><p></p>
+<pre><code>- axios+vue
+1. axios回调函数中的this已经改变,无法访问到data中数据
+2. 把this保存起来,回调函数中直接使用保存的this即可
+3. 和本地应用的最大区别就是改变了**数据来源**
+```html
+&lt;div id="app"&gt;
+    &lt;input type="button" value="获取笑话" @click="getJoke"&gt;
+    &lt;p&gt; {{ joke }}&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+&lt;!-- 官网提供的 axios 在线地址 --&gt;
+&lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    /*
+        接口:随机获取一条笑话
+        请求地址:https://autumnfish.cn/api/joke
+        请求方法:get
+        请求参数:无
+        响应内容:随机笑话
+    */
+    var app = new Vue({
+        el:"#app",
+        data:{
+            joke:"很好笑的笑话"
+        },
+        methods: {
+            getJoke:function(){
+                // console.log(this.joke);
+                var that = this;
+                axios.get("https://autumnfish.cn/api/joke").then(function(response){
+                    // console.log(response)
+                    console.log(response.data);
+                    // console.log(this.joke);
+                    that.joke = response.data;
+                },function (err) {  })
+            }
+        },
+    })
+&lt;/script&gt;
+</code></pre>
+</li></ol>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Rowellor</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://roweller.github.io/2023/05/08/Vue/">https://roweller.github.io/2023/05/08/Vue/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Rowellor</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%A1%86%E6%9E%B6/">
+                                    <span class="chip bg-color">框架</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://roweller.github.io/2023/05/08/Vue/';
+        this.page.identifier = '/2023/05/08/Vue/';
+        this.page.title = 'Vue';
+    };
+    let disqus_shortname = '';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/05/08/Vue/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Vue">
+                        
+                        <span class="card-title">Vue</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介 Vue的基础介绍
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">框架</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/11/nodejs/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Nodejs">
+                        
+                        <span class="card-title">Nodejs</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介 Node.js
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Roweller<br />'
+            + '文章作者: Roweller<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2 , h3 , h4 ,h5'
+        });
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height()*0.4 -45);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll11 = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll11 > 0) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <a href="/about" target="_blank">Roweller</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">89.8k</span>
+            
+            
+            
+            
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script language=javascript>
+                    function siteTime(){
+                        window.setTimeout("siteTime()", 1000);
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth()+1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        /* 
+                        Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+                        year - 作为date对象的年份，为4位年份值
+                        month - 0-11之间的整数，做为date对象的月份
+                        day - 1-31之间的整数，做为date对象的天数
+                        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+                        minutes - 0-59之间的整数，做为date对象的分钟数
+                        seconds - 0-59之间的整数，做为date对象的秒数
+                        microseconds - 0-999之间的整数，做为date对象的毫秒数
+                        */
+                        var t1 = Date.UTC(2022,10,11,15,00,00); //北京时间2018-2-13 00:00:00
+                        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                        var diff = t2-t1;
+                        var diffYears = Math.floor(diff/years);
+                        var diffDays = Math.floor((diff/days)-diffYears*365);
+                        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+                        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+                        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+                        document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+                    }
+                    siteTime();
+                </script>
+                
+            
+            <br>
+            
+     
+
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/Roweller" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2559617545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2559617545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2559617545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  <div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+  </div>
+  <script>
+    function switchNightMode() {
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+        })
+    }
+  </script>
+  
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll" style="position:fixed;bottom:50px;left:15px;cursor: pointer;">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+    <!-- 弹出文字 -->
+    
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write(
+                '<script type="text/javascript" src="/libs/others/popupText.js"><\/script>'
+            );
+        }
+    </script>
+    
+
+
+    <!-- 冒泡 -->
+    
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/"><\/script>'
+        );
+    </script>
+     
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+        <!-- <script src='https://unpkg.com/mermaid@latest/dist/mermaid.min.js'></script> -->
+        <script src='/libs/mermaid/mermaid.min.js'></script>
+        <script>
+          if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+          }
+        </script>
+    
+
+    
+    <!--动态背景-->
+<div id="DynamicBackground"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<script src="/js/canvas_moving.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    
+  
+  
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="200,25,25"
+        pointColor="200,50,25" opacity='1'
+        zIndex="-1" count="165"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  <div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+  </div>
+  <script>
+    function switchNightMode() {
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+        })
+    }
+  </script>
+  
+    <script>
+       /* 模式判断 */
+       if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
+        }
+
+        if ((new Date().getHours() <= 22 || new Date().getHours() > 7) && $('body').hasClass('DarkMode')) {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').remove("fa-sun").addClass('fa-moon')
+        }
+        </script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
